@@ -5,7 +5,10 @@ const links = await Astro.glob('./proyectos/enObra/*.astro');
 console.log(links.map((link) => link.url));
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+	title="Astro"
+	descripcion="Astro is a fresh but familiar approach to building websites. Astro combines decades of proven performance best practices with the DX improvements of the component-oriented era. Use your favorite JavaScript framework and automatically ship the bare-minimum amount of JavaScript—by default."
+>
 	<main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
@@ -18,7 +21,12 @@ console.log(links.map((link) => link.url));
 				}
 		</ul>
 
-
+		<video
+		class="object-center object-cover h-full w-full"
+		autoplay
+		muted
+		loop
+		src="/video.webm"></video>
 
 	</main>
 </Layout>
