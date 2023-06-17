@@ -5,7 +5,6 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://fournaturalenergy.com.ar/',
+  site: 'https://fournaturalenergy.com.ar',
   integrations: [tailwind(), sitemap(), robotsTxt()],
-  outDir: './dist',
 });

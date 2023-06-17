@@ -1,3 +1,29 @@
-<nav>
-    
+---
+import logo from '../assets/4NE - Sin Logo - Grey.png'
+---
+
+<nav class="sticky top-20">
+    <div class="">
+        <i class="fa-solid fa-bars"></i>
+        <ul>
+            <li><a href="/inicio">Homme</a></li>
+            <li><a href="/servicios">Servicios</a></li>
+            <li><a href="/proyectos">Proyectos</a></li>
+            <li><a href="/acercaDe">AcercaDe</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+        </ul>
+    </div>
+    <a href="/"><img src={logo} alt=""></a>
+    <a href="/BioF">Proyecto BioF</a>
 </nav>
+
+
+
+
+<script>
+    const menu = document.querySelector('nav');
+    const btn = document.querySelector('nav i');
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('show')
+    })
+</script>

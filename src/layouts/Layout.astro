@@ -1,5 +1,6 @@
 ---
 import Head from "../components/Head.astro"
+import Nav from "../components/Nav.astro";
 
 export interface Props {
 	title: string;
@@ -13,7 +14,9 @@ const { title, descripcion, urlCanonica = Astro.url } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
 	<Head title={title} descripcion={descripcion} urlCanonica={urlCanonica} />
-
+	<header>
+		<Nav />
+	</header>
 	<body>
 		<slot />
 	</body>
