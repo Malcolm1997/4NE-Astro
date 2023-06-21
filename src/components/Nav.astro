@@ -1,29 +1,42 @@
 ---
 import logo from '../assets/4NE - Sin Logo - Grey.png'
+
+export interface Props {
+	page: string;
+}
+
+const { page } = Astro.props;
+
 ---
-
-<nav class="sticky top-20">
-    <div class="">
-        <i class="fa-solid fa-bars"></i>
-        <ul>
-            <li><a href="/inicio">Homme</a></li>
-            <li><a href="/servicios">Servicios</a></li>
-            <li><a href="/proyectos">Proyectos</a></li>
-            <li><a href="/acercaDe">AcercaDe</a></li>
-            <li><a href="/contacto">Contacto</a></li>
-        </ul>
-    </div>
-    <a href="/"><img src={logo} alt=""></a>
-    <a href="/BioF">Proyecto BioF</a>
-</nav>
-
-
+<div class="fixed h-[10vh] flex">
+    <nav class=" flex flex-col justify-between bg-white">
+        <div class="flex justify-between py-4 bg-white">
+            <div class="w-1/4 pl-4">
+                <i class="fa-solid fa-bars"></i>
+                <ul class="hidden bg-white w-full pt-9 ">
+                    <li class="py-2"><a href="/inicio">Home</a></li>
+                    <li class="py-2"><a href="/servicios">Servicios</a></li>
+                    <li class="py-2"><a href="/proyectos">Proyectos</a></li>
+                    <li class="py-2"><a href="/acercaDe">AcercaDe</a></li>
+                    <li class="py-2"><a href="/contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <a href="/" class="w-1/3"><img class="md:w-auto" src={logo} alt="" ></a>
+            <a href="/BioF" class="w-1/4 text-end pr-4">BioF</a>
+        </div>
+        <hr>
+    </nav>
+</div>
 
 
 <script>
-    const menu = document.querySelector('nav');
+    const menu = document.querySelector('ul');
     const btn = document.querySelector('nav i');
     btn.addEventListener('click', () => {
-        menu.classList.toggle('show')
+        menu.classList.toggle('hidden')
     })
+    
+    let page = Astro.props.page;
+
+    console.log(page)
 </script>

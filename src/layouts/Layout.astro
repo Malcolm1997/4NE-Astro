@@ -6,16 +6,17 @@ export interface Props {
 	title: string;
 	descripcion: string;
 	urlCanonica?: URL;
+	page: string;
 }
 
-const { title, descripcion, urlCanonica = Astro.url } = Astro.props;
+const { title, descripcion, urlCanonica = Astro.url, page } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<Head title={title} descripcion={descripcion} urlCanonica={urlCanonica} />
-	<header>
-		<Nav />
+	<header class="h-[10vh]">
+		<Nav page={page} />
 	</header>
 	<body>
 		<slot />
