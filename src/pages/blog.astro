@@ -1,25 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const identity = {
-	firstName: "Sarah",
-	country: "Canada",
-	occupation: "Escritor técnico",
-	hobbies: ["fotografia", "observación de aves", "peñarol"],
-};
 
-const skills = [
-	"HTML",
-	"CSS",
-	"JavaScript",
-	"React",
-	"Astro",
-	"Redacción de documentos",
-];
-
-const happy = true;
-const finished = true;
-const goal = 3;
 ---
 
 <Layout title="Blog">
@@ -29,39 +11,6 @@ const goal = 3;
 			<li><a href="/posts/post-m1/">Publicación 1</a></li>
 		</ul>
 	</main>
-
-	<p>He aquí algunos datos sobre mí:</p>
-	<ul>
-		<li>Me llamo {identity.firstName}.</li>
-
-		<li>
-			Vivo en {identity.country} y trabajo como {identity.occupation}.
-		</li>
-		{
-			identity.hobbies.length >= 2 && (
-				<li>
-					Dos de mis aficiones son: {identity.hobbies[0]} y{" "}
-					{identity.hobbies[1]}
-				</li>
-			)
-		}
-	</ul>
-	<p>Mis habilidades son:</p>
-	<ul>
-		{skills.map((skill) => <li>{skill}</li>)}
-	</ul>
-
-	{happy && <p>¡Estoy feliz de aprender Astro!</p>}
-
-	{finished && <p>¡He terminado este tutorial!</p>}
-
-	{
-		goal === 3 ? (
-			<p>Mi objetivo es terminar en 3 días.</p>
-		) : (
-			<p>Mi objetivo no son 3 días.</p>
-		)
-	}
 </Layout>
 
 <style></style>
