@@ -1,9 +1,41 @@
 ---
-
+import { Picture } from 'astro:assets';
+import logo from '../assets/img/Logo 4NE - Sin Logo.png'
 ---
 
-<ul>
-	<li><a href="/">Inicio</a></li>
-	<li><a href="/about/">Sobre mi</a></li>
-	<li><a href="/blog/">Blog 1</a></li>
-</ul>
+<nav class="navbar is-justify-content-center">
+	
+	<div class="navbar-brand">
+
+		<a class="navbar-item" href="/">
+			<Picture  src={logo} alt='Logo de 4NE' height="200"/>
+		</a>
+
+	</div>
+	
+	
+	<div class="navbar-menu">
+		<div class="navbar-start">
+			<a class="navbar-item" href="/">Inicio</a>
+			<a class="navbar-item" href="/service/">Servicios</a>
+			<a class="navbar-item" href="/proyect/">Proyectos</a>
+			<a class="navbar-item" href="/about/">Quienes somos?</a>
+			<a class="navbar-item" href="/contact/">Contacto</a>
+		</div>
+	</div>
+	
+	<div class="navbar-end">
+		<div class="navbar-item">
+			<div class="buttons">
+				<a class="button" href="/">Renovables</a>
+				<a class="button" href="/proyectBioF/">Proyecto BioF</a>
+
+			</div>
+
+		</div>
+	</div>
+	
+	
+	
+
+</nav>
