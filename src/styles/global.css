@@ -6,6 +6,10 @@
 	box-sizing: border-box;
 }
 
-main{
-	margin: 0 20%;
+body{
+	margin: 0 10%;
+}
+
+.logo-image { 
+    object-fit: contain; 
 }
