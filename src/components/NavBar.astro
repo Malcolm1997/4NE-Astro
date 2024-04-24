@@ -4,12 +4,18 @@ import logo from '../assets/img/Logo 4NE - Chico.png'
 ---
 
 <nav class="navbar is-justify-content-center">
-	
+	<script src="../scripts/burger.js"></script>
 	<div class="navbar-brand">
-
-			<a class="navbar-item" href="/">
-				<Picture class="logo-image" src={logo} alt='Logo de 4NE'/>
-			</a>
+        
+        <a class="navbar-item" href="/">
+			<Picture class="logo-image" src={logo} alt='Logo de 4NE'/>
+		</a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
 
 	</div>
 	
@@ -24,11 +30,11 @@ import logo from '../assets/img/Logo 4NE - Chico.png'
 		</div>
 	</div>
 	
-	<div class="navbar-end">
-		<div class="navbar-item">
-			<div class="buttons">
-				<a class="button" href="/">Renovables</a>
-				<a class="button" href="/proyectBioF/">Proyecto BioF</a>
+	<div class="navbar-end ">
+		<div class="navbar-item ">
+			<div class="buttons is-justify-content-center">
+				<a class="button is-rounded is-inverted" href="/">Renovables<i class="fa-solid fa-repeat ml-2"></i></a> 
+				<a class="button is-rounded is-inverted" href="/proyectBioF/">Proyecto BioF<i class="fa-solid fa-arrow-right ml-2"></i></a>
 
 			</div>
 

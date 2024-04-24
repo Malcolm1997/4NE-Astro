@@ -13,3 +13,8 @@ body{
 .logo-image { 
     object-fit: contain; 
 }
+
+.image-index{
+	object-fit: cover;
+	width: 30vw;
+}
