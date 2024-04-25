@@ -3,13 +3,15 @@ import Layout from "../layouts/Layout.astro";
 import { Picture } from 'astro:assets';
 import ingenieria from '../assets/img/presentacion.jpeg'
 import renovables from '../assets/img/digestor.webp'
+import ImageIndex from '../components/react/ImageIndex'
 ---
 
 <Layout title="4NE - Incio">
 	<main>
 		<div class="is-flex is-flex-direction-row is-justify-content-center py-5">
-			<Picture class="image-index image is-3by4" src={ingenieria} alt='Logo de 4NE'/>
-			<Picture class="image-index image is-3by4" src={renovables} alt='Logo de 4NE'/>
+			<ImageIndex/>
+			<!-- <Picture class="image-index image is-3by4" src={ingenieria} alt='Logo de 4NE'/>
+			<Picture class="image-index image is-3by4" src={renovables} alt='Logo de 4NE'/> -->
 		</div>
 	</main>
 </Layout>
