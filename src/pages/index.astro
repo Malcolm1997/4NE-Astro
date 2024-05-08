@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Picture } from 'astro:assets';
-import ingenieria from '../assets/img/presentacion.jpeg'
+import ingenieria from '../assets/img/img3.jpg'
 import renovables from '../assets/img/digestor.webp'
 
 ---
@@ -9,30 +9,68 @@ import renovables from '../assets/img/digestor.webp'
 <Layout title="4NE - Incio">
 	<main>
 		<div class="is-flex is-flex-direction-row is-justify-content-center py-5 div-index">
-			<Picture class="image-index image is-3by4" id="image-index" src={ingenieria} alt='Logo de 4NE'/>
-			<Picture class="image-index image is-3by4" src={renovables} alt='Logo de 4NE'/> 
+			<Picture class="image-index image is-3by4" id="image-index-ing" src={ingenieria} alt='Logo de 4NE'/>
+			<Picture class="image-index image is-3by4" id="image-index-ren" src={renovables} alt='Logo de 4NE'/> 
 		</div>
 	</main>
 </Layout>
 
-<style></style>
+<style>
+
+</style>
 
 <script>
 	import anime from 'animejs/lib/anime.es.js';
 	
-	let mouseOver = () => {
+	let imgIng = document.getElementById("image-index-ing")
+	let imgRen = document.getElementById("image-index-ren")
+
+	
+	imgIng.addEventListener("mouseover", () => {
 		anime({
-			
+			targets: "#image-index-ing",
 			translateX:100,
 			scale: 1,
-			duration:1000
+			opacity: 1,
+			begin: (anim)=>{
+				anim.animatables[0].target.style.zIndex = 1;
+			}
 		})
-	}
+
+		anime({
+			targets: "#image-index-ren",
+			translateX:-250,
+			scale: .8,
+			opacity: .5,
+			begin: (anim)=>{
+				anim.animatables[0].target.style.zIndex = 0;
+			}
+		})
+	});
+
+	imgRen.addEventListener("mouseover", () => {
+		anime({
+			targets: "#image-index-ren",
+			translateX:-100,
+			scale: 1,
+			opacity: 1,
+			begin: (anim)=>{
+				anim.animatables[0].target.style.zIndex = 1;
+			}
+		})
+
+		anime({
+			targets: "#image-index-ing",
+			translateX:250,
+			scale: .8,
+			opacity: .5,
+			begin: (anim)=>{
+				anim.animatables[0].target.style.zIndex = 0;
+			}
+		})
+	});
 	
-	
-	document.getElementById("image-index").addEventListener("mouseover", mouseOver);
-	
-	anime.set("#image-index", {
+	anime.set("#image-index-ing", {
 		translateX:250,
 		scale: .8,
 	})
