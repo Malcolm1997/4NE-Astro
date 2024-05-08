@@ -8,10 +8,16 @@ import renovables from '../assets/img/digestor.webp'
 
 <Layout title="4NE - Incio">
 	<main>
-		<div class="is-flex is-flex-direction-row is-justify-content-center py-5 div-index">
-			<Picture class="image-index image is-3by4" id="image-index-ing" src={ingenieria} alt='Logo de 4NE'/>
-			<Picture class="image-index image is-3by4" id="image-index-ren" src={renovables} alt='Logo de 4NE'/> 
-		</div>
+			<div class="is-flex is-flex-direction-row is-justify-content-center py-5 div-index">
+				<div id="image-index-ing">
+					<Picture class="image-index image is-3by4"  src={ingenieria} alt='Logo de 4NE'/>
+					<p>Ingenieria</p>
+				</div>
+				<div id="image-index-ren">
+					<Picture class="image-index image is-3by4" src={renovables} alt='Logo de 4NE'/> 
+					<p>Renovables</p>
+				</div>
+			</div>
 	</main>
 </Layout>
 
