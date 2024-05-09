@@ -9,11 +9,11 @@ import renovables from '../assets/img/digestor.webp'
 <Layout title="4NE - Incio">
 	<main>
 			<div class="is-flex is-flex-direction-row is-justify-content-center py-5 div-index">
-				<div id="image-index-ing">
+				<div class="divImg" id="image-index-ing">
 					<Picture class="image-index image is-3by4"  src={ingenieria} alt='Logo de 4NE'/>
 					<p>Ingenieria</p>
 				</div>
-				<div id="image-index-ren">
+				<div class="divImg" id="image-index-ren">
 					<Picture class="image-index image is-3by4" src={renovables} alt='Logo de 4NE'/> 
 					<p>Renovables</p>
 				</div>
@@ -35,7 +35,7 @@ import renovables from '../assets/img/digestor.webp'
 	imgIng.addEventListener("mouseover", () => {
 		anime({
 			targets: "#image-index-ing",
-			translateX:100,
+			translateX:150,
 			scale: 1,
 			opacity: 1,
 			begin: (anim)=>{
@@ -45,7 +45,7 @@ import renovables from '../assets/img/digestor.webp'
 
 		anime({
 			targets: "#image-index-ren",
-			translateX:-250,
+			translateX:0,
 			scale: .8,
 			opacity: .5,
 			begin: (anim)=>{
@@ -57,7 +57,7 @@ import renovables from '../assets/img/digestor.webp'
 	imgRen.addEventListener("mouseover", () => {
 		anime({
 			targets: "#image-index-ren",
-			translateX:-100,
+			translateX:-150,
 			scale: 1,
 			opacity: 1,
 			begin: (anim)=>{
@@ -67,7 +67,7 @@ import renovables from '../assets/img/digestor.webp'
 
 		anime({
 			targets: "#image-index-ing",
-			translateX:250,
+			translateX:0,
 			scale: .8,
 			opacity: .5,
 			begin: (anim)=>{
@@ -77,8 +77,13 @@ import renovables from '../assets/img/digestor.webp'
 	});
 	
 	anime.set("#image-index-ing", {
-		translateX:250,
+		translateX:0,
 		scale: .8,
+		opacity: .5,
+	})
+	
+	anime.set("#image-index-ren", {
+		translateX:-150,
 	})
 
 
