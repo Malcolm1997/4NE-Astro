@@ -25,3 +25,16 @@ body{
 	margin: 5% 0;
 }
 
+.divImg{
+	position: relative;
+}
+
+.divImg p{
+	display: none;
+	position: absolute;
+	font-size: 300%;
+}
+
+.divImg:hover p{
+	display: block;
+}
