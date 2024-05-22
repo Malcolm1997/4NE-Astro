@@ -30,11 +30,12 @@ body{
 }
 
 .divImg p{
-	display: none;
 	position: absolute;
 	font-size: 300%;
+	opacity: 0;
+    transition: opacity .5s ease-in-out;
 }
 
 .divImg:hover p{
-	display: block;
+	opacity: 1;
 }
