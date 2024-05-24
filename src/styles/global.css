@@ -12,20 +12,8 @@
 	font-family: 'Owners-Wide';
 }
 
-html{
-	background-color: #F0F0F0;
-}
-
-nav{
+html, nav{
 	background-color: #F0F0F0 !important;
-}
-
-nav a {
-	color: #000 !important;
-}
-nav a:hover{
-	color:#F0F0F0 !important;
-	;
 }
 
 body{
@@ -79,4 +67,18 @@ body{
 
 .buttonIndex:active{
 	background-color: #6E9223 !important;
+}
+
+footer .divFotter{
+	width:  33%;
+	display: flex;
+	justify-content: center;
+}
+
+footer div{
+	width: 100%;
+}
+
+.logo-fotter{
+	width: 128px;
 }

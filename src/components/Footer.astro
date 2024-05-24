@@ -1,10 +1,20 @@
 ---
-const platform = "github";
-const username = "withastro";
+import { Picture } from "astro:assets"
+import logo from "../assets/img/Logo 4NE - Sin Logo.png"
 ---
 
-<footer>
-    <p>
-        ¡Más información sobre mis proyectos en <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!
-    </p>
+<footer class="is-flex is-flex-direction-column is-align-items-center">
+    <div class="is-flex is-justify-content-center">
+        <div class="divFotter">
+            <Picture class="image logo-fotter"  src={logo} alt='Logo de 4NE'/>
+        </div>
+        <div class="divFotter">
+            
+        </div>
+        <div class="divFotter">
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+    </div>
+    <p>Todos los derechos reservados - Four Natural Energy©</p>
 </footer>
