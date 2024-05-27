@@ -1,20 +1,32 @@
 ---
 import { Picture } from "astro:assets"
-import logo from "../assets/img/Logo 4NE - Sin Logo.png"
+import logo from "../assets/img/4NE - Logo Horizontal.png"
 ---
 
 <footer class="is-flex is-flex-direction-column is-align-items-center">
-    <div class="is-flex is-justify-content-center">
+    <div class="is-flex is-justify-content-center m-6">
         <div class="divFotter">
             <Picture class="image logo-fotter"  src={logo} alt='Logo de 4NE'/>
         </div>
         <div class="divFotter">
-            
+            <ul>
+                
+                <a class="navbar-item" href="/">Inicio</a>
+                <a class="navbar-item" href="/service/">Servicios</a>
+                <a class="navbar-item" href="/proyect/">Proyectos</a>
+                <a class="navbar-item" href="/about/">Quienes somos?</a>
+                <a class="navbar-item" href="/contact/">Contacto</a>
+                
+            </ul>
         </div>
-        <div class="divFotter">
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+
+    </div>
+    <div class="is-flex is-justify-content-space-around">
+        <p>Todos los derechos reservados - Four Natural Energy©</p>
+        <div>
+            <a class="logo-redes" href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a class="logo-redes" href=""><i class="fa-brands fa-square-instagram"></i></a>
         </div>
     </div>
-    <p>Todos los derechos reservados - Four Natural Energy©</p>
+
 </footer>
