@@ -73,12 +73,24 @@ body{
 	width: 100%;
 }
 
-.divFotter{
-	width:  50%;
+.divFotter-d a{
+	color: black;
+}
+
+.divFotter-i,  .divFotter-d{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+
+.divFotter-i{
+	width: 30%;
+}
+
+.divFotter-d{
+	width: 70%;
+}
+
 
 .logo-fotter{
 	width: 256px;
@@ -104,3 +116,63 @@ body{
 .divRedes{
 	width: 50%;
 }
+
+.div-contact ul{
+	width: 45%;
+}
+
+.li-ubic::before{
+	content: "\f3c5";
+	font-family: FontAwesome;
+	display: inline-block;
+	margin-left: -1.3em;
+	width: 1.3em;
+	padding-right:2em
+
+}
+
+.li-industry::before{
+	content: "\f275";
+	font-family: FontAwesome;
+	display: inline-block;
+	margin-left: -1.3em;
+	width: 1.3em;
+	padding-right:2em
+}
+
+.li-phone::before{
+	content: "\f095";
+	font-family: FontAwesome;
+	display: inline-block;
+	margin-left: -1.3em;
+	width: 1.3em;
+	padding-right:2em
+}
+
+.li-contact::before{
+	content: "\f2c1";
+	font-family: FontAwesome;
+	display: inline-block;
+	margin-left: -1.3em;
+	width: 1.3em;
+	padding-right:2em
+}
+
+.li-email::before{
+	content: "\f0e0";
+	font-family: FontAwesome;
+	display: inline-block;
+	margin-left: -1.3em;
+	width: 1.3em;
+	padding-right:2em
+}
+
+.li-whatsapp::before{
+	content: "\f232";
+	font-family: FontAwesome;
+	display: inline-block;
+	margin-left: -1.3em;
+	width: 1.3em;
+	padding-right:2em
+}
+
