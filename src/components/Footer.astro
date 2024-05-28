@@ -3,8 +3,8 @@ import { Picture } from "astro:assets"
 import logo from "../assets/img/4NE - Logo Horizontal.png"
 ---
 
-<footer class="is-flex is-flex-direction-column is-align-items-center">
-    <div class="is-flex is-justify-content-center m-6">
+<footer class="is-flex is-flex-direction-column is-align-items-center my-6">
+    <div class="is-flex is-justify-content-center m-6 divFotter-up">
         <div class="divFotter">
             <Picture class="image logo-fotter"  src={logo} alt='Logo de 4NE'/>
         </div>
@@ -21,9 +21,9 @@ import logo from "../assets/img/4NE - Logo Horizontal.png"
         </div>
 
     </div>
-    <div class="is-flex is-justify-content-space-around">
+    <div class="is-flex is-justify-content-space-between divFotter-up">
         <p>Todos los derechos reservados - Four Natural Energy©</p>
-        <div>
+        <div class="divRedes is-flex is-justify-content-end">
             <a class="logo-redes" href=""><i class="fa-brands fa-linkedin"></i></a>
             <a class="logo-redes" href=""><i class="fa-brands fa-square-instagram"></i></a>
         </div>

@@ -69,15 +69,15 @@ body{
 	background-color: #6E9223 !important;
 }
 
-footer .divFotter{
-	width:  33%;
+.divFotter-up{
+	width: 100%;
+}
+
+.divFotter{
+	width:  50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-footer div{
-	width: 100%;
 }
 
 .logo-fotter{
@@ -91,4 +91,16 @@ footer div{
 .logo-redes i{
 	font-size: 32px;
 	color: #A4CD39;
+}
+
+.logo-redes i:hover{
+	color: #8BB82A
+}
+
+.logo-redes i:active{
+	color: #6E9223
+}
+
+.divRedes{
+	width: 50%;
 }
