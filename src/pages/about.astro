@@ -1,5 +1,11 @@
 ---
+import { Picture } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+import beming from '../assets/img/Logos-Alianzas/bemingLogo.webp'
+import bezer from '../assets/img/Logos-Alianzas/bezerLogo.webp'
+import euskal from '../assets/img/Logos-Alianzas/euskalLogo.webp'
+import archea from '../assets/img/Logos-Alianzas/archeaLogo.webp'
+
 
 ---
 
@@ -14,8 +20,20 @@ import Layout from "../layouts/Layout.astro";
 		<div>
 			<h2 class="is-size-3"> - Asociaciones Estrategicas</h2>
 			<div>
-				
-
+				<div class="is-flex ">
+					<div class="box div-ali">
+						<Picture class="image-ali image" src={archea} alt='Logo de 4NE'/> 
+					</div>
+					<div class="box div-ali">
+						<Picture class="image-ali image" src={beming} alt='Logo de 4NE'/> 
+					</div>
+					<div class="box div-ali">
+						<Picture class="image-ali image" src={bezer} alt='Logo de 4NE'/> 
+					</div>
+					<div class="box div-ali">
+						<Picture class="image-ali image" src={euskal} alt='Logo de 4NE'/> 
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>
