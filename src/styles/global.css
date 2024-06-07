@@ -178,6 +178,70 @@ body{
 
 /* Alianzas */
 
-.div-ali{
-	width: 512px;
+.carousel{
+	position: relative;
+	overflow: hidden;
+}
+
+.carousel-inner{
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+	padding: 25px 0;
+}
+
+.carousel-item img {
+    display: block;
+    border-radius: 10px;
+	width: 256px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Contact */
+
+.card-contact{
+	width: 33%;
+	margin-bottom:0 !important
+}
+
+.card-contact ul{
+	list-style: none;
+}
+
+.card-contact a{
+	color: #A4CD39;
+}
+
+.card-contact a:hover{
+	color: #6E9223
+}
+
+.card-contact a:active{
+	color: #000
 }
