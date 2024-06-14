@@ -194,6 +194,12 @@ body{
 	padding: 25px 0;
 }
 
+.carousel-item a {
+	background-color: rgb(96, 96, 98);
+	padding: 20px;
+	border-radius: 50px;
+}
+
 .carousel-item img {
     display: block;
     border-radius: 10px;

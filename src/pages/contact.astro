@@ -1,9 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import seba from "../assets/img/Avatar-Icon/Sebastian-Gibbons.jpeg"
-import dario from "../assets/img/Avatar-Icon/Dario-Gentile.jpeg"
-import negocio from "../assets/img/negocio.jpg"
-import ingenieria from "../assets/img/ingenieria.jpg"
+import seba from "../assets/img/Avatar-Icon/Sebastian-Gibbons.jpeg";
+import dario from "../assets/img/Avatar-Icon/Dario-Gentile.jpeg";
+import negocio from "../assets/img/negocio.jpg";
+import ingenieria from "../assets/img/ingenieria.jpg";
 import { Picture } from "astro:assets";
 ---
 
@@ -12,64 +12,106 @@ import { Picture } from "astro:assets";
 		<div class="is-flex is-justify-content-space-around mt-6 pt-6">
 			<div class="card card-contact">
 				<div class="card-image">
-				  <figure class="image is-4by3">
-					<Picture class="image-ali image" src={negocio} alt='Logo de 4NE'/>
-				  </figure>
+					<figure class="image is-4by3">
+						<Picture
+							class="image-ali image"
+							src={negocio}
+							alt="Logo de 4NE"
+						/>
+					</figure>
 				</div>
 				<div class="card-content">
-				  <div class="media">
-					<div class="media-left">
-					  <figure class="image is-48x48">
-						<Picture class="image-ali image" src={seba} alt='Logo de 4NE'/>
-					  </figure>
+					<div class="media">
+						<div class="media-left">
+							<figure class="image is-48x48">
+								<Picture
+									class="image-ali image"
+									src={seba}
+									alt="Logo de 4NE"
+								/>
+							</figure>
+						</div>
+						<div class="media-content">
+							<p class="title is-4">Sebastian Gibbons</p>
+							<p class="subtitle is-6">
+								<a
+									href="https://www.linkedin.com/in/sebastian-gibbons-13329722/"
+									target="_blank">@sebastiangibbons</a>
+							</p>
+						</div>
 					</div>
-					<div class="media-content">
-					  <p class="title is-4">Sebastian Gibbons</p>
-					  <p class="subtitle is-6"><a href="https://www.linkedin.com/in/sebastian-gibbons-13329722/" target="_blank">@sebastiangibbons</a></p>
+
+					<div class="content">
+						<ul>
+							<li class="li-phone mb-3">
+								<a href="tel:+5493416187180"
+									>+54 9 (341) 618-7180</a>
+							</li>
+							<li class="li-whatsapp mb-3">
+								<a
+									href="https://wa.me/5493416187180"
+									target="_blank">+54 9 341 618-7180</a>
+							</li>
+							<li class="li-email mb-3">
+								<a href="mailto:sebastian@4ne.com.ar"
+									>sebastian@4ne.com.ar</a>
+							</li>
+						</ul>
 					</div>
-				  </div>
-			  
-				  <div class="content">
-					<ul>
-						<li class="li-phone mb-3"><a href="tel:+5493416187180">+54 9 (341) 618-7180</a></li>
-						<li class="li-whatsapp mb-3" ><a href="https://wa.me/5493416187180" target="_blank">+54 9 341 618-7180</a></li>
-						<li class="li-email mb-3"><a href="mailto:sebastian@4ne.com.ar">sebastian@4ne.com.ar</a></li>
-					</ul>
-				  </div>
 				</div>
-			  </div>
-			  <div class="card card-contact">
+			</div>
+			<div class="card card-contact">
 				<div class="card-image">
-				  <figure class="image is-4by3">
-					<Picture class="image-ali image" src={ingenieria} alt='Logo de 4NE'/>
-				  </figure>
+					<figure class="image is-4by3">
+						<Picture
+							class="image-ali image"
+							src={ingenieria}
+							alt="Logo de 4NE"
+						/>
+					</figure>
 				</div>
 				<div class="card-content">
-				  <div class="media">
-					<div class="media-left">
-					  <figure class="image is-48x48">
-						<Picture class="image-ali image" src={dario} alt='Logo de 4NE'/>
-					  </figure>
+					<div class="media">
+						<div class="media-left">
+							<figure class="image is-48x48">
+								<Picture
+									class="image-ali image"
+									src={dario}
+									alt="Logo de 4NE"
+								/>
+							</figure>
+						</div>
+						<div class="media-content">
+							<p class="title is-4">Ing Dario Gentile</p>
+							<p class="subtitle is-6">
+								<a
+									href="https://www.linkedin.com/in/dariofgentile/"
+									target="_blank">@dariogentile</a>
+							</p>
+						</div>
 					</div>
-					<div class="media-content">
-					  <p class="title is-4">Ing Dario Gentile</p>
-					  <p class="subtitle is-6"><a href="https://www.linkedin.com/in/dariofgentile/" target="_blank">@dariogentile</a></p>
+
+					<div class="content">
+						<ul>
+							<li class="li-phone mb-3">
+								<a href="tel:+5492616793419"
+									>+54 9 (261) 679-3419</a>
+							</li>
+							<li class="li-whatsapp mb-3">
+								<a
+									href="https://wa.me/5492616793419"
+									target="_blank">+54 9 261 679-3419</a>
+							</li>
+							<li class="li-email mb-3">
+								<a href="mailto:dario@4ne.com.ar"
+									>dario@4ne.com.ar</a>
+							</li>
+						</ul>
 					</div>
-				  </div>
-			  
-				  <div class="content">
-					<ul>
-						<li class="li-phone mb-3"><a href="tel:+5492616793419">+54 9 (261) 679-3419</a></li>
-						<li class="li-whatsapp mb-3" ><a href="https://wa.me/5492616793419" target="_blank">+54 9 261 679-3419</a></li>
-						<li class="li-email mb-3"><a href="mailto:dario@4ne.com.ar">dario@4ne.com.ar</a></li>
-					</ul>
-				  </div>
 				</div>
-			  </div>
+			</div>
 		</div>
 		<div class="is-flex is-justify-content-space-around mt-6 div-contact">
-	
-			
 		</div>
 	</main>
 </Layout>
