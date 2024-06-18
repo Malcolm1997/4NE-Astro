@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Picture } from 'astro:assets';
+import bezer from "../assets/img/img3.jpg"
+---
+
+<Layout title="4NE - Servicio">
+	<main>
+        <h2 class="has-text-centered is-size-3 mt-5">Servicios</h2>
+		<hr class="has-background-black barra-ser">
+        <div>
+            <div class="is-flex is-align-items-center">
+                <div>
+                    <h3>Servicio 1</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias eaque minima commodi pariatur excepturi natus nihil placeat cumque sed. Accusamus suscipit assumenda porro, animi placeat aut blanditiis. Praesentium, beatae a!
+                    Voluptatibus obcaecati quaerat necessitatibus fuga voluptate itaque provident suscipit cupiditate numquam enim odit dolor repellendus, accusantium iure nobis fugiat quas. Vel nihil doloremque ipsam dolore dignissimos est rem culpa nesciunt.
+                    Dignissimos quasi possimus, eius mollitia sit iusto rem quos quo odit ratione consequatur velit impedit officiis nam. Illo exercitationem voluptatem quasi, illum ipsam explicabo quo natus, eos, culpa in architecto!
+                    Iusto voluptatum dolores sed, aut id quasi quibusdam quam est molestias placeat fugiat, ullam mollitia vel minus, iure commodi harum neque incidunt perferendis dolorum deleniti excepturi illum. Sapiente, aut veritatis.
+                    Unde repellendus iure soluta ducimus natus cum laudantium, recusandae corporis numquam ea. Earum voluptates iusto cumque molestias enim reiciendis vitae voluptate vel ad quasi commodi ea consectetur, dignissimos doloremque nemo.</p>
+                </div>
+                <Picture class="is-square image image-ser" src={bezer} alt='Logo de 4NE'/> 
+            </div>
+            <hr class="has-background-black bar-serv" >
+        </div>
+
+
+	</main>
+</Layout>

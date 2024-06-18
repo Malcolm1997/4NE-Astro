@@ -1,13 +1,13 @@
 ---
+
 import { Picture } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import beming from '../assets/img/Logos-Alianzas/bemingLogo.webp'
 import bezer from '../assets/img/Logos-Alianzas/bezerLogo.webp'
 import euskal from '../assets/img/Logos-Alianzas/euskalLogo.webp'
 import archea from '../assets/img/Logos-Alianzas/archeaLogo.webp'
-
-
-
+import solartex from '../assets/img/Logos-Alianzas/solartexLogo.webp'
+import ankur from '../assets/img/Logos-Alianzas/ankurLogo.webp'
 
 ---
 
@@ -24,19 +24,25 @@ import archea from '../assets/img/Logos-Alianzas/archeaLogo.webp'
 			<div class="carousel">
 				<div class="is-flex carousel-inner">
 					<div class="carousel-item is-flex is-justify-content-space-around">
-						<a href="/">
+						<a class="is-flex is-align-items-center" href="/">
 							<Picture class="image-ali image" src={bezer} alt='Logo de 4NE'/> 
 						</a>
-						<a href="/">
+						<a class="is-flex is-align-items-center" href="/">
 							<Picture class="image-ali image" src={beming} alt='Logo de 4NE'/> 
+						</a>
+						<a class="is-flex is-align-items-center" href="/">
+							<Picture class="image-ali image" src={euskal} alt='Logo de 4NE'/> 
 						</a>
 					</div>
 					<div class="carousel-item is-flex is-justify-content-space-around">
-						<a href="/">
-							<Picture class="image-ali image" src={euskal} alt='Logo de 4NE'/> 
-						</a>
-						<a href="/">
+						<a class="is-flex is-align-items-center" href="/">
 							<Picture class="image-ali image" src={archea} alt='Logo de 4NE'/> 
+						</a>
+						<a class="is-flex is-align-items-center" href="/">
+							<Picture class="image-ali image" src={solartex} alt='Logo de 4NE'/> 
+						</a>
+						<a class="is-flex is-align-items-center" href="/">
+							<Picture class="image-ali image" src={ankur} alt='Logo de 4NE'/> 
 						</a>
 					</div>
 				</div>

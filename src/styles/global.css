@@ -195,9 +195,7 @@ body{
 }
 
 .carousel-item a {
-	background-color: rgb(96, 96, 98);
 	padding: 20px;
-	border-radius: 50px;
 }
 
 .carousel-item img {
@@ -250,4 +248,20 @@ body{
 
 .card-contact a:active{
 	color: #000
+}
+
+/* Servicios */
+
+.barra-ser{
+	width: 30%;
+	margin: 10px auto;
+}
+
+.bar-serv{
+	width: 80%;
+	margin: 30px auto;
+}
+
+.image-ser{
+	object-fit: cover;
 }

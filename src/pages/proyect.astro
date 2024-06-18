@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Picture } from 'astro:assets';
+import ingenieria from '../assets/img/img3.jpg'
+import renovables from '../assets/img/digestor.webp'
+
+---
+
+<Layout title="4NE - Proyecto">
+	<main>
+			<div class="is-flex is-flex-direction-row is-justify-content-center py-5 div-index">
+				<div class="divImg is-flex" id="image-index-ing">
+					<Picture class="image-index image is-3by4"  src={ingenieria} alt='Logo de 4NE'/>
+					<div class="divHov is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+						<p class="mb-6">Ingenieria</p>
+						<div>
+							<a class="button buttonIndex is-rounded is-inverted" href="/rr/service">Servicios</a> 
+							<a class="button buttonIndex is-rounded is-inverted" href="/">Proyectos</a> 
+						</div>
+					</div>
+				</div>
+				<div class="divImg is-flex is-justify-content-center is-align-items-center" id="image-index-ren">
+					<Picture class="image-index image is-3by4" src={renovables} alt='Logo de 4NE'/> 
+					<div class="divHov is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+						<p class="mb-6">Renovables</p>
+						<a class="button buttonIndex is-rounded is-inverted" href="/">Entrar</a> 
+					</div>
+				</div>
+			</div>
+	</main>
+</Layout>
