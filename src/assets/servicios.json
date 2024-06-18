@@ -1,0 +1,60 @@
+{
+    "services":[
+        {   
+            "title":"Oil & Gas",
+            "description": "En el ámbito de la ingeniería de Oil & Gas, ofrecemos servicios especializados en diseño, construcción y optimización de instalaciones. Nos encargamos de la gestión integral de proyectos de exploración, producción y refinación de petróleo y gas natural.",
+            "service": [
+                {
+                    "title": "Ingeniería y Diseño",
+                    "description": "Soluciones personalizadas para plataformas offshore, refinerías y plantas de procesamiento."
+                },
+                {
+                    "title": "Gestión de Proyectos",
+                    "description": "Estrategias que aseguran el cumplimiento de plazos y presupuestos."
+                },
+                {
+                    "title": "Consultoría Técnica",
+                    "description": "Asesoramiento en perforación, extracción, transporte y almacenamiento de hidrocarburos."
+                },
+                {
+                    "title": "Optimización de Procesos",
+                    "description": "Mejora de eficiencia operativa y reducción de costos."
+                },
+                {
+                    "title": "Cumplimiento Normativo",
+                    "description": "Aseguramos operaciones conforme a regulaciones locales e internacionales."
+                }
+            ],
+            "conclusion": "Nuestro compromiso es proporcionar servicios de alta calidad que impulsen la eficiencia y sostenibilidad en la industria del Oil & Gas.",
+            "img": []
+        },
+        {   
+            "title":"Ing Electrica",
+            "description": "En el ámbito de la ingeniería de Oil & Gas, ofrecemos servicios especializados en diseño, construcción y optimización de instalaciones. Nos encargamos de la gestión integral de proyectos de exploración, producción y refinación de petróleo y gas natural.",
+            "service": [
+                {
+                    "title": "Ingeniería y Diseño",
+                    "description": "Soluciones personalizadas para plataformas offshore, refinerías y plantas de procesamiento."
+                },
+                {
+                    "title": "Gestión de Proyectos",
+                    "description": "Estrategias que aseguran el cumplimiento de plazos y presupuestos."
+                },
+                {
+                    "title": "Consultoría Técnica",
+                    "description": "Asesoramiento en perforación, extracción, transporte y almacenamiento de hidrocarburos."
+                },
+                {
+                    "title": "Optimización de Procesos",
+                    "description": "Mejora de eficiencia operativa y reducción de costos."
+                },
+                {
+                    "title": "Cumplimiento Normativo",
+                    "description": "Aseguramos operaciones conforme a regulaciones locales e internacionales."
+                }
+            ],
+            "conclusion": "Nuestro compromiso es proporcionar servicios de alta calidad que impulsen la eficiencia y sostenibilidad en la industria del Oil & Gas.",
+            "img": []
+        }
+    ]
+}

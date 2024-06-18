@@ -264,4 +264,15 @@ body{
 
 .image-ser{
 	object-fit: cover;
+	width: 100%;
+	border-radius: 5px;
+	border: #000 1px solid;
+}
+
+.img-serv{
+	width: 30%;
+}
+
+.text-serv{
+	width: 70%;
 }
