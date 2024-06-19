@@ -1,42 +1,88 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Picture } from 'astro:assets';
-import oilgas from "../assets/img/Fotos-Serv/oilgas.jpg"
-import services from "../assets/servicios.json"
-console.log(services)
+import { Picture } from "astro:assets";
+import oilgas from "../assets/img/Fotos-Serv/oilgas.jpg";
+import ingelectrica from "../assets/img/Fotos-Serv/ingelectrica.jpg";
+import services from "../assets/servicios.json";
+
+const images = {
+	oilgas: oilgas,
+	"ing-electrica": ingelectrica,
+};
 ---
 
 <Layout title="4NE - Servicio">
 	<main>
-        <h2 class="has-text-centered is-size-2 mt-5">Servicios</h2>
-		<hr class="has-background-black barra-ser">
-        
-        {services.services.map( service  => {
-			<div>
-				<div class="is-flex is-align-items-center mt-6">
-					<div class="mr-6 text-serv">
-						<h3 class="is-size-3">Oil & Gas</h3>
-						<p>En el ámbito de la ingeniería de Oil & Gas, ofrecemos servicios especializados en diseño, construcción y optimización de instalaciones. Nos encargamos de la gestión integral de proyectos de exploración, producción y refinación de petróleo y gas natural.</p>
-						<ol>
-							<li class="ml-6 my-3" ><b>Ingeniería y Diseño:</b> Soluciones personalizadas para plataformas offshore, refinerías y plantas de procesamiento.</li>
-							<li class="ml-6 my-3" ><b>Gestión de Proyectos:</b> Estrategias que aseguran el cumplimiento de plazos y presupuestos.</li>
-							<li class="ml-6 my-3" ><b>Consultoría Técnica:</b> Asesoramiento en perforación, extracción, transporte y almacenamiento de hidrocarburos.</li>
-							<li class="ml-6 my-3" ><b>Optimización de Procesos:</b> Mejora de eficiencia operativa y reducción de costos.</li>
-							<li class="ml-6 my-3" ><b>Cumplimiento Normativo:</b> Aseguramos operaciones conforme a regulaciones locales e internacionales.</li>
-						</ol>
-						<p>Nuestro compromiso es proporcionar servicios de alta calidad que impulsen la eficiencia y sostenibilidad en la industria del Oil & Gas.
-						</p>
+		<h2 class="has-text-centered is-size-2 mt-5">Servicios</h2>
+		<hr class="has-background-black barra-ser" />
+
+		{
+			services.services.map((service) => (
+				<>
+					<div>
+						<div class="is-flex is-align-items-center mt-6">
+							<div class="mr-6 text-serv">
+								<h3 class="is-size-3">{service.title}</h3>
+								<p>{service.description}</p>
+								<ol>
+									{service.service.map((item) => (
+										<li class="ml-6 my-3">
+											<b>{item.title}:</b>{" "}
+											{item.description}
+										</li>
+									))}
+								</ol>
+								<p>{service.conclusion}</p>
+							</div>
+							<div class="img-serv">
+								<Picture
+									class="is-square image image-ser"
+									src={images[`${service.img}`]}
+									alt="Logo de 4NE"
+								/>
+							</div>
+						</div>
+						<hr class="has-background-black bar-serv" />
 					</div>
-					<div class="img-serv">
-						<Picture class="is-square image image-ser" src={oilgas} alt='Logo de 4NE'/> 
+					<div class="card">
+						<header class="card-header">
+							<h3 class="card-header-title is-size-3">{service.title}</h3>
+							<button
+								class="card-header-icon"
+								aria-label="more options"
+							>
+								<span class="icon">
+									<i
+										class="fas fa-angle-down"
+										aria-hidden="true"
+									/>
+								</span>
+							</button>
+						</header>
+						<div class="card-content is-flex is-align-items-center">
+							<div class="content mr-6 text-serv">
+								<p>{service.description}</p>
+								<ol>
+									{service.service.map((item) => (
+										<li class="ml-6 my-3">
+											<b>{item.title}:</b>{" "}
+											{item.description}
+										</li>
+									))}
+								</ol>
+								<p>{service.conclusion}</p>
+							</div>
+							<div class="img-serv">
+								<Picture
+									class="is-square image image-ser"
+									src={images[`${service.img}`]}
+									alt="Logo de 4NE"
+								/>
+							</div>
+						</div>
 					</div>
-				</div>
-				<hr class="has-background-black bar-serv" >
-			</div>
-
-		}) }
-
-
-
+				</>
+			))
+		}
 	</main>
 </Layout>

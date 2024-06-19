@@ -26,35 +26,31 @@
                 }
             ],
             "conclusion": "Nuestro compromiso es proporcionar servicios de alta calidad que impulsen la eficiencia y sostenibilidad en la industria del Oil & Gas.",
-            "img": []
+            "img": "oilgas"
         },
         {   
             "title":"Ing Electrica",
-            "description": "En el ámbito de la ingeniería de Oil & Gas, ofrecemos servicios especializados en diseño, construcción y optimización de instalaciones. Nos encargamos de la gestión integral de proyectos de exploración, producción y refinación de petróleo y gas natural.",
+            "description": "Ofrecemos soluciones integrales en ingeniería eléctrica, abarcando desde el diseño y la instalación hasta el mantenimiento de sistemas eléctricos en entornos industriales y comerciales.",
             "service": [
                 {
-                    "title": "Ingeniería y Diseño",
-                    "description": "Soluciones personalizadas para plataformas offshore, refinerías y plantas de procesamiento."
+                    "title": "Diseño de Sistemas Eléctricos",
+                    "description": "Desarrollo de esquemas eléctricos personalizados."
                 },
                 {
-                    "title": "Gestión de Proyectos",
-                    "description": "Estrategias que aseguran el cumplimiento de plazos y presupuestos."
+                    "title": "Instalación y Montaje",
+                    "description": "Implementación de sistemas eléctricos de alta eficiencia."
                 },
                 {
-                    "title": "Consultoría Técnica",
-                    "description": "Asesoramiento en perforación, extracción, transporte y almacenamiento de hidrocarburos."
+                    "title": "Mantenimiento y Reparación",
+                    "description": "Servicios de mantenimiento preventivo y correctivo."
                 },
                 {
-                    "title": "Optimización de Procesos",
-                    "description": "Mejora de eficiencia operativa y reducción de costos."
-                },
-                {
-                    "title": "Cumplimiento Normativo",
-                    "description": "Aseguramos operaciones conforme a regulaciones locales e internacionales."
+                    "title": "Optimización Energética",
+                    "description": "Soluciones para mejorar la eficiencia energética y reducir costos."
                 }
             ],
-            "conclusion": "Nuestro compromiso es proporcionar servicios de alta calidad que impulsen la eficiencia y sostenibilidad en la industria del Oil & Gas.",
-            "img": []
+            "conclusion": "",
+            "img": "ing-electrica"
         }
     ]
 }
