@@ -1,8 +1,8 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
 
 @font-face {
-    font-family: 'Owners-Wide';
-    src: url('../assets/fonts/owners-wide.ttf') format('truetype');
+	font-family: 'Owners-Wide';
+	src: url('../assets/fonts/owners-wide.ttf') format('truetype');
 }
 
 * {
@@ -12,185 +12,186 @@
 	font-family: 'Owners-Wide';
 }
 
-html, nav{
+html,
+nav {
 	background-color: #F0F0F0 !important;
 }
 
-body{
+body {
 	margin: 0 10%;
 }
 
-.logo-image { 
-    object-fit: contain; 
+.logo-image {
+	object-fit: contain;
 }
 
-.image-index{
+.image-index {
 	object-fit: cover;
 	width: 30vw;
-	box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
 }
 
-.div-index{
+.div-index {
 	margin: 5% 0;
 }
 
-.divImg{
+.divImg {
 	position: relative;
 }
 
-.divHov{
+.divHov {
 	position: absolute;
 	font-size: 300%;
 	opacity: 0;
-    transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
 	width: 100%;
 	height: 100%;
 }
 
-.divHov p{
+.divHov p {
 	color: white;
 }
 
-.divImg:hover .divHov{
+.divImg:hover .divHov {
 	opacity: 1;
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
-.buttonIndex{
-	background-color: #A4CD39 !important; 
+.buttonIndex {
+	background-color: #A4CD39 !important;
 	color: #ffffff !important;
 }
 
-.buttonIndex:hover{
+.buttonIndex:hover {
 	background-color: #8BB82A !important;
 }
 
-.buttonIndex:active{
+.buttonIndex:active {
 	background-color: #6E9223 !important;
 }
 
-.divFotter-up{
+.divFotter-up {
 	width: 100%;
 }
 
-.divFotter-d a{
+.divFotter-d a {
 	color: black;
 }
 
-.divFotter-i,  .divFotter-d{
+.divFotter-i,
+.divFotter-d {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.divFotter-i{
+.divFotter-i {
 	width: 30%;
 }
 
-.divFotter-d{
+.divFotter-d {
 	width: 70%;
 }
 
 
-.logo-fotter{
+.logo-fotter {
 	width: 256px;
 }
 
-.logo-redes{
+.logo-redes {
 	width: 32px;
 }
 
-.logo-redes i{
+.logo-redes i {
 	font-size: 32px;
 	color: #A4CD39;
 }
 
-.logo-redes i:hover{
+.logo-redes i:hover {
 	color: #8BB82A
 }
 
-.logo-redes i:active{
+.logo-redes i:active {
 	color: #6E9223
 }
 
-.divRedes{
+.divRedes {
 	width: 50%;
 }
 
-.div-contact ul{
+.div-contact ul {
 	width: 45%;
 }
 
-.li-ubic::before{
+.li-ubic::before {
 	content: "\f3c5";
 	font-family: FontAwesome;
 	display: inline-block;
 	margin-left: -1.3em;
 	width: 1.3em;
-	padding-right:2em
-
+	padding-right: 2em
 }
 
-.li-industry::before{
+.li-industry::before {
 	content: "\f275";
 	font-family: FontAwesome;
 	display: inline-block;
 	margin-left: -1.3em;
 	width: 1.3em;
-	padding-right:2em
+	padding-right: 2em
 }
 
-.li-phone::before{
+.li-phone::before {
 	content: "\f095";
 	font-family: FontAwesome;
 	display: inline-block;
 	margin-left: -1.3em;
 	width: 1.3em;
-	padding-right:2em
+	padding-right: 2em
 }
 
-.li-contact::before{
+.li-contact::before {
 	content: "\f2c1";
 	font-family: FontAwesome;
 	display: inline-block;
 	margin-left: -1.3em;
 	width: 1.3em;
-	padding-right:2em
+	padding-right: 2em
 }
 
-.li-email::before{
+.li-email::before {
 	content: "\f0e0";
 	font-family: FontAwesome;
 	display: inline-block;
 	margin-left: -1.3em;
 	width: 1.3em;
-	padding-right:2em
+	padding-right: 2em
 }
 
-.li-whatsapp::before{
+.li-whatsapp::before {
 	content: "\f232";
 	font-family: FontAwesome;
 	display: inline-block;
 	margin-left: -1.3em;
 	width: 1.3em;
-	padding-right:2em
+	padding-right: 2em
 }
 
 /* Alianzas */
 
-.carousel{
+.carousel {
 	position: relative;
 	overflow: hidden;
 }
 
-.carousel-inner{
+.carousel-inner {
 	display: flex;
 	transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
+	min-width: 100%;
+	box-sizing: border-box;
 	padding: 25px 0;
 }
 
@@ -199,80 +200,103 @@ body{
 }
 
 .carousel-item img {
-    display: block;
-    border-radius: 10px;
+	display: block;
+	border-radius: 10px;
 	width: 256px;
 }
 
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.2);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+.prev,
+.next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.2);
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
 }
 
 .prev {
-    left: 10px;
+	left: 10px;
 }
 
 .next {
-    right: 10px;
+	right: 10px;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Contact */
 
-.card-contact{
+.card-contact {
 	width: 33%;
-	margin-bottom:0 !important
+	margin-bottom: 0 !important
 }
 
-.card-contact ul{
+.card-contact ul {
 	list-style: none;
 }
 
-.card-contact a{
+.card-contact a {
 	color: #A4CD39;
 }
 
-.card-contact a:hover{
+.card-contact a:hover {
 	color: #6E9223
 }
 
-.card-contact a:active{
+.card-contact a:active {
 	color: #000
 }
 
 /* Servicios */
 
-.barra-ser{
+.barra-ser {
 	width: 30%;
 	margin: 10px auto;
 }
 
-.bar-serv{
+.bar-serv {
 	width: 80%;
 	margin: 30px auto;
 }
 
-.image-ser{
+.image-ser {
 	object-fit: cover;
 	width: 100%;
 	border-radius: 5px;
 	border: #000 1px solid;
 }
 
-.img-serv{
+.img-serv {
 	width: 20%;
 }
 
-.text-serv{
+.text-serv {
 	width: 80%;
+}
+
+.card-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease-out, padding 1s ease-out;
+}
+
+.card-content.active {
+	max-height: 500px;
+}
+
+.card-content>.content,
+.card-content>.img-serv {
+	opacity: 0;
+	transition: opacity 0.5s ease-out;
+}
+
+.card-content.active>.content,
+.card-content.active>.img-serv {
+	opacity: 1;
 }
