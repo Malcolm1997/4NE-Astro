@@ -33,14 +33,37 @@ import logo from '../assets/img/Logo 4NE - Chico.png'
 	<div class="navbar-end ">
 		<div class="navbar-item">
 			<div class="buttons is-justify-content-center">
-				<a class="button is-rounded is-inverted" href="/">Renovables<i class="fa-solid fa-repeat ml-2"></i></a> 
-				<a class="button is-rounded is-inverted" href="/proyectBioF/">Proyecto BioF<i class="fa-solid fa-arrow-right ml-2"></i></a>
+				<button class="button is-rounded is-inverted" id="pag-toggle">Renovables<i class="fa-solid fa-repeat ml-2"></i></button> 
 			</div>
 
 		</div>
 	</div>
-	
-	
-	
-
 </nav>
+
+
+<script>
+
+	if(!localStorage.getItem("pagTipo")){
+		localStorage.setItem("pagTipo", "ing");
+	}
+
+	let tipoPag = localStorage.getItem("pagTipo")
+
+	const btnPag = document.getElementById("pag-toggle")
+	const textNode = btnPag.firstChild;
+	
+	btnPag.addEventListener( "click", () => {
+
+		if(tipoPag == "ing"){
+			tipoPag = "ren"
+			localStorage.setItem("pagTipo", "ren");
+			textNode.nodeValue = "Ingenieria";
+		} else if(tipoPag == "ren"){
+			tipoPag = "ing"
+			localStorage.setItem("pagTipo", "ing");
+			textNode.nodeValue = "Renovables";
+		}
+		
+	})
+	
+</script>

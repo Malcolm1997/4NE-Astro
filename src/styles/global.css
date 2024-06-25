@@ -255,14 +255,8 @@ body {
 
 /* Servicios */
 
-.barra-ser {
-	width: 30%;
-	margin: 10px auto;
-}
-
-.bar-serv {
-	width: 80%;
-	margin: 30px auto;
+.serv-card{
+	margin: auto 20px;
 }
 
 .image-ser {

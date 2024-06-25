@@ -1,26 +1,56 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Picture } from "astro:assets";
+import dataJSON from "../assets/servicios.json";
+
+//Ingenieria
 import oilgas from "../assets/img/Fotos-Serv/oilgas.jpg";
-import ingelectrica from "../assets/img/Fotos-Serv/ingelectrica.jpg";
-import services from "../assets/servicios.json";
+import ingElectrica from "../assets/img/Fotos-Serv/ingelectrica.jpg";
+import ingMecanica from "../assets/img/Fotos-Serv/mecanica.jpg";
+import energianuclear from "../assets/img/Fotos-Serv/energia-nuclear.jpg";
+import agroindustria from "../assets/img/Fotos-Serv/agroindustria.jpg";
+import mineria from "../assets/img/Fotos-Serv/mineria.jpg";
+import personalizado from "../assets/img/Fotos-Serv/personalizado.jpg";
+
+//Renovables
+import rsu from "../assets/img/Fotos-Serv/rsu.jpg";
+import fotovoltaica from "../assets/img/Fotos-Serv/fotovoltaica.jpg";
+import biogas from "../assets/img/Fotos-Serv/biogas.jpg";
+import biofertilizantes from "../assets/img/Fotos-Serv/biofertilizantes.jpg";
+import personalizadoRen from "../assets/img/Fotos-Serv/personalizadoRen.jpg";
+
+
+
 
 const images = {
-	oilgas: oilgas,
-	"ing-electrica": ingelectrica,
+	"oilgas": oilgas,
+	"ing-electrica": ingElectrica,
+	"ing-mecanica": ingMecanica,
+	"energianuclear": energianuclear,
+	"agroindustria": agroindustria,
+	"mineria": mineria,
+	"personalizado": personalizado,
+	"rsu": rsu,
+	"fotovoltaica": fotovoltaica,
+	"biogas": biogas,
+	"biofertilizantes": biofertilizantes,
+	"personalizadoRen": personalizadoRen,
 };
+
+
+let tipoPag = ""
 ---
 
 <Layout title="4NE - Servicio">
 	<main>
-		<h2 class="has-text-centered is-size-2 mt-5">Servicios</h2>
-		<hr class="has-background-black barra-ser" />
+		<h2 class="has-text-centered is-size-1 mt-5">Servicios</h2>
 
 		{
-			services.services.map((service, index) => (
+			tipoPag ? 
+			dataJSON.ingenieria.services.map((service, index) => (
 				<>
-					<hr class="has-background-black bar-serv" />
-					<div class="card" id={`card-${index}`}>
+					<hr class="has-background-black " />
+					<div class="serv-card" id={`card-${index}`}>
 						<header class="card-header">
 							<h3 class="card-header-title is-size-3">
 								{service.title}
@@ -44,6 +74,57 @@ const images = {
 						>
 							<div class="content mr-6 text-serv">
 								<p>{service.description}</p>
+								<h4><b>Servicios ofrecidos:</b></h4>
+								<ol>
+									{service.service.map((item) => (
+										<li class="ml-6 my-3">
+											<b>{item.title}:</b>{" "}
+											{item.description}
+										</li>
+									))}
+								</ol>
+								<p>{service.conclusion}</p>
+							</div>
+							<div class="img-serv">
+								<Picture
+									class="is-square image image-ser"
+									src={images[`${service.img}`]}
+									alt="Logo de 4NE"
+								/>
+							</div>
+						</div>
+					</div>
+				</>
+			)) 
+			:
+			dataJSON.renovables.services.map((service, index) => (
+				<>
+					<hr class="has-background-black " />
+					<div class="serv-card" id={`card-${index}`}>
+						<header class="card-header">
+							<h3 class="card-header-title is-size-3">
+								{service.title}
+							</h3>
+							<button
+								class="card-header-icon toggle-button"
+								aria-label="more options"
+								data-index={index}
+							>
+								<span class="icon">
+									<i
+										class="fas fa-angle-down"
+										aria-hidden="true"
+									/>
+								</span>
+							</button>
+						</header>
+						<div
+							class="card-content is-flex is-align-items-center"
+							id={`card-content-${index}`}
+						>
+							<div class="content mr-6 text-serv">
+								<p>{service.description}</p>
+								<h4><b>Servicios ofrecidos:</b></h4>
 								<ol>
 									{service.service.map((item) => (
 										<li class="ml-6 my-3">
@@ -91,4 +172,5 @@ const images = {
 			});
 		});
 	});
+
 </script>
