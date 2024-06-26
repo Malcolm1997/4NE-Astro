@@ -51,7 +51,7 @@
                     }
                 ],
                 "conclusion": "Nuestro enfoque en la innovación y la seguridad garantiza que sus instalaciones eléctricas operen con la máxima eficiencia y fiabilidad. Permítanos ser su socio de confianza en todos sus proyectos eléctricos.",
-                "img": "ing-electrica"
+                "img": "ingelectrica"
             },
             {
                 "title": "Ingeniería Mecánica",
@@ -75,7 +75,7 @@
                     }
                 ],
                 "conclusion": "Nuestra dedicación a la precisión y la innovación técnica asegura que sus sistemas mecánicos funcionen de manera óptima. Trabajamos para convertir sus desafíos en soluciones eficientes y efectivas.",
-                "img": "ing-mecanica"
+                "img": "mecanica"
             },
             {
                 "title": "Desarrollo en Energía Nuclear",
@@ -99,7 +99,7 @@
                     }
                 ],
                 "conclusion": "Nuestra experiencia en energía nuclear nos permite ofrecer soluciones que no solo cumplen con los más altos estándares de seguridad, sino que también optimizan el rendimiento y la sostenibilidad de sus operaciones nucleares.",
-                "img": "energianuclear"
+                "img": "nuclear"
             },
             {
                 "title": "Desarrollo Integral en la Agroindustria",

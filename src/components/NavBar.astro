@@ -1,25 +1,28 @@
 ---
-import { Picture } from 'astro:assets';
-import logo from '../assets/img/Logo 4NE - Chico.png'
+import { Picture } from "astro:assets";
+import logo from "../assets/img/Logo 4NE - Chico.png";
 ---
 
 <nav class="navbar is-justify-content-center">
 	<script src="../scripts/burger.js"></script>
 	<div class="navbar-brand">
-        
-        <a class="navbar-item" href="/">
-			<Picture class="logo-image" src={logo} alt='Logo de 4NE'/>
+		<a class="navbar-item" href="/">
+			<Picture class="logo-image" src={logo} alt="Logo de 4NE" />
 		</a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-
+		<a
+			role="button"
+			class="navbar-burger"
+			aria-label="menu"
+			aria-expanded="false"
+			data-target="navbarBasicExample"
+		>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
 	</div>
-	
-	
+
 	<div class="navbar-menu">
 		<div class="navbar-start">
 			<a class="navbar-item" href="/">Inicio</a>
@@ -29,41 +32,51 @@ import logo from '../assets/img/Logo 4NE - Chico.png'
 			<a class="navbar-item" href="/contact/">Contacto</a>
 		</div>
 	</div>
-	
-	<div class="navbar-end ">
+
+	<div class="navbar-end">
 		<div class="navbar-item">
 			<div class="buttons is-justify-content-center">
-				<button class="button is-rounded is-inverted" id="pag-toggle">Renovables<i class="fa-solid fa-repeat ml-2"></i></button> 
+				<button class="button is-rounded is-inverted" id="pag-toggle"
+					>Renovables<i class="fa-solid fa-repeat ml-2"></i></button
+				>
 			</div>
-
 		</div>
 	</div>
 </nav>
 
-
 <script>
 
-	if(!localStorage.getItem("pagTipo")){
-		localStorage.setItem("pagTipo", "ing");
-	}
-
-	let tipoPag = localStorage.getItem("pagTipo")
-
-	const btnPag = document.getElementById("pag-toggle")
-	const textNode = btnPag.firstChild;
-	
-	btnPag.addEventListener( "click", () => {
-
-		if(tipoPag == "ing"){
-			tipoPag = "ren"
-			localStorage.setItem("pagTipo", "ren");
-			textNode.nodeValue = "Ingenieria";
-		} else if(tipoPag == "ren"){
-			tipoPag = "ing"
+	document.addEventListener("DOMContentLoaded", function () {
+		if (!localStorage.getItem("pagTipo")) {
 			localStorage.setItem("pagTipo", "ing");
-			textNode.nodeValue = "Renovables";
 		}
-		
-	})
+
+		let tipoPag = localStorage.getItem("pagTipo");
+		const btnPag = document.getElementById("pag-toggle");
+		const textNode = btnPag.firstChild;
+
+		if (tipoPag === "ing") {
+			textNode.nodeValue = "Renovables ";
+		} else if (tipoPag === "ren") {
+			textNode.nodeValue = "Ingeniería ";
+		}
+
+		btnPag.addEventListener("click", () => {
+			if (tipoPag === "ing") {
+				tipoPag = "ren";
+				localStorage.setItem("pagTipo", "ren");
+				textNode.nodeValue = "Ingeniería ";
+			} else if (tipoPag === "ren") {
+				tipoPag = "ing";
+				localStorage.setItem("pagTipo", "ing");
+				textNode.nodeValue = "Renovables ";
+			}
+
+			const event = new CustomEvent("pagToggle", {
+				detail: { tipoPag: tipoPag },
+			});
+			document.dispatchEvent(event);
+		});
+	});
 	
 </script>

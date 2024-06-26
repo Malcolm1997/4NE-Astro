@@ -1,176 +1,114 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Picture } from "astro:assets";
-import dataJSON from "../assets/servicios.json";
-
-//Ingenieria
-import oilgas from "../assets/img/Fotos-Serv/oilgas.jpg";
-import ingElectrica from "../assets/img/Fotos-Serv/ingelectrica.jpg";
-import ingMecanica from "../assets/img/Fotos-Serv/mecanica.jpg";
-import energianuclear from "../assets/img/Fotos-Serv/energia-nuclear.jpg";
-import agroindustria from "../assets/img/Fotos-Serv/agroindustria.jpg";
-import mineria from "../assets/img/Fotos-Serv/mineria.jpg";
-import personalizado from "../assets/img/Fotos-Serv/personalizado.jpg";
-
-//Renovables
-import rsu from "../assets/img/Fotos-Serv/rsu.jpg";
-import fotovoltaica from "../assets/img/Fotos-Serv/fotovoltaica.jpg";
-import biogas from "../assets/img/Fotos-Serv/biogas.jpg";
-import biofertilizantes from "../assets/img/Fotos-Serv/biofertilizantes.jpg";
-import personalizadoRen from "../assets/img/Fotos-Serv/personalizadoRen.jpg";
-
-
-
-
-const images = {
-	"oilgas": oilgas,
-	"ing-electrica": ingElectrica,
-	"ing-mecanica": ingMecanica,
-	"energianuclear": energianuclear,
-	"agroindustria": agroindustria,
-	"mineria": mineria,
-	"personalizado": personalizado,
-	"rsu": rsu,
-	"fotovoltaica": fotovoltaica,
-	"biogas": biogas,
-	"biofertilizantes": biofertilizantes,
-	"personalizadoRen": personalizadoRen,
-};
-
-
-let tipoPag = ""
 ---
 
-<Layout title="4NE - Servicio">
+<Layout title="4NE - Servicios">
 	<main>
-		<h2 class="has-text-centered is-size-1 mt-5">Servicios</h2>
-
-		{
-			tipoPag ? 
-			dataJSON.ingenieria.services.map((service, index) => (
-				<>
-					<hr class="has-background-black " />
-					<div class="serv-card" id={`card-${index}`}>
-						<header class="card-header">
-							<h3 class="card-header-title is-size-3">
-								{service.title}
-							</h3>
-							<button
-								class="card-header-icon toggle-button"
-								aria-label="more options"
-								data-index={index}
-							>
-								<span class="icon">
-									<i
-										class="fas fa-angle-down"
-										aria-hidden="true"
-									/>
-								</span>
-							</button>
-						</header>
-						<div
-							class="card-content is-flex is-align-items-center"
-							id={`card-content-${index}`}
-						>
-							<div class="content mr-6 text-serv">
-								<p>{service.description}</p>
-								<h4><b>Servicios ofrecidos:</b></h4>
-								<ol>
-									{service.service.map((item) => (
-										<li class="ml-6 my-3">
-											<b>{item.title}:</b>{" "}
-											{item.description}
-										</li>
-									))}
-								</ol>
-								<p>{service.conclusion}</p>
-							</div>
-							<div class="img-serv">
-								<Picture
-									class="is-square image image-ser"
-									src={images[`${service.img}`]}
-									alt="Logo de 4NE"
-								/>
-							</div>
-						</div>
-					</div>
-				</>
-			)) 
-			:
-			dataJSON.renovables.services.map((service, index) => (
-				<>
-					<hr class="has-background-black " />
-					<div class="serv-card" id={`card-${index}`}>
-						<header class="card-header">
-							<h3 class="card-header-title is-size-3">
-								{service.title}
-							</h3>
-							<button
-								class="card-header-icon toggle-button"
-								aria-label="more options"
-								data-index={index}
-							>
-								<span class="icon">
-									<i
-										class="fas fa-angle-down"
-										aria-hidden="true"
-									/>
-								</span>
-							</button>
-						</header>
-						<div
-							class="card-content is-flex is-align-items-center"
-							id={`card-content-${index}`}
-						>
-							<div class="content mr-6 text-serv">
-								<p>{service.description}</p>
-								<h4><b>Servicios ofrecidos:</b></h4>
-								<ol>
-									{service.service.map((item) => (
-										<li class="ml-6 my-3">
-											<b>{item.title}:</b>{" "}
-											{item.description}
-										</li>
-									))}
-								</ol>
-								<p>{service.conclusion}</p>
-							</div>
-							<div class="img-serv">
-								<Picture
-									class="is-square image image-ser"
-									src={images[`${service.img}`]}
-									alt="Logo de 4NE"
-								/>
-							</div>
-						</div>
-					</div>
-				</>
-			))
-		}
+		<h2 class="has-text-centered is-size-1 mt-5" id="title-secction">Servicios</h2>
+		<div id="service-container"></div>
 	</main>
 </Layout>
 
 <script>
 	document.addEventListener("DOMContentLoaded", function () {
-		const buttons = document.querySelectorAll(".toggle-button");
-		buttons.forEach((button) => {
-			button.addEventListener("click", function () {
-				const index = button.getAttribute("data-index");
-				const content = document.getElementById(
-					`card-content-${index}`
-				);
-				const icon = button.querySelector(".icon i");
-				if (content.classList.contains("active")) {
-					content.classList.remove("active");
-					icon.classList.remove("fa-angle-up");
-					icon.classList.add("fa-angle-down");
+		const serviceContainer = document.getElementById("service-container");
+		const images = {
+			oilgas: "../src/assets/img/Fotos-Serv/oilgas.webp",
+			ingelectrica: "../src/assets/img/Fotos-Serv/ingelectrica.webp",
+			mecanica: "../src/assets/img/Fotos-Serv/mecanica.webp",
+			nuclear: "../src/assets/img/Fotos-Serv/nuclear.webp",
+			agroindustria: "../src/assets/img/Fotos-Serv/agroindustria.webp",
+			mineria: "../src/assets/img/Fotos-Serv/mineria.webp",
+			personalizado: "../src/assets/img/Fotos-Serv/personalizado.webp",
+			rsu: "../src/assets/img/Fotos-Serv/rsu.webp",
+			fotovoltaica: "../src/assets/img/Fotos-Serv/fotovoltaica.webp",
+			biogas: "../src/assets/img/Fotos-Serv/biogas.webp",
+			biofertilizantes:
+				"../src/assets/img/Fotos-Serv/biofertilizantes.webp",
+			personalizadoRen:
+				"../src/assets/img/Fotos-Serv/personalizadoRen.webp",
+		};
+
+		let loadTipoPag = () => {
+			return new Promise((resolve, reject) => {
+				const tipoPag = localStorage.getItem("pagTipo");
+				if (tipoPag) {
+					resolve(tipoPag);
 				} else {
-					content.classList.add("active");
-					icon.classList.remove("fa-angle-down");
-					icon.classList.add("fa-angle-up");
+					reject("Error al cargar los datos");
 				}
 			});
+		};
+
+		function renderServices(tipoPag) {
+			import("../assets/servicios.json").then((dataJSON) => {
+				const services =
+					tipoPag === "ing"
+						? dataJSON.ingenieria.services
+						: dataJSON.renovables.services;
+				serviceContainer.innerHTML = "";
+
+				services.map((service, index) => {
+					const card = document.createElement("div");
+					card.classList.add("serv-card");
+					card.innerHTML = `
+							<hr class="has-background-black" />
+							<div class="serv-card" id="card-${index}">
+							<header class="card-header">
+								<h3 class="card-header-title is-size-3">${service.title}</h3>
+								<button class="card-header-icon toggle-button" aria-label="more options" data-index="${index}">
+								<span class="icon">
+									<i class="fas fa-angle-down" aria-hidden="true"></i>
+								</span>
+								</button>
+							</header>
+							<div class="card-content card-content-serv is-flex is-align-items-center" id="card-content-${index}">
+								<div class="content content-serv mr-6 text-serv">
+								<p>${service.description}</p>
+								<h4><b>Servicios ofrecidos:</b></h4>
+								<ol>
+									${service.service.map((item) => `<li class="ml-6 my-3"><b>${item.title}:</b> ${item.description}</li>`).join("")}
+								</ol>
+								<p>${service.conclusion}</p>
+								</div>
+								<div class="img-serv">
+								<img class="is-square image image-ser" src="${images[service.img]}" alt="${service.title}" />
+								</div>
+							</div>
+							</div>
+						`;
+					serviceContainer.appendChild(card);
+				});
+
+				const buttons = document.querySelectorAll(".toggle-button");
+				buttons.forEach((button) => {
+					button.addEventListener("click", function () {
+						const index = button.getAttribute("data-index");
+						const content = document.getElementById(
+							`card-content-${index}`
+						);
+						const icon = button.querySelector(".icon i");
+						if (content.classList.contains("active")) {
+							content.classList.remove("active");
+							icon.classList.remove("fa-angle-up");
+							icon.classList.add("fa-angle-down");
+						} else {
+							content.classList.add("active");
+							icon.classList.remove("fa-angle-down");
+							icon.classList.add("fa-angle-up");
+						}
+					});
+				});
+			});
+		}
+
+		loadTipoPag().then((tipoPag) => {
+			renderServices(tipoPag);
+		});
+
+		document.addEventListener("pagToggle", (e) => {
+			const tipoPag = e.detail.tipoPag;
+			renderServices(tipoPag);
 		});
 	});
-
 </script>
