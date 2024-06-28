@@ -294,3 +294,26 @@ body {
 .card-content-serv.active>.img-serv {
 	opacity: 1;
 }
+
+.hidden {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.visible {
+    max-height: 10000px;
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .fade-in {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }

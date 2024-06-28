@@ -7,6 +7,7 @@ import renovables from '../assets/img/digestor.webp'
 ---
 
 <Layout title="4NE - Incio">
+	<script src="../scripts/animateIndex.js"></script>
 	<main>
 			<div class="is-flex is-flex-direction-row is-justify-content-center py-5 div-index">
 				<div class="divImg is-flex" id="image-index-ing">
@@ -14,8 +15,8 @@ import renovables from '../assets/img/digestor.webp'
 					<div class="divHov is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
 						<p class="mb-6">Ingenieria</p>
 						<div>
-							<a class="button buttonIndex is-rounded is-inverted" href="/rr/service">Servicios</a> 
-							<a class="button buttonIndex is-rounded is-inverted" href="/">Proyectos</a> 
+							<a class="button buttonIndex is-rounded is-inverted" href="/service">Servicios</a> 
+							<a class="button buttonIndex is-rounded is-inverted" href="/proyect">Proyectos</a> 
 						</div>
 					</div>
 				</div>
@@ -23,7 +24,10 @@ import renovables from '../assets/img/digestor.webp'
 					<Picture class="image-index image is-3by4" src={renovables} alt='Logo de 4NE'/> 
 					<div class="divHov is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
 						<p class="mb-6">Renovables</p>
-						<a class="button buttonIndex is-rounded is-inverted" href="/">Entrar</a> 
+						<div>
+							<a class="button buttonIndex is-rounded is-inverted" href="/service">Servicios</a> 
+							<a class="button buttonIndex is-rounded is-inverted" href="/proyect">Proyectos</a> 
+						</div>
 					</div>
 				</div>
 			</div>
@@ -31,65 +35,6 @@ import renovables from '../assets/img/digestor.webp'
 </Layout>
 
 <script>
-	import anime from 'animejs/lib/anime.es.js';
-	
-	let imgIng = document.getElementById("image-index-ing")
-	let imgRen = document.getElementById("image-index-ren")
-
-	
-	imgIng.addEventListener("mouseover", () => {
-		anime({
-			targets: "#image-index-ing",
-			translateX:150,
-			scale: 1,
-			opacity: 1,
-			begin: (anim)=>{
-				anim.animatables[0].target.style.zIndex = 1;
-			}
-		})
-
-		anime({
-			targets: "#image-index-ren",
-			translateX:0,
-			scale: .8,
-			opacity: .5,
-			begin: (anim)=>{
-				anim.animatables[0].target.style.zIndex = 0;
-			}
-		})
-	});
-
-	imgRen.addEventListener("mouseover", () => {
-		anime({
-			targets: "#image-index-ren",
-			translateX:-150,
-			scale: 1,
-			opacity: 1,
-			begin: (anim)=>{
-				anim.animatables[0].target.style.zIndex = 1;
-			}
-		})
-
-		anime({
-			targets: "#image-index-ing",
-			translateX:0,
-			scale: .8,
-			opacity: .5,
-			begin: (anim)=>{
-				anim.animatables[0].target.style.zIndex = 0;
-			}
-		})
-	});
-	
-	anime.set("#image-index-ing", {
-		translateX:0,
-		scale: .8,
-		opacity: .5,
-	})
-	
-	anime.set("#image-index-ren", {
-		translateX:-150,
-	})
 
 
 

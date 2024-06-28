@@ -1,114 +1,213 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import services from "../assets/servicios.json";
+
+import oilgas from "../assets/img/Fotos-Serv/oilgas.webp";
+import ingelectrica from "../assets/img/Fotos-Serv/ingelectrica.webp";
+import mecanica from "../assets/img/Fotos-Serv/mecanica.webp";
+import nuclear from "../assets/img/Fotos-Serv/nuclear.webp";
+import agroindustria from "../assets/img/Fotos-Serv/agroindustria.webp";
+import mineria from "../assets/img/Fotos-Serv/mineria.webp";
+import personalizado from "../assets/img/Fotos-Serv/personalizado.webp";
+import rsu from "../assets/img/Fotos-Serv/rsu.webp";
+import fotovoltaica from "../assets/img/Fotos-Serv/fotovoltaica.webp";
+import biogas from "../assets/img/Fotos-Serv/biogas.webp";
+import biofertilizantes from "../assets/img/Fotos-Serv/biofertilizantes.webp";
+import personalizadoRen from "../assets/img/Fotos-Serv/personalizadoRen.webp";
+
+const images = {
+	oilgas: oilgas,
+	ingelectrica: ingelectrica,
+	mecanica: mecanica,
+	nuclear: nuclear,
+	agroindustria: agroindustria,
+	mineria: mineria,
+	personalizado: personalizado,
+	rsu: rsu,
+	fotovoltaica: fotovoltaica,
+	biogas: biogas,
+	biofertilizantes: biofertilizantes,
+	personalizadoRen: personalizadoRen,
+};
+
+const cantServIng = services.ingenieria.services.length;
 ---
 
 <Layout title="4NE - Servicios">
 	<main>
-		<h2 class="has-text-centered is-size-1 mt-5" id="title-secction">Servicios</h2>
-		<div id="service-container"></div>
+		<h2 class="has-text-centered is-size-1 mt-5" id="title-secction-ing">
+			Servicios - Ingenieria
+		</h2>
+		<div id="service-ing-container">
+			{
+				services.ingenieria.services.map((service, index) => (
+					<>
+						<hr class="has-background-black" />
+						<div class="serv-card" id={`card-${index}`}>
+							<header class="card-header">
+								<h3 class="card-header-title is-size-3">
+									{service.title}
+								</h3>
+								<button
+									class="card-header-icon toggle-button"
+									aria-label="more options"
+									data-index={index}
+								>
+									<span class="icon">
+										<i
+											class="fas fa-angle-down"
+											aria-hidden="true"
+										/>
+									</span>
+								</button>
+							</header>
+							<div
+								class="card-content card-content-serv is-flex is-align-items-center"
+								id={`card-content-${index}`}
+							>
+								<div class="content content-serv mr-6 text-serv">
+									<p>{service.description}</p>
+									<h4>
+										<b>Servicios ofrecidos:</b>
+									</h4>
+									<ol>
+										{service.service.map((item) => (
+											<li class="ml-6 my-3">
+												<b>{item.title}:</b>{" "}
+												{item.description}
+											</li>
+										))}
+									</ol>
+									<p>{service.conclusion}</p>
+								</div>
+								<div class="img-serv">
+									<Image
+										class="is-square image image-ser"
+										src={images[service.img]}
+										alt={service.title}
+									/>
+								</div>
+							</div>
+						</div>
+					</>
+				))
+			}
+		</div>
+
+		<div id="service-ren-container">
+			{
+				services.renovables.services.map((service, index) => (
+					<>
+						<hr class="has-background-black" />
+						<div
+							class="serv-card"
+							id={`card-${index + cantServIng}`}
+						>
+							<header class="card-header">
+								<h3 class="card-header-title is-size-3">
+									{service.title}
+								</h3>
+								<button
+									class="card-header-icon toggle-button"
+									aria-label="more options"
+									data-index={index + cantServIng}
+								>
+									<span class="icon">
+										<i
+											class="fas fa-angle-down"
+											aria-hidden="true"
+										/>
+									</span>
+								</button>
+							</header>
+							<div
+								class="card-content card-content-serv is-flex is-align-items-center"
+								id={`card-content-${index + cantServIng}`}
+							>
+								<div class="content content-serv mr-6 text-serv">
+									<p>{service.description}</p>
+									<h4>
+										<b>Servicios ofrecidos:</b>
+									</h4>
+									<ol>
+										{service.service.map((item) => (
+											<li class="ml-6 my-3">
+												<b>{item.title}:</b>{" "}
+												{item.description}
+											</li>
+										))}
+									</ol>
+									<p>{service.conclusion}</p>
+								</div>
+								<div class="img-serv">
+									<Image
+										class="is-square image image-ser"
+										src={images[service.img]}
+										alt={service.title}
+									/>
+								</div>
+							</div>
+						</div>
+					</>
+				))
+			}
+		</div>
 	</main>
 </Layout>
 
 <script>
 	document.addEventListener("DOMContentLoaded", function () {
-		const serviceContainer = document.getElementById("service-container");
-		const images = {
-			oilgas: "../public/assets/img/Fotos-Serv/oilgas.webp",
-			ingelectrica: "../public/assets/img/Fotos-Serv/ingelectrica.webp",
-			mecanica: "../public/assets/img/Fotos-Serv/mecanica.webp",
-			nuclear: "../public/assets/img/Fotos-Serv/nuclear.webp",
-			agroindustria: "../public/assets/img/Fotos-Serv/agroindustria.webp",
-			mineria: "../public/assets/img/Fotos-Serv/mineria.webp",
-			personalizado: "../public/assets/img/Fotos-Serv/personalizado.webp",
-			rsu: "../public/assets/img/Fotos-Serv/rsu.webp",
-			fotovoltaica: "../public/assets/img/Fotos-Serv/fotovoltaica.webp",
-			biogas: "../public/assets/img/Fotos-Serv/biogas.webp",
-			biofertilizantes:
-				"../public/assets/img/Fotos-Serv/biofertilizantes.webp",
-			personalizadoRen:
-				"../public/assets/img/Fotos-Serv/personalizadoRen.webp",
+
+		const toggleVisibility = (tipoPag) => {
+			const ingenieriaContainerTitle = document.getElementById("title-secction-ing");
+			
+			const ingenieriaContainer = document.getElementById("service-ing-container");
+			const renovablesContainer = document.getElementById("service-ren-container");
+
+
+			if (tipoPag === "ing") {
+				ingenieriaContainerTitle.innerHTML = "Servicios - Ingenieria"
+				ingenieriaContainer.classList.add("visible");
+				ingenieriaContainer.classList.remove("hidden");
+				renovablesContainer.classList.add("hidden");
+				renovablesContainer.classList.remove("visible");
+			} else {
+				ingenieriaContainerTitle.innerHTML = "Servicios - Renovables"
+				ingenieriaContainer.classList.add("hidden");
+				ingenieriaContainer.classList.remove("visible");
+				renovablesContainer.classList.add("visible");
+				renovablesContainer.classList.remove("hidden");
+			}
 		};
 
-		let loadTipoPag = () => {
-			return new Promise((resolve, reject) => {
-				const tipoPag = localStorage.getItem("pagTipo");
-				if (tipoPag) {
-					resolve(tipoPag);
+		const buttons = document.querySelectorAll(".toggle-button");
+		buttons.forEach((button) => {
+			button.addEventListener("click", function () {
+				const index = button.getAttribute("data-index");
+				const content = document.getElementById(
+					`card-content-${index}`
+				);
+				const icon = button.querySelector(".icon i");
+				if (content.classList.contains("active")) {
+					content.classList.remove("active");
+					icon.classList.remove("fa-angle-up");
+					icon.classList.add("fa-angle-down");
 				} else {
-					reject("Error al cargar los datos");
+					content.classList.add("active");
+					icon.classList.remove("fa-angle-down");
+					icon.classList.add("fa-angle-up");
 				}
 			});
-		};
-
-		function renderServices(tipoPag) {
-			import("../assets/servicios.json").then((dataJSON) => {
-				const services =
-					tipoPag === "ing"
-						? dataJSON.ingenieria.services
-						: dataJSON.renovables.services;
-				serviceContainer.innerHTML = "";
-
-				services.map((service, index) => {
-					const card = document.createElement("div");
-					card.classList.add("serv-card");
-					card.innerHTML = `
-							<hr class="has-background-black" />
-							<div class="serv-card" id="card-${index}">
-							<header class="card-header">
-								<h3 class="card-header-title is-size-3">${service.title}</h3>
-								<button class="card-header-icon toggle-button" aria-label="more options" data-index="${index}">
-								<span class="icon">
-									<i class="fas fa-angle-down" aria-hidden="true"></i>
-								</span>
-								</button>
-							</header>
-							<div class="card-content card-content-serv is-flex is-align-items-center" id="card-content-${index}">
-								<div class="content content-serv mr-6 text-serv">
-								<p>${service.description}</p>
-								<h4><b>Servicios ofrecidos:</b></h4>
-								<ol>
-									${service.service.map((item) => `<li class="ml-6 my-3"><b>${item.title}:</b> ${item.description}</li>`).join("")}
-								</ol>
-								<p>${service.conclusion}</p>
-								</div>
-								<div class="img-serv">
-								<img class="is-square image image-ser" src="${images[service.img]}" alt="${service.title}" />
-								</div>
-							</div>
-							</div>
-						`;
-					serviceContainer.appendChild(card);
-				});
-
-				const buttons = document.querySelectorAll(".toggle-button");
-				buttons.forEach((button) => {
-					button.addEventListener("click", function () {
-						const index = button.getAttribute("data-index");
-						const content = document.getElementById(
-							`card-content-${index}`
-						);
-						const icon = button.querySelector(".icon i");
-						if (content.classList.contains("active")) {
-							content.classList.remove("active");
-							icon.classList.remove("fa-angle-up");
-							icon.classList.add("fa-angle-down");
-						} else {
-							content.classList.add("active");
-							icon.classList.remove("fa-angle-down");
-							icon.classList.add("fa-angle-up");
-						}
-					});
-				});
-			});
-		}
-
-		loadTipoPag().then((tipoPag) => {
-			renderServices(tipoPag);
 		});
 
 		document.addEventListener("pagToggle", (e) => {
 			const tipoPag = e.detail.tipoPag;
-			renderServices(tipoPag);
+			toggleVisibility(tipoPag);
 		});
+
+		const tipoPag = localStorage.getItem("pagTipo") || "ing";
+		toggleVisibility(tipoPag);
 	});
 </script>
