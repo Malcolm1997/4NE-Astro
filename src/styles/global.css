@@ -255,6 +255,10 @@ body {
 
 /* Servicios */
 
+.card-header-title{
+	font-size: 1.75rem;
+}
+
 .serv-card{
 	margin: auto 20px;
 }
