@@ -1,41 +1,107 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Picture } from 'astro:assets';
-import ingenieria from '../assets/img/img3.jpg'
-import renovables from '../assets/img/digestor.webp'
-
+import { Picture } from "astro:assets";
+import ingenieria from "../assets/img/img3.jpg";
+import renovables from "../assets/img/digestor.webp";
 ---
 
 <Layout title="4NE - Incio">
 	<script src="../scripts/animateIndex.js"></script>
 	<main>
-			<div class="is-flex is-flex-direction-row is-justify-content-center py-5 div-index">
-				<div class="divImg is-flex" id="image-index-ing">
-					<Picture class="image-index image is-3by4"  src={ingenieria} alt='Logo de 4NE'/>
-					<div class="divHov is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
-						<p class="mb-6">Ingenieria</p>
-						<div>
-							<a class="button buttonIndex is-rounded is-inverted" href="/service">Servicios</a> 
-							<a class="button buttonIndex is-rounded is-inverted" href="/proyect">Proyectos</a> 
-						</div>
-					</div>
-				</div>
-				<div class="divImg is-flex is-justify-content-center is-align-items-center" id="image-index-ren">
-					<Picture class="image-index image is-3by4" src={renovables} alt='Logo de 4NE'/> 
-					<div class="divHov is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
-						<p class="mb-6">Renovables</p>
-						<div>
-							<a class="button buttonIndex is-rounded is-inverted" href="/service">Servicios</a> 
-							<a class="button buttonIndex is-rounded is-inverted" href="/proyect">Proyectos</a> 
-						</div>
+		<div
+			class="is-flex is-flex-direction-row is-justify-content-center py-5 div-index"
+		>
+			<div class="divImg is-flex" id="image-index-ing">
+				<Picture
+					class="image-index image is-3by4"
+					src={ingenieria}
+					alt="Logo de 4NE"
+				/>
+				<div
+					class="divHov is-flex is-flex-direction-column is-justify-content-center is-align-items-center"
+				>
+					<p class="mb-6">Ingenieria</p>
+					<div>
+						<button
+							class="button buttonIndex is-rounded is-inverted"
+							id="service-ing-button">Servicios</button
+						>
+						<button
+							class="button buttonIndex is-rounded is-inverted"
+							id="proyect-ing-button">Proyectos</button
+						>
 					</div>
 				</div>
 			</div>
+			<div
+				class="divImg is-flex is-justify-content-center is-align-items-center"
+				id="image-index-ren"
+			>
+				<Picture
+					class="image-index image is-3by4"
+					src={renovables}
+					alt="Logo de 4NE"
+				/>
+				<div
+					class="divHov is-flex is-flex-direction-column is-justify-content-center is-align-items-center"
+				>
+					<p class="mb-6">Renovables</p>
+					<div>
+						<button
+							class="button buttonIndex is-rounded is-inverted"
+							id="service-ren-button">Servicios</button
+						>
+						<button
+							class="button buttonIndex is-rounded is-inverted"
+							id="proyect-ren-button">Proyectos</button
+						>
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 </Layout>
 
 <script>
+	const serviceIngButton = document.getElementById("service-ing-button");
+	const proyectIngButton = document.getElementById("proyect-ing-button");
+	const serviceRenButton = document.getElementById("service-ren-button");
+	const proyectRenButton = document.getElementById("proyect-ren-button");
 
+	serviceIngButton.addEventListener("click", function (event) {
+		event.preventDefault();
+		funcionPreNavegacionSerIng();
+	});
 
+	proyectIngButton.addEventListener("click", function (event) {
+		event.preventDefault();
+		funcionPreNavegacionProIng();
+	});
 
+	serviceRenButton.addEventListener("click", function (event) {
+		event.preventDefault();
+		funcionPreNavegacionSerRen();
+	});
+
+	proyectRenButton.addEventListener("click", function (event) {
+		event.preventDefault();
+		funcionPreNavegacionProRen();
+	});
+
+	function funcionPreNavegacionSerIng() {
+		localStorage.setItem("pagTipo", "ing");
+		window.location.href = "/service";
+	}
+	function funcionPreNavegacionProIng() {
+		localStorage.setItem("pagTipo", "ing");
+		window.location.href = "/proyect";
+	}
+	function funcionPreNavegacionSerRen() {
+		localStorage.setItem("pagTipo", "ren");
+		window.location.href = "/service";
+	}
+	function funcionPreNavegacionProRen() {
+		localStorage.setItem("pagTipo", "ren");
+		window.location.href = "/proyect";
+	}
 </script>
