@@ -1,0 +1,24 @@
+{
+    "ingenieria": {
+        "proyect":[
+            {
+                "title": "Oil & Gas",
+                "cliente":"",
+                "ubicacion":"",
+                "description": "En el ámbito de la ingeniería de Oil & Gas, ofrecemos servicios especializados en diseño, construcción y optimización de instalaciones. Nos encargamos de la gestión integral de proyectos de exploración, producción y refinación de petróleo y gas natural.",
+                "impacto": "Nuestro compromiso es proporcionar servicios de alta calidad que impulsen la eficiencia y sostenibilidad en la industria del Oil & Gas. Confíe en nosotros para llevar sus proyectos al siguiente nivel de excelencia."
+            }
+        ]
+    },
+    "renovables": {
+        "proyect":[
+            {
+                "title": "Oil & Gas",
+                "cliente":"",
+                "ubicacion":"",
+                "description": "En el ámbito de la ingeniería de Oil & Gas, ofrecemos servicios especializados en diseño, construcción y optimización de instalaciones. Nos encargamos de la gestión integral de proyectos de exploración, producción y refinación de petróleo y gas natural.",
+                "impacto": "Nuestro compromiso es proporcionar servicios de alta calidad que impulsen la eficiencia y sostenibilidad en la industria del Oil & Gas. Confíe en nosotros para llevar sus proyectos al siguiente nivel de excelencia."
+            }
+        ]
+    }
+}
