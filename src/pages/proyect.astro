@@ -1,53 +1,123 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Picture } from 'astro:assets';
-import ingenieria from '../assets/img/img3.jpg'
-import renovables from '../assets/img/digestor.webp'
+
+import proyect from "../assets/proyect.json";
 
 ---
 
 <Layout title="4NE - Proyectos">
+	<script src="../scripts/changeType.js"></script>
 	<main>
-		<h2 class="has-text-centered is-size-1 mt-5" id="title-secction">Proyectos</h2>
-		<hr>
-		<div>
+		<h2 class="has-text-centered is-size-1 mt-5" id="title-secction-ing-proyect">
+			Proyectos
+		</h2>
+		<hr class="has-background-black" />
+		<div id="service-ing-container">
 			<div>
-				<div class="is-flex is-justify-content-space-around has-text-centered">
-					<div class="is-flex is-flex-direction-column is-justify-content-center div-proyect">
-						<h3 class="is-size-3 mb-5">En obra</h3>
-						<div>
-							<h4 class="is-size-4 mb-2">Proyecto 1</h4>
-							<p class="is-size-5">Esto es un proyectos de varias cosas</p>
-							<hr class="has-background-black">
+				<div>
+					<div
+						class="is-flex is-justify-content-space-around has-text-centered"
+					>
+						<div
+							class="is-flex is-flex-direction-column is-justify-content-center div-proyect"
+						>
+							<h3 class="is-size-3 mb-5">En obra</h3>
+							{
+								proyect.ingenieria.proyect.inProgress.map(
+									(proyect, index) => (
+										<div>
+											<h4 class="is-size-4 mb-2">
+												{proyect.title}
+											</h4>
+											<p>Cliente: {proyect.cliente}</p>
+											<p>Ubicacion: {proyect.ubicacion}</p>
+											<p class="is-size-5">
+												{proyect.description}
+											</p>
+											<hr class="has-background-black" />
+										</div>
+									)
+								)
+							}
 						</div>
-						<div>
-							<h4 class="is-size-4 mb-2">Proyecto 2</h4>
-							<p class="is-size-5">Esto es un proyectos de varias cosas</p>
-							<hr class="has-background-black">
-						</div>
-						<div>
-							<h4 class="is-size-4 mb-2">Proyecto 3</h4>
-							<p class="is-size-5">Esto es un proyectos de varias cosas</p>
-							<hr class="has-background-black">
+						<div class="div-medio"></div>
+						<div
+							class="is-flex is-flex-direction-column is-justify-content-center div-proyect"
+						>
+							<h3 class="is-size-3 mb-5">Finalizados</h3>
+							{
+								proyect.ingenieria.proyect.finished.map(
+									(proyect, index) => (
+										<div>
+											<h4 class="is-size-4 mb-2">
+												{proyect.title}
+											</h4>
+											<p>Cliente: {proyect.cliente}</p>
+											<p>Ubicacion: {proyect.ubicacion}</p>
+											<p class="is-size-5">
+												{proyect.description}
+											</p>
+											<hr class="has-background-black" />
+										</div>
+									)
+								)
+							}
 						</div>
 					</div>
-					<div class="div-medio"></div>
-					<div class="is-flex is-flex-direction-column is-justify-content-center div-proyect">
-						<h3 class="is-size-3 mb-5">Finalizados</h3>
-						<div>
-							<h4 class="is-size-4 mb-2">Proyecto 1</h4>
-							<p class="is-size-5">Esto es un proyectos de varias cosas</p>
-							<hr class="has-background-black">
+				</div>
+			</div>
+		</div>
+
+		<div id="service-ren-container">
+			<div>
+				<div>
+					<div
+						class="is-flex is-justify-content-space-around has-text-centered"
+					>
+						<div
+							class="is-flex is-flex-direction-column is-justify-content-center div-proyect"
+						>
+							<h3 class="is-size-3 mb-5">En obra</h3>
+							{
+								proyect.renovables.proyect.inProgress.map(
+									(proyect, index) => (
+										<div>
+											<h4 class="is-size-4 mb-2">
+												{proyect.title}
+											</h4>
+											<p>Cliente: {proyect.cliente}</p>
+											<p>Ubicacion: {proyect.ubicacion}</p>
+											<p class="is-size-5">
+												{proyect.description}
+											</p>
+											<hr class="has-background-black" />
+										</div>
+									)
+								)
+							}
 						</div>
-						<div>
-							<h4 class="is-size-4 mb-2">Proyecto 2</h4>
-							<p class="is-size-5">Esto es un proyectos de varias cosas</p>
-							<hr class="has-background-black">
-						</div>
-						<div>
-							<h4 class="is-size-4 mb-2">Proyecto 3</h4>
-							<p class="is-size-5">Esto es un proyectos de varias cosas</p>
-							<hr class="has-background-black">
+						<div class="div-medio"></div>
+						<div
+							class="is-flex is-flex-direction-column is-justify-content-center div-proyect"
+						>
+							<h3 class="is-size-3 mb-5">Finalizados</h3>
+							{
+								proyect.renovables.proyect.finished.map(
+									(proyect, index) => (
+										<div>
+											<h4 class="is-size-4 mb-2">
+												{proyect.title}
+											</h4>
+											<p>Cliente: {proyect.cliente}</p>
+											<p>Ubicacion: {proyect.ubicacion}</p>
+											<p class="is-size-5">
+												{proyect.description}
+											</p>
+											<hr class="has-background-black" />
+										</div>
+									)
+								)
+							}
 						</div>
 					</div>
 				</div>

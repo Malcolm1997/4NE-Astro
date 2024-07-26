@@ -1,24 +1,53 @@
 {
     "ingenieria": {
-        "proyect":[
-            {
-                "title": "Oil & Gas",
-                "cliente":"",
-                "ubicacion":"",
-                "description": "En el ámbito de la ingeniería de Oil & Gas, ofrecemos servicios especializados en diseño, construcción y optimización de instalaciones. Nos encargamos de la gestión integral de proyectos de exploración, producción y refinación de petróleo y gas natural.",
-                "impacto": "Nuestro compromiso es proporcionar servicios de alta calidad que impulsen la eficiencia y sostenibilidad en la industria del Oil & Gas. Confíe en nosotros para llevar sus proyectos al siguiente nivel de excelencia."
-            }
-        ]
+        "proyect":{
+            "finished":[
+                {
+                    "title": "Aerogenerador IWP-100",
+                    "cliente":"IMSA",
+                    "ubicacion":"Arauco, La Rioja",
+                    "description": "Four Natural Energy, junto a IMPSA, desarrolló el aerogenerador IWP-100, un sistema de 100 kW diseñado para aprovechar el viento como fuente de energía renovable. El proyecto abarcó desde el diseño y pruebas hasta la instalación, garantizando eficiencia y fiabilidad.",
+                    "impacto": "Este proyecto no solo apoya la diversificación energética en La Rioja, sino que también promueve el uso de energías limpias y sostenibles, alineándose con las tendencias globales hacia una economía más verde."
+                }
+            ],
+            "inProgress":[
+                {
+                    "title": "Aerogenerador IWP-100",
+                    "cliente":"IMSA",
+                    "ubicacion":"Arauco, La Rioja",
+                    "description": "Four Natural Energy, junto a IMPSA, desarrolló el aerogenerador IWP-100, un sistema de 100 kW diseñado para aprovechar el viento como fuente de energía renovable. El proyecto abarcó desde el diseño y pruebas hasta la instalación, garantizando eficiencia y fiabilidad.",
+                    "impacto": "Este proyecto no solo apoya la diversificación energética en La Rioja, sino que también promueve el uso de energías limpias y sostenibles, alineándose con las tendencias globales hacia una economía más verde."
+                },
+                {
+                    "title": "Aerogenerador IWP-100",
+                    "cliente":"IMSA",
+                    "ubicacion":"Arauco, La Rioja",
+                    "description": "Four Natural Energy, junto a IMPSA, desarrolló el aerogenerador IWP-100, un sistema de 100 kW diseñado para aprovechar el viento como fuente de energía renovable. El proyecto abarcó desde el diseño y pruebas hasta la instalación, garantizando eficiencia y fiabilidad.",
+                    "impacto": "Este proyecto no solo apoya la diversificación energética en La Rioja, sino que también promueve el uso de energías limpias y sostenibles, alineándose con las tendencias globales hacia una economía más verde."
+                }
+            ]
+        }
     },
     "renovables": {
-        "proyect":[
-            {
-                "title": "Oil & Gas",
-                "cliente":"",
-                "ubicacion":"",
-                "description": "En el ámbito de la ingeniería de Oil & Gas, ofrecemos servicios especializados en diseño, construcción y optimización de instalaciones. Nos encargamos de la gestión integral de proyectos de exploración, producción y refinación de petróleo y gas natural.",
-                "impacto": "Nuestro compromiso es proporcionar servicios de alta calidad que impulsen la eficiencia y sostenibilidad en la industria del Oil & Gas. Confíe en nosotros para llevar sus proyectos al siguiente nivel de excelencia."
-            }
-        ]
+        "proyect":{
+            "finished":[
+                {
+                    "title": "Oil & Gas",
+                    "cliente":"IMSA",
+                    "ubicacion":"Algun lado",
+                    "description": "En el ámbito de la ingeniería de Oil & Gas, ofrecemos servicios especializados en diseño, construcción y optimización de instalaciones. Nos encargamos de la gestión integral de proyectos de exploración, producción y refinación de petróleo y gas natural.",
+                    "impacto": "Nuestro compromiso es proporcionar servicios de alta calidad que impulsen la eficiencia y sostenibilidad en la industria del Oil & Gas. Confíe en nosotros para llevar sus proyectos al siguiente nivel de excelencia."
+                }
+            ],
+            "inProgress":[
+                {
+                    "title": "Oil & Gas",
+                    "cliente":"IMSA",
+                    "ubicacion":"Algun lado",
+                    "description": "En el ámbito de la ingeniería de Oil & Gas, ofrecemos servicios especializados en diseño, construcción y optimización de instalaciones. Nos encargamos de la gestión integral de proyectos de exploración, producción y refinación de petróleo y gas natural.",
+                    "impacto": "Nuestro compromiso es proporcionar servicios de alta calidad que impulsen la eficiencia y sostenibilidad en la industria del Oil & Gas. Confíe en nosotros para llevar sus proyectos al siguiente nivel de excelencia."
+                }
+            ]
+        }
     }
 }
