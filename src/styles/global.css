@@ -331,3 +331,12 @@ body {
 .div-medio{
 	border: 1px solid;
 }
+
+.logo-client{
+	font-size: 24px;
+}
+
+.linea-separadora{
+	width: 60%;
+	margin: 15px auto;
+}

@@ -8,7 +8,7 @@ import proyect from "../assets/proyect.json";
 <Layout title="4NE - Proyectos">
 	<script src="../scripts/changeType.js"></script>
 	<main>
-		<h2 class="has-text-centered is-size-1 mt-5" id="title-secction-ing-proyect">
+		<h2 class="has-text-centered is-size-2 mt-5" id="title-secction-ing-proyect">
 			Proyectos
 		</h2>
 		<hr class="has-background-black" />
@@ -21,20 +21,20 @@ import proyect from "../assets/proyect.json";
 						<div
 							class="is-flex is-flex-direction-column is-justify-content-center div-proyect"
 						>
-							<h3 class="is-size-3 mb-5">En obra</h3>
+							<h3 class="is-size-4 mb-5">En obra</h3>
 							{
 								proyect.ingenieria.proyect.inProgress.map(
 									(proyect, index) => (
 										<div>
-											<h4 class="is-size-4 mb-2">
+											<hr class="has-background-black linea-separadora" />
+											<h4 class="is-size-5 mb-2">
 												{proyect.title}
 											</h4>
-											<p>Cliente: {proyect.cliente}</p>
-											<p>Ubicacion: {proyect.ubicacion}</p>
-											<p class="is-size-5">
+											<p class="mb-2"><i class="fa-solid fa-user-tie mr-2 logo-client"></i> <b>{proyect.cliente}</b></p>
+											<p class="mb-2"><i class="fa-solid fa-map-location-dot mr-2 logo-client"></i> <b>{proyect.ubicacion}</b></p>
+											<p class="is-size-6">
 												{proyect.description}
 											</p>
-											<hr class="has-background-black" />
 										</div>
 									)
 								)
@@ -44,20 +44,20 @@ import proyect from "../assets/proyect.json";
 						<div
 							class="is-flex is-flex-direction-column is-justify-content-center div-proyect"
 						>
-							<h3 class="is-size-3 mb-5">Finalizados</h3>
+							<h3 class="is-size-4 mb-5">Finalizados</h3>
 							{
 								proyect.ingenieria.proyect.finished.map(
 									(proyect, index) => (
 										<div>
-											<h4 class="is-size-4 mb-2">
+											<hr class="has-background-black linea-separadora" />
+											<h4 class="is-size-5 mb-2">
 												{proyect.title}
 											</h4>
-											<p>Cliente: {proyect.cliente}</p>
-											<p>Ubicacion: {proyect.ubicacion}</p>
-											<p class="is-size-5">
+											<p class="mb-2"><i class="fa-solid fa-user-tie mr-2 logo-client"></i> <b>{proyect.cliente}</b></p>
+											<p class="mb-2"><i class="fa-solid fa-map-location-dot mr-2 logo-client"></i> <b>{proyect.ubicacion}</b></p>
+											<p class="is-size-6">
 												{proyect.description}
 											</p>
-											<hr class="has-background-black" />
 										</div>
 									)
 								)
@@ -77,20 +77,20 @@ import proyect from "../assets/proyect.json";
 						<div
 							class="is-flex is-flex-direction-column is-justify-content-center div-proyect"
 						>
-							<h3 class="is-size-3 mb-5">En obra</h3>
+							<h3 class="is-size-4 mb-5">En obra</h3>
 							{
 								proyect.renovables.proyect.inProgress.map(
 									(proyect, index) => (
 										<div>
-											<h4 class="is-size-4 mb-2">
+											<hr class="has-background-black linea-separadora" />
+											<h4 class="is-size-5 mb-2">
 												{proyect.title}
 											</h4>
-											<p>Cliente: {proyect.cliente}</p>
-											<p>Ubicacion: {proyect.ubicacion}</p>
-											<p class="is-size-5">
+											<p class="mb-2"><i class="fa-solid fa-user-tie mr-2 logo-client"></i> <b>{proyect.cliente}</b></p>
+											<p class="mb-2"><i class="fa-solid fa-map-location-dot mr-2 logo-client"></i> <b>{proyect.ubicacion}</b></p>
+											<p class="is-size-6">
 												{proyect.description}
 											</p>
-											<hr class="has-background-black" />
 										</div>
 									)
 								)
@@ -100,20 +100,20 @@ import proyect from "../assets/proyect.json";
 						<div
 							class="is-flex is-flex-direction-column is-justify-content-center div-proyect"
 						>
-							<h3 class="is-size-3 mb-5">Finalizados</h3>
+							<h3 class="is-size-4 mb-5">Finalizados</h3>
 							{
 								proyect.renovables.proyect.finished.map(
 									(proyect, index) => (
 										<div>
-											<h4 class="is-size-4 mb-2">
+											<hr class="has-background-black linea-separadora" />
+											<h4 class="is-size-5 mb-2">
 												{proyect.title}
 											</h4>
-											<p>Cliente: {proyect.cliente}</p>
-											<p>Ubicacion: {proyect.ubicacion}</p>
-											<p class="is-size-5">
+											<p class="mb-2"><i class="fa-solid fa-user-tie mr-2 logo-client"></i> <b>{proyect.cliente}</b></p>
+											<p class="mb-2"><i class="fa-solid fa-map-location-dot mr-2 logo-client"></i> <b>{proyect.ubicacion}</b></p>
+											<p class="is-size-6">
 												{proyect.description}
 											</p>
-											<hr class="has-background-black" />
 										</div>
 									)
 								)
