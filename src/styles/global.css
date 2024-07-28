@@ -325,18 +325,11 @@ body {
 /* Proyect */
 
 .div-proyect{
-	width: 45%;
-}
-
-.div-medio{
-	border: 1px solid;
+	width: 40%;
+	height: 100%;
+	margin: 0 5%;
 }
 
 .logo-client{
 	font-size: 24px;
-}
-
-.linea-separadora{
-	width: 60%;
-	margin: 15px auto;
 }

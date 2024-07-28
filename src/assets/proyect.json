@@ -3,27 +3,78 @@
         "proyect":{
             "finished":[
                 {
-                    "title": "Aerogenerador IWP-100",
-                    "cliente":"IMSA",
-                    "ubicacion":"Arauco, La Rioja",
-                    "description": "Four Natural Energy, junto a IMPSA, desarrolló el aerogenerador IWP-100, un sistema de 100 kW diseñado para aprovechar el viento como fuente de energía renovable. El proyecto abarcó desde el diseño y pruebas hasta la instalación, garantizando eficiencia y fiabilidad.",
-                    "impacto": "Este proyecto no solo apoya la diversificación energética en La Rioja, sino que también promueve el uso de energías limpias y sostenibles, alineándose con las tendencias globales hacia una economía más verde."
-                }
-            ],
-            "inProgress":[
-                {
-                    "title": "Aerogenerador IWP-100",
-                    "cliente":"IMSA",
-                    "ubicacion":"Arauco, La Rioja",
-                    "description": "Four Natural Energy, junto a IMPSA, desarrolló el aerogenerador IWP-100, un sistema de 100 kW diseñado para aprovechar el viento como fuente de energía renovable. El proyecto abarcó desde el diseño y pruebas hasta la instalación, garantizando eficiencia y fiabilidad.",
-                    "impacto": "Este proyecto no solo apoya la diversificación energética en La Rioja, sino que también promueve el uso de energías limpias y sostenibles, alineándose con las tendencias globales hacia una economía más verde."
+                    "title": "Estación Transformadora Los Nogales",
+                    "cliente": "HITACHI-ABB Power Grids",
+                    "ubicacion": "Los Nogales, Salta",
+                    "year": 2021,
+                    "description": "Instalación y puesta en marcha de una estación transformadora, mejorando la infraestructura eléctrica local. Incluyó la instalación de transformadores y sistemas de control.",
+                    "impacto": "Aumenta la capacidad de transmisión de energía en la región, garantizando un suministro eléctrico estable y confiable."
                 },
                 {
-                    "title": "Aerogenerador IWP-100",
-                    "cliente":"IMSA",
-                    "ubicacion":"Arauco, La Rioja",
-                    "description": "Four Natural Energy, junto a IMPSA, desarrolló el aerogenerador IWP-100, un sistema de 100 kW diseñado para aprovechar el viento como fuente de energía renovable. El proyecto abarcó desde el diseño y pruebas hasta la instalación, garantizando eficiencia y fiabilidad.",
-                    "impacto": "Este proyecto no solo apoya la diversificación energética en La Rioja, sino que también promueve el uso de energías limpias y sostenibles, alineándose con las tendencias globales hacia una economía más verde."
+                    "title": "Ingeniería en Mina de Litio",
+                    "cliente": "Carpas Argentina",
+                    "ubicacion": "Kachi, Catamarca",
+                    "year": 2022,
+                    "description": "Servicios de ingeniería para el desarrollo de infraestructura minera, incluyendo la logística para el montaje de campamentos mineros.",
+                    "impacto": "Apoya el desarrollo del sector minero en Catamarca, facilitando la extracción sostenible de litio."
+                },
+                {
+                    "title": "Central Atómica de Embalse",
+                    "cliente": "ASSi",
+                    "ubicacion": "Río Tercero, Córdoba",
+                    "year": 2016,
+                    "description": "Proyecto de actualización y mantenimiento de la Central Atómica de Embalse, enfocándose en mejorar la seguridad y la eficiencia operativa.",
+                    "impacto": "Contribuye a la seguridad energética y la reducción de riesgos en la generación nuclear."
+                },
+                {
+                    "title": "Yacimiento Lindero Atravesado",
+                    "cliente": "Pan American Energy",
+                    "ubicacion": "Neuquén",
+                    "year": 2022,
+                    "description": "Obras de mitigación y reemplazo de línea de gas, incluyendo trabajos civiles, mecánicos y eléctricos.",
+                    "impacto": "Mejora la eficiencia y seguridad en las operaciones de extracción de recursos, fortaleciendo la infraestructura energética en la región."
+                },
+                {
+                    "title": "Estación Transformadora Bell Ville",
+                    "cliente": "HITACHI-ABB Power Grids",
+                    "ubicacion": "Bell Ville, Córdoba",
+                    "year": 2022,
+                    "description": "Desarrollo e implementación de una estación transformadora para mejorar la distribución eléctrica en la zona.",
+                    "impacto": "Asegura un suministro eléctrico más estable y eficiente para las comunidades locales."
+                },
+                {
+                    "title": "Proyecto de Tolva Autodescargable",
+                    "cliente": "Desarrollo Propio",
+                    "ubicacion": "Rosario, Santa Fe",
+                    "year": 2015,
+                    "description": "Diseño y desarrollo de una tolva autodescargable para uso agrícola, facilitando el transporte y manejo de granos.",
+                    "impacto": "Optimiza las operaciones agrícolas, mejorando la eficiencia en la cosecha y transporte de productos."
+                },
+                {
+                    "title": "Proyectos de Cosechadora de Algodón",
+                    "cliente": "Proyecto Propio",
+                    "ubicacion": "Rosario, Santa Fe",
+                    "year": 2015,
+                    "description": "Desarrollo de una cosechadora de algodón sobre tractor, adaptada a las necesidades de la industria local.",
+                    "impacto": "Incrementa la productividad en la recolección de algodón, beneficiando a los productores locales."
+                },
+                {
+                    "title": "Inspección y Verificación en Cargil",
+                    "cliente": "Bunge, Promivi (Cargil) - SGS",
+                    "ubicacion": "Venado Tuerto, Santa Fe",
+                    "year": 2021,
+                    "description": "Inspección técnica y verificación de seguridad y capacidad de carga de silos cerealeros en las instalaciones de Cargil.",
+                    "impacto": "Asegura la conformidad con estándares de seguridad, protegiendo la integridad de los productos almacenados."
+                }
+            ]
+            ,
+            "inProgress":[
+                {
+                    "title": "Gasoducto Néstor Kirchner",
+                    "cliente":"",
+                    "ubicacion": "Valentín Alsina y Otamendi",
+                    "description": "Realización de inspección técnica en la expedición de tubos para el gasoducto Néstor Kirchner, un proyecto en ejecución en las localidades de Valentín Alsina y Otamendi. Nuestro equipo especializado en ingeniería brinda soluciones de calidad, asegurando la conformidad y el cumplimiento de los estándares requeridos.",
+                    "impacto": "El proyecto del gasoducto Néstor Kirchner es crucial para mejorar la infraestructura de transporte de gas en Argentina, garantizando un suministro energético seguro y eficiente para el país."
                 }
             ]
         }
@@ -32,20 +83,104 @@
         "proyect":{
             "finished":[
                 {
-                    "title": "Oil & Gas",
-                    "cliente":"IMSA",
-                    "ubicacion":"Algun lado",
-                    "description": "En el ámbito de la ingeniería de Oil & Gas, ofrecemos servicios especializados en diseño, construcción y optimización de instalaciones. Nos encargamos de la gestión integral de proyectos de exploración, producción y refinación de petróleo y gas natural.",
-                    "impacto": "Nuestro compromiso es proporcionar servicios de alta calidad que impulsen la eficiencia y sostenibilidad en la industria del Oil & Gas. Confíe en nosotros para llevar sus proyectos al siguiente nivel de excelencia."
+                    "title": "Desarrollo y Ensayo de la Central Hidroeléctrica de Portrerillo",
+                    "cliente": "IMPSA",
+                    "ubicacion": "Portrerillo, Mendoza",
+                    "description": "Four Natural Energy, en colaboración con IMPSA, llevó a cabo el desarrollo y ensayo de la Central Hidroeléctrica de Portrerillo. El proyecto incluyó el diseño y pruebas de sistemas para maximizar la eficiencia en la generación de energía hidroeléctrica.",
+                    "impacto": "Este proyecto contribuye significativamente al suministro de energía limpia en Mendoza, fortaleciendo la infraestructura energética regional y promoviendo prácticas sostenibles."
+                },
+                {
+                    "title": "Desarrollo y Ensayo de la Central Hidroeléctrica de Cacheuta",
+                    "cliente": "IMPSA",
+                    "ubicacion": "Cacheuta, Mendoza",
+                    "description": "Four Natural Energy trabajó con IMPSA en el desarrollo y pruebas de la Central Hidroeléctrica de Cacheuta, enfocándose en optimizar el aprovechamiento del potencial hídrico local para la generación de energía.",
+                    "impacto": "La central hidroeléctrica de Cacheuta ayuda a diversificar la matriz energética de Mendoza, promoviendo el uso de recursos naturales de manera sostenible y reduciendo la dependencia de combustibles fósiles."
+                },
+                {
+                    "title": "Diseño Conceptual de Planta de Biogás",
+                    "cliente": "Fenix",
+                    "ubicacion": "Alvear, Mendoza",
+                    "description": "En 2018, Four Natural Energy diseñó conceptualmente una planta de biogás para Fenix, en Alvear, Mendoza. El proyecto se centró en la conversión de residuos frutihortícolas en biogás, un combustible renovable.",
+                    "impacto": "Este proyecto impulsa el uso de residuos agrícolas para generar energía, contribuyendo a la economía circular y a la reducción de la huella de carbono en la región."
+                },
+                {
+                    "title": "Evaluación del Potencial de Planta de Biogás",
+                    "cliente": "Il Porco",
+                    "ubicacion": "Alvear, Mendoza",
+                    "description": "Four Natural Energy realizó la evaluación del potencial para una planta de biogás en Alvear, investigando la viabilidad técnica y económica de utilizar desechos agrícolas como fuente de energía renovable.",
+                    "impacto": "La evaluación facilita la toma de decisiones para inversiones en energías renovables, promoviendo el desarrollo sostenible y el uso eficiente de recursos locales."
+                },
+                {
+                    "title": "Planta de Generación para Goldcopr",
+                    "cliente": "Goldcopr - Euskal",
+                    "ubicacion": "Santa Cruz",
+                    "description": "En 2020, Four Natural Energy desarrolló una planta de generación eléctrica para Goldcopr en Santa Cruz, utilizando residuos sólidos urbanos como materia prima.",
+                    "impacto": "Este proyecto no solo ofrece una solución sostenible para la gestión de residuos, sino que también proporciona una fuente de energía limpia para la comunidad, apoyando el desarrollo económico local."
+                },
+                {
+                    "title": "Embio Las Junturas",
+                    "cliente": "Plan Renovar",
+                    "ubicacion": "Las Junturas, Córdoba",
+                    "description": "Como parte del Plan Renovar, Four Natural Energy implementó una planta de biomasa en Las Junturas, utilizando cáscaras de maní para generar energía.",
+                    "impacto": "La planta contribuye a la producción de energía renovable y a la reducción de residuos agrícolas, apoyando un desarrollo más sostenible en Córdoba."
+                },
+                {
+                    "title": "Estudios en la Central Térmica de San Alonso",
+                    "cliente": "Dieger - Techint",
+                    "ubicacion": "San Alonso, Corrientes",
+                    "description": "En 2023, Four Natural Energy realizó estudios técnicos en la Central Térmica de San Alonso, enfocados en la optimización de procesos para mejorar la eficiencia energética y reducir el impacto ambiental.",
+                    "impacto": "Estos estudios permiten una operación más eficiente y sostenible de la planta, beneficiando tanto al medio ambiente como a la economía local."
+                },
+                {
+                    "title": "Proyecto BioF",
+                    "cliente": "Desarrollo Propio - AgTech",
+                    "ubicacion": "Córdoba",
+                    "description": "El Proyecto BioF de Four Natural Energy se centra en el desarrollo de biofertilizantes y sistemas de recuperación de agua a partir de efluentes orgánicos, promoviendo prácticas agrícolas sostenibles.",
+                    "impacto": "Este proyecto impulsa la innovación en la agricultura, reduciendo el uso de químicos y mejorando la gestión de recursos hídricos en la región."
+                },
+                {
+                    "title": "Planta de Generación para el Gobierno de La Pampa",
+                    "cliente": "Gobierno de La Pampa - Euskal",
+                    "ubicacion": "La Pampa",
+                    "description": "Four Natural Energy diseñó y desarrolló una planta de generación eléctrica para el Gobierno de La Pampa, utilizando residuos sólidos urbanos como fuente de energía.",
+                    "impacto": "Este proyecto apoya la gestión sostenible de residuos y proporciona una fuente de energía renovable, contribuyendo al desarrollo regional sostenible."
+                },
+                {
+                    "title": "Planta de Biogás en Frigorífico Cerdo de Los Llanos",
+                    "cliente": "Frigorifico Cerdo de Los Llanos",
+                    "ubicacion": "Chepes, La Rioja",
+                    "description": "Four Natural Energy implementó una planta de biogás en el Frigorífico Cerdo de Los Llanos, utilizando desechos orgánicos para generar energía.",
+                    "impacto": "La planta de biogás ayuda a reducir el impacto ambiental del frigorífico y proporciona una fuente de energía limpia y renovable."
+                },
+                {
+                    "title": "Proyecto Renovar: Parque Eólico El Trébol",
+                    "cliente": "YPF Luz - Bezer",
+                    "ubicacion": "El Trébol, Chubut",
+                    "description": "El Parque Eólico El Trébol, desarrollado por Four Natural Energy para YPF Luz, forma parte del Proyecto Renovar. Este parque aprovecha el potencial eólico de la región para generar energía renovable.",
+                    "impacto": "El proyecto contribuye a la diversificación de la matriz energética de Argentina y promueve el uso de fuentes de energía limpias."
+                },
+                {
+                    "title": "Proyectos Solares",
+                    "cliente":"",
+                    "ubicacion": "Mendoza, Buenos Aires, Entre Ríos y Córdoba",
+                    "description": "En 2020, Four Natural Energy desarrolló proyectos solares en varias provincias argentinas, instalando sistemas fotovoltaicos para la generación de energía limpia y sostenible.",
+                    "impacto": "Estos proyectos apoyan el uso de energías renovables, reduciendo la dependencia de fuentes no renovables y promoviendo la sostenibilidad energética."
+                },
+                {
+                    "title": "Estudios de Factibilidad de Proyectos de Biogás",
+                    "cliente": "Colombia M3",
+                    "ubicacion": "Colombia",
+                    "description": "Four Natural Energy realizó estudios de factibilidad para proyectos de biogás en Colombia, evaluando la viabilidad de utilizar residuos orgánicos como fuente de energía.",
+                    "impacto": "Estos estudios facilitan la implementación de proyectos de energías renovables, promoviendo el desarrollo sostenible y la utilización eficiente de los recursos disponibles."
                 }
             ],
             "inProgress":[
                 {
-                    "title": "Oil & Gas",
-                    "cliente":"IMSA",
-                    "ubicacion":"Algun lado",
-                    "description": "En el ámbito de la ingeniería de Oil & Gas, ofrecemos servicios especializados en diseño, construcción y optimización de instalaciones. Nos encargamos de la gestión integral de proyectos de exploración, producción y refinación de petróleo y gas natural.",
-                    "impacto": "Nuestro compromiso es proporcionar servicios de alta calidad que impulsen la eficiencia y sostenibilidad en la industria del Oil & Gas. Confíe en nosotros para llevar sus proyectos al siguiente nivel de excelencia."
+                    "title": "Gasoducto Néstor Kirchner",
+                    "cliente":"",
+                    "ubicacion": "Valentín Alsina y Otamendi",
+                    "description": "Realización de inspección técnica en la expedición de tubos para el gasoducto Néstor Kirchner, un proyecto en ejecución en las localidades de Valentín Alsina y Otamendi. Nuestro equipo especializado en ingeniería brinda soluciones de calidad, asegurando la conformidad y el cumplimiento de los estándares requeridos.",
+                    "impacto": "El proyecto del gasoducto Néstor Kirchner es crucial para mejorar la infraestructura de transporte de gas en Argentina, garantizando un suministro energético seguro y eficiente para el país."
                 }
             ]
         }

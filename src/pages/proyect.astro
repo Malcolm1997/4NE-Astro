@@ -2,16 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 
 import proyect from "../assets/proyect.json";
-
 ---
 
 <Layout title="4NE - Proyectos">
 	<script src="../scripts/changeType.js"></script>
 	<main>
-		<h2 class="has-text-centered is-size-2 mt-5" id="title-secction-ing-proyect">
+		<h2
+			class="has-text-centered is-size-2 mt-5 mb-6"
+			id="title-secction-ing-proyect"
+		>
 			Proyectos
 		</h2>
-		<hr class="has-background-black" />
 		<div id="service-ing-container">
 			<div>
 				<div>
@@ -25,22 +26,34 @@ import proyect from "../assets/proyect.json";
 							{
 								proyect.ingenieria.proyect.inProgress.map(
 									(proyect, index) => (
-										<div>
-											<hr class="has-background-black linea-separadora" />
+										<div class="my-6">
 											<h4 class="is-size-5 mb-2">
 												{proyect.title}
 											</h4>
-											<p class="mb-2"><i class="fa-solid fa-user-tie mr-2 logo-client"></i> <b>{proyect.cliente}</b></p>
-											<p class="mb-2"><i class="fa-solid fa-map-location-dot mr-2 logo-client"></i> <b>{proyect.ubicacion}</b></p>
-											<p class="is-size-6">
+											{proyect.cliente ? (
+												<p class="mb-2">
+													<i class="fa-solid fa-user-tie mr-2 logo-client" />{" "}
+													<b>{proyect.cliente}</b>
+												</p>
+											) : (
+												""
+											)}
+											<p class="mb-2">
+												<i class="fa-solid fa-location-dot mr-2 logo-client" />{" "}
+												<b>{proyect.ubicacion}</b>
+											</p>
+											<p class="is-size-6 mb-5">
 												{proyect.description}
+											</p>
+											<p class="mb-2">
+												<b>Impacto: </b>
+												{proyect.impacto}
 											</p>
 										</div>
 									)
 								)
 							}
 						</div>
-						<div class="div-medio"></div>
 						<div
 							class="is-flex is-flex-direction-column is-justify-content-center div-proyect"
 						>
@@ -48,15 +61,28 @@ import proyect from "../assets/proyect.json";
 							{
 								proyect.ingenieria.proyect.finished.map(
 									(proyect, index) => (
-										<div>
-											<hr class="has-background-black linea-separadora" />
+										<div class="my-6">
 											<h4 class="is-size-5 mb-2">
 												{proyect.title}
 											</h4>
-											<p class="mb-2"><i class="fa-solid fa-user-tie mr-2 logo-client"></i> <b>{proyect.cliente}</b></p>
-											<p class="mb-2"><i class="fa-solid fa-map-location-dot mr-2 logo-client"></i> <b>{proyect.ubicacion}</b></p>
-											<p class="is-size-6">
+											{proyect.cliente ? (
+												<p class="mb-2">
+													<i class="fa-solid fa-user-tie mr-2 logo-client" />{" "}
+													<b>{proyect.cliente}</b>
+												</p>
+											) : (
+												""
+											)}
+											<p class="mb-2">
+												<i class="fa-solid fa-location-dot mr-2 logo-client" />{" "}
+												<b>{proyect.ubicacion}</b>
+											</p>
+											<p class="is-size-6 mb-5">
 												{proyect.description}
+											</p>
+											<p class="mb-2">
+												<b>Impacto: </b>
+												{proyect.impacto}
 											</p>
 										</div>
 									)
@@ -81,15 +107,28 @@ import proyect from "../assets/proyect.json";
 							{
 								proyect.renovables.proyect.inProgress.map(
 									(proyect, index) => (
-										<div>
-											<hr class="has-background-black linea-separadora" />
+										<div class="my-6">
 											<h4 class="is-size-5 mb-2">
 												{proyect.title}
 											</h4>
-											<p class="mb-2"><i class="fa-solid fa-user-tie mr-2 logo-client"></i> <b>{proyect.cliente}</b></p>
-											<p class="mb-2"><i class="fa-solid fa-map-location-dot mr-2 logo-client"></i> <b>{proyect.ubicacion}</b></p>
-											<p class="is-size-6">
+											{proyect.cliente ? (
+												<p class="mb-2">
+													<i class="fa-solid fa-user-tie mr-2 logo-client" />{" "}
+													<b>{proyect.cliente}</b>
+												</p>
+											) : (
+												""
+											)}
+											<p class="mb-2">
+												<i class="fa-solid fa-location-dot mr-2 logo-client" />{" "}
+												<b>{proyect.ubicacion}</b>
+											</p>
+											<p class="is-size-6 mb-5">
 												{proyect.description}
+											</p>
+											<p class="mb-2">
+												<b>Impacto: </b>
+												{proyect.impacto}
 											</p>
 										</div>
 									)
@@ -104,15 +143,28 @@ import proyect from "../assets/proyect.json";
 							{
 								proyect.renovables.proyect.finished.map(
 									(proyect, index) => (
-										<div>
-											<hr class="has-background-black linea-separadora" />
+										<div class="my-6">
 											<h4 class="is-size-5 mb-2">
 												{proyect.title}
 											</h4>
-											<p class="mb-2"><i class="fa-solid fa-user-tie mr-2 logo-client"></i> <b>{proyect.cliente}</b></p>
-											<p class="mb-2"><i class="fa-solid fa-map-location-dot mr-2 logo-client"></i> <b>{proyect.ubicacion}</b></p>
-											<p class="is-size-6">
+											{proyect.cliente ? (
+												<p class="mb-2">
+													<i class="fa-solid fa-user-tie mr-2 logo-client" />{" "}
+													<b>{proyect.cliente}</b>
+												</p>
+											) : (
+												""
+											)}
+											<p class="mb-2">
+												<i class="fa-solid fa-location-dot mr-2 logo-client" />{" "}
+												<b>{proyect.ubicacion}</b>
+											</p>
+											<p class="is-size-6 mb-5">
 												{proyect.description}
+											</p>
+											<p class="mb-2">
+												<b>Impacto: </b>
+												{proyect.impacto}
 											</p>
 										</div>
 									)
