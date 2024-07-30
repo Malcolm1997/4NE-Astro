@@ -333,3 +333,53 @@ body {
 .logo-client{
 	font-size: 24px;
 }
+
+
+
+@media only screen and (max-width: 1023px) {
+	
+	footer{
+		text-align: center;
+	}
+	
+	.divFotter-up, .divFotter-d, .div-contact{
+		flex-direction: column !important;
+	}
+
+	.divFotter-i{
+		margin-bottom: 2rem ;
+		width: 70%;
+	}
+
+	.logo-fotter{
+		width: 70%;
+		margin: 0 15%;
+	}
+
+	.divFotter-up{
+		align-items: center;
+		margin: 1rem auto;
+	}
+
+	.divFotter-d{
+		width: 90%;
+		margin: auto 5%;
+	}
+
+	.div-contact ul{
+		width: 90%;
+		margin: 5%;
+	}
+
+	.divRedes{
+		justify-content: center !important;
+		margin-top: 1rem;
+	} 
+}
+
+@media only screen and (max-width:425px){
+	.logo-fotter{
+		width: 90%;
+		margin: 0 5%;
+	}	
+}
