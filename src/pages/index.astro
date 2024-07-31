@@ -9,7 +9,7 @@ import renovables from "../assets/img/digestor.webp";
 	<script src="../scripts/animateIndex.js"></script>
 	<main>
 		<div
-			class="is-flex is-flex-direction-row is-justify-content-center py-5 div-index"
+			class="is-flex is-flex-direction-row is-justify-content-center py-5 div-index-desktop"
 		>
 			<div class="divImg is-flex" id="image-index-ing">
 				<Picture
@@ -53,6 +53,63 @@ import renovables from "../assets/img/digestor.webp";
 						>
 						<button
 							class="button buttonIndex is-rounded is-inverted"
+							id="proyect-ren-button">Proyectos</button
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="is-flex is-flex-direction-column is-justify-content-center py-5 div-index-mobile"
+		>
+			<div
+				class="is-flex is-flex-direction-column is-align-items-center has-background-black my-6 div-index-mobile-img"
+			>
+				<Picture
+					class="img-index-mobile image is-3by4"
+					src={ingenieria}
+					alt="Logo de 4NE"
+				/>
+				<div
+					class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center div-index-access"
+				>
+					<p class="my-4 is-size-3">Ingenieria</p>
+					<div
+						class="mb-3 is-flex is-flex-wrap-wrap is-justify-content-space-around mt-4 div-button"
+					>
+						<button
+							class="button buttonIndex is-rounded is-inverted mb-4"
+							id="service-ing-button">Servicios</button
+						>
+						<button
+							class="button buttonIndex is-rounded is-inverted mb-4"
+							id="proyect-ing-button">Proyectos</button
+						>
+					</div>
+				</div>
+			</div>
+			<div
+				class="is-flex is-flex-direction-column is-align-items-center has-background-black my-6 div-index-mobile-img"
+			>
+				<Picture
+					class="img-index-mobile image is-3by4"
+					src={renovables}
+					alt="Logo de 4NE"
+				/>
+				<div
+					class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center div-index-access"
+				>
+					<p class="my-4 is-size-3">Renovables</p>
+					<div
+						class="mb-3 is-flex is-flex-wrap-wrap is-justify-content-space-around mt-4 div-button"
+					>
+						<button
+							class="button buttonIndex is-rounded is-inverted mb-4"
+							id="service-ren-button">Servicios</button
+						>
+						<button
+							class="button buttonIndex is-rounded is-inverted mb-4"
 							id="proyect-ren-button">Proyectos</button
 						>
 					</div>
