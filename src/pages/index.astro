@@ -80,11 +80,11 @@ import renovables from "../assets/img/digestor.webp";
 					>
 						<button
 							class="button buttonIndex is-rounded is-inverted mb-4"
-							id="service-ing-button">Servicios</button
+							id="service-ing-button-mobile">Servicios</button
 						>
 						<button
 							class="button buttonIndex is-rounded is-inverted mb-4"
-							id="proyect-ing-button">Proyectos</button
+							id="proyect-ing-button-mobile">Proyectos</button
 						>
 					</div>
 				</div>
@@ -106,11 +106,11 @@ import renovables from "../assets/img/digestor.webp";
 					>
 						<button
 							class="button buttonIndex is-rounded is-inverted mb-4"
-							id="service-ren-button">Servicios</button
+							id="service-ren-button-mobile">Servicios</button
 						>
 						<button
 							class="button buttonIndex is-rounded is-inverted mb-4"
-							id="proyect-ren-button">Proyectos</button
+							id="proyect-ren-button-mobile">Proyectos</button
 						>
 					</div>
 				</div>
@@ -121,26 +121,46 @@ import renovables from "../assets/img/digestor.webp";
 
 <script>
 	const serviceIngButton = document.getElementById("service-ing-button");
+	const serviceIngButtonMobile = document.getElementById("service-ing-button-mobile");
 	const proyectIngButton = document.getElementById("proyect-ing-button");
+	const proyectIngButtonMobile = document.getElementById("proyect-ing-button-mobile");
 	const serviceRenButton = document.getElementById("service-ren-button");
+	const serviceRenButtonMobile = document.getElementById("service-ren-button-mobile");
 	const proyectRenButton = document.getElementById("proyect-ren-button");
+	const proyectRenButtonMobile = document.getElementById("proyect-ren-button-mobile");
 
 	serviceIngButton.addEventListener("click", function (event) {
 		event.preventDefault();
 		funcionPreNavegacionSerIng();
 	});
-
+	serviceIngButtonMobile.addEventListener("click", function (event) {
+		event.preventDefault();
+		funcionPreNavegacionSerIng();
+	});
+	
 	proyectIngButton.addEventListener("click", function (event) {
 		event.preventDefault();
 		funcionPreNavegacionProIng();
 	});
-
+	proyectIngButtonMobile.addEventListener("click", function (event) {
+		event.preventDefault();
+		funcionPreNavegacionProIng();
+	});
+	
 	serviceRenButton.addEventListener("click", function (event) {
+		event.preventDefault();
+		funcionPreNavegacionSerRen();
+	});
+	serviceRenButtonMobile.addEventListener("click", function (event) {
 		event.preventDefault();
 		funcionPreNavegacionSerRen();
 	});
 
 	proyectRenButton.addEventListener("click", function (event) {
+		event.preventDefault();
+		funcionPreNavegacionProRen();
+	});
+	proyectRenButtonMobile.addEventListener("click", function (event) {
 		event.preventDefault();
 		funcionPreNavegacionProRen();
 	});
