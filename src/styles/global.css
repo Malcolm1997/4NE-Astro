@@ -314,7 +314,7 @@ ol li{
 }
 
 .visible {
-    max-height: 10000px;
+    max-height: 100000px;
     opacity: 1;
     transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
 }
@@ -426,6 +426,7 @@ ol li{
 	}
 	/*Proyect*/
 
+	
 
 
 }
@@ -437,6 +438,14 @@ ol li{
 
 	.img-serv{
 		width: 95%;
+	}
+
+	.div-proyect-conteiner{
+		flex-direction: column;
+	}
+
+	.div-proyect{
+		width: 90%;
 	}
 }
 
