@@ -38,7 +38,7 @@ const cantServIng = services.ingenieria.services.length;
 <Layout title="4NE - Servicios">
 	<script src="../scripts/changeType.js"></script>
 	<main>
-		<h2 class="has-text-centered is-size-2 mt-5" id="title-secction-ing">
+		<h2 class="has-text-centered is-size-3 mt-5" id="title-secction-ing">
 			Servicios - Ingenieria
 		</h2>
 		<div id="service-ing-container">
@@ -48,7 +48,7 @@ const cantServIng = services.ingenieria.services.length;
 						<hr class="has-background-black" />
 						<div class="serv-card" id={`card-${index}`}>
 							<header class="card-header">
-								<h3 class="card-header-title">
+								<h3 class="card-header-title is-size-4">
 									{service.title}
 								</h3>
 								<button
@@ -68,14 +68,14 @@ const cantServIng = services.ingenieria.services.length;
 								class="card-content card-content-serv is-flex is-align-items-center"
 								id={`card-content-${index}`}
 							>
-								<div class="content content-serv mr-6 text-serv">
+								<div class="content content-serv text-serv">
 									<p>{service.description}</p>
 									<h4>
 										<b>Servicios ofrecidos:</b>
 									</h4>
 									<ol>
 										{service.service.map((item) => (
-											<li class="ml-6 my-3">
+											<li class="my-3">
 												<b>{item.title}:</b>{" "}
 												{item.description}
 											</li>
@@ -107,7 +107,7 @@ const cantServIng = services.ingenieria.services.length;
 							id={`card-${index + cantServIng}`}
 						>
 							<header class="card-header">
-								<h3 class="card-header-title is-size-3">
+								<h3 class="card-header-title is-size-4">
 									{service.title}
 								</h3>
 								<button
@@ -127,14 +127,14 @@ const cantServIng = services.ingenieria.services.length;
 								class="card-content card-content-serv is-flex is-align-items-center"
 								id={`card-content-${index + cantServIng}`}
 							>
-								<div class="content content-serv mr-6 text-serv">
+								<div class="content content-serv text-serv">
 									<p>{service.description}</p>
 									<h4>
 										<b>Servicios ofrecidos:</b>
 									</h4>
 									<ol>
 										{service.service.map((item) => (
-											<li class="ml-6 my-3">
+											<li class="my-3">
 												<b>{item.title}:</b>{" "}
 												{item.description}
 											</li>

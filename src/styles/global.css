@@ -5,6 +5,8 @@
 	src: url('../assets/fonts/owners-wide.ttf') format('truetype');
 }
 
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -276,6 +278,11 @@ body {
 
 .text-serv {
 	width: 80%;
+	margin-right: 3rem;
+}
+
+ol li{
+	margin-left: 3rem ;
 }
 
 .card-content-serv {
@@ -395,9 +402,28 @@ body {
 	}
 
 
-
 	/*Service*/
 
+	.card-content-serv{
+		flex-direction: column;
+	}
+
+	.serv-card{
+		margin: 0;
+	}
+
+	.text-serv{
+		margin-right: 0;
+		width: 95%;
+	}
+
+	ol li{
+		margin-left: 0 ;
+	}
+
+	.img-serv{
+		display: none;
+	}
 	/*Proyect*/
 
 
@@ -407,6 +433,10 @@ body {
 @media only screen and (max-width: 768px) {
 	.div-button{
 		width: 100%;
+	}
+
+	.img-serv{
+		width: 95%;
 	}
 }
 
