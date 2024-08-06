@@ -19,16 +19,44 @@ nav {
 	background-color: #F0F0F0 !important;
 }
 
-body {
+
+
+main, footer{
+	color: rgb(64, 70, 84) !important;
 	margin: 0 10%;
+}
+
+.linea-layout{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.navbar-menu{
+	justify-content: center;
+	background-color: #F0F0F0 !important;
+}
+
+.navbar-start{
+	margin: 0;
+}
+
+.navbar-item-mod{
+	color: hsla(221deg, 14%, 29%,1);
+}
+
+.title-class{
+	color: rgb(241, 242, 255);
 }
 
 .is-size-5-5{
 	font-size: 1.15rem;
 }
 
+
 .logo-image {
 	object-fit: contain;
+	max-height: 2.5rem !important;
+	margin: 5%;
 }
 
 .image-index {
@@ -249,7 +277,10 @@ body {
 
 .card-contact {
 	width: 33%;
-	margin-bottom: 0 !important
+	margin-bottom: 0 !important;
+	background-color: hsl(221, 14%, 100%);
+	color: hsla(221deg, 14%, 29%,1) !important;
+
 }
 
 .card-contact ul {
@@ -266,6 +297,10 @@ body {
 
 .card-contact a:active {
 	color: #000
+}
+
+.is-4{
+	color: hsla(221deg, 14%, 29%,1);
 }
 
 /* Servicios */
