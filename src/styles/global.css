@@ -33,7 +33,7 @@ main, footer{
 
 .navbar-menu{
 	justify-content: center;
-	background-color: #F0F0F0 !important;
+	background-color: #ffffff !important;
 }
 
 .navbar-start{
@@ -421,6 +421,10 @@ ol li{
 		justify-content: center !important;
 		margin-top: 1rem;
 	} 
+
+	.button-class{
+		margin-top: 2.5rem;
+	}
 
 	/*Index*/
 	.div-index-desktop{
