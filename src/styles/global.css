@@ -285,10 +285,6 @@ body {
 	border: #000 1px solid;
 }
 
-.img-serv {
-	width: 20%;
-}
-
 .text-serv {
 	width: 80%;
 	margin-right: 3rem;
@@ -430,14 +426,15 @@ ol li{
 		width: 95%;
 	}
 
+	.img-serv{
+		max-width:50%;
+	}
+
 	ol li{
 		margin-left: 0 ;
 	}
 
-	.img-serv{
-		display: none;
-	}
-	/*Proyect*/
+	/*About us*/
 
 	.carousel-desktop{
 		display: none;
@@ -451,6 +448,16 @@ ol li{
 		display: none;
 	}
 
+	/*Contact*/
+
+	.card-contact-content{
+		flex-direction: column;
+	}
+	.card-contact{
+		width: 70%;
+		margin: auto;
+		margin-bottom: 3rem !important;
+	}
 
 }
 
@@ -482,12 +489,28 @@ ol li{
 	.carousel-mobile{
 		display: block;
 	}
+
+	.card-contact{
+		width: 90%;
+	}
 }
 
 @media only screen and (max-width: 425px) {
 	.carousel-item-mobile img{
 		width: 80%;
 		margin: auto;
+	}
+
+	.card-contact{
+		width: 100%;
+	}
+
+	.card-content{
+		padding: 1rem;
+	}
+
+	.img-serv{
+		max-width:80%;
 	}
 }
 
