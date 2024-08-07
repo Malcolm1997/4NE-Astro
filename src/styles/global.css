@@ -19,11 +19,19 @@ nav {
 	background-color: #F0F0F0 !important;
 }
 
-
+body{
+	margin-top: 75px;
+}
 
 main, footer{
 	color: rgb(64, 70, 84) !important;
 	margin: 0 10%;
+}
+
+nav{
+	position: fixed !important;
+	width: 100%;
+	top: 0;
 }
 
 .linea-layout{
@@ -33,7 +41,7 @@ main, footer{
 
 .navbar-menu{
 	justify-content: center;
-	background-color: #ffffff !important;
+	background-color: #F0F0F0 !important;
 }
 
 .navbar-start{
