@@ -19,14 +19,16 @@ nav {
 	background-color: #F0F0F0 !important;
 }
 
-body{
-	margin-top: 75px;
-}
 
 main, footer{
 	color: rgb(64, 70, 84) !important;
-	margin: 0 10%;
+	margin: auto 10%;
 }
+
+main{
+	margin-top: 225px;
+}
+
 
 nav{
 	position: fixed !important;
