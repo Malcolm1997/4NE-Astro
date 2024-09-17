@@ -35,12 +35,12 @@ const images = {
 const cantServIng = services.ingenieria.services.length;
 ---
 
-<Layout title="4NE - Servicios">
+<Layout title="Servicios de Ingeniería en Energías Renovables, Oil & Gas - 4NE" description="Ofrecemos servicios de ingeniería para proyectos de energías renovables, oil & gas, consultoría EPC y más. Contáctanos para conocer nuestros servicios personalizados.">
 	<script src="../scripts/changeType.js"></script>
 	<main>
-		<h2 class="has-text-centered is-size-3 mt-5" id="title-secction-ing">
+		<h1 class="has-text-centered is-size-3 mt-5" id="title-secction-ing">
 			Servicios - Ingenieria
-		</h2>
+		</h1>
 		<div id="service-ing-container">
 			{
 				services.ingenieria.services.map((service, index) => (
@@ -48,9 +48,9 @@ const cantServIng = services.ingenieria.services.length;
 						<hr class="has-background-black" />
 						<div class="serv-card" id={`card-${index}`}>
 							<header class="card-header">
-								<h3 class="card-header-title is-size-4">
+								<h2 class="card-header-title is-size-4">
 									{service.title}
-								</h3>
+								</h2>
 								<button
 									class="card-header-icon toggle-button"
 									aria-label="more options"
@@ -70,9 +70,9 @@ const cantServIng = services.ingenieria.services.length;
 							>
 								<div class="content content-serv text-serv">
 									<p>{service.description}</p>
-									<h4>
-										<b>Servicios ofrecidos:</b>
-									</h4>
+									<h3>
+										<b class="title-type-service is-size-5">Servicios ofrecidos:</b>
+									</h3>
 									<ol>
 										{service.service.map((item) => (
 											<li class="my-3">
@@ -107,9 +107,9 @@ const cantServIng = services.ingenieria.services.length;
 							id={`card-${index + cantServIng}`}
 						>
 							<header class="card-header">
-								<h3 class="card-header-title is-size-4">
+								<h2 class="card-header-title is-size-4">
 									{service.title}
-								</h3>
+								</h2>
 								<button
 									class="card-header-icon toggle-button"
 									aria-label="more options"
@@ -129,9 +129,9 @@ const cantServIng = services.ingenieria.services.length;
 							>
 								<div class="content content-serv text-serv">
 									<p>{service.description}</p>
-									<h4>
-										<b>Servicios ofrecidos:</b>
-									</h4>
+									<h3>
+										<b class="title-type-service is-size-5">Servicios ofrecidos:</b>
+									</h3>
 									<ol>
 										{service.service.map((item) => (
 											<li class="my-3">

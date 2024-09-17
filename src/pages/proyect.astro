@@ -4,15 +4,15 @@ import Layout from "../layouts/Layout.astro";
 import proyect from "../assets/proyect.json";
 ---
 
-<Layout title="4NE - Proyectos">
+<Layout title="Proyectos de Energías Renovables e Ingeniería en Oil & Gas - 4NE" description="Descubre nuestros proyectos en energías renovables, biogás y oil & gas, con un enfoque en ingeniería EPC y consultoría técnica.">
 	<script src="../scripts/changeType.js"></script>
 	<main>
-		<h2
+		<h1
 			class="has-text-centered is-size-3 mt-5 mb-6"
 			id="title-secction-ing-proyect"
 		>
-			Proyectos
-		</h2>
+			Proyectos de Energía Renovable e Ingeniería de 4NE
+		</h1>
 		<div id="service-ing-container">
 			<div>
 				<div>
@@ -22,14 +22,14 @@ import proyect from "../assets/proyect.json";
 						<div
 							class="is-flex is-flex-direction-column is-justify-content-center div-proyect"
 						>
-							<h3 class="is-size-4 mb-5">En obra</h3>
+							<h2 class="is-size-4 mb-5">En obra</h2>
 							{
 								proyect.ingenieria.proyect.inProgress.map(
 									(proyect, index) => (
 										<div class="my-6">
-											<h4 class="is-size-5 mb-2">
+											<h3 class="is-size-5 mb-2">
 												{proyect.title}
-											</h4>
+											</h3>
 											{proyect.cliente ? (
 												<p class="mb-2">
 													<i class="fa-solid fa-user-tie mr-2 logo-client" />{" "}
@@ -62,9 +62,9 @@ import proyect from "../assets/proyect.json";
 								proyect.ingenieria.proyect.finished.map(
 									(proyect, index) => (
 										<div class="my-6">
-											<h4 class="is-size-5 mb-2">
+											<h3 class="is-size-5 mb-2">
 												{proyect.title}
-											</h4>
+											</h3>
 											{proyect.cliente ? (
 												<p class="mb-2">
 													<i class="fa-solid fa-user-tie mr-2 logo-client" />{" "}
@@ -103,14 +103,14 @@ import proyect from "../assets/proyect.json";
 						<div
 							class="is-flex is-flex-direction-column is-justify-content-center div-proyect"
 						>
-							<h3 class="is-size-4 mb-5">En obra</h3>
+							<h2 class="is-size-4 mb-5">En obra</h2>
 							{
 								proyect.renovables.proyect.inProgress.map(
 									(proyect, index) => (
 										<div class="my-6">
-											<h4 class="is-size-5 mb-2">
+											<h3 class="is-size-5 mb-2">
 												{proyect.title}
-											</h4>
+											</h3>
 											{proyect.cliente ? (
 												<p class="mb-2">
 													<i class="fa-solid fa-user-tie mr-2 logo-client" />{" "}
@@ -139,14 +139,14 @@ import proyect from "../assets/proyect.json";
 						<div
 							class="is-flex is-flex-direction-column is-justify-content-center div-proyect"
 						>
-							<h3 class="is-size-4 mb-5">Finalizados</h3>
+							<h2 class="is-size-4 mb-5">Finalizados</h2>
 							{
 								proyect.renovables.proyect.finished.map(
 									(proyect, index) => (
 										<div class="my-6">
-											<h4 class="is-size-5 mb-2">
+											<h3 class="is-size-5 mb-2">
 												{proyect.title}
-											</h4>
+											</h3>
 											{proyect.cliente ? (
 												<p class="mb-2">
 													<i class="fa-solid fa-user-tie mr-2 logo-client" />{" "}
