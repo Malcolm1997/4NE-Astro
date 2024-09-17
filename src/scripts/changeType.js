@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         if (tipoPag === "ing") {
-            serviceContainerTitle ? serviceContainerTitle.innerHTML = "Servicios - Ingenieria" : proyectContainerTitle.innerHTML = "Proyectos - Ingenieria"
+            serviceContainerTitle ? serviceContainerTitle.innerHTML = "Servicios de Ingeniería: Consultoría y Desarrollo de Proyectos" : proyectContainerTitle.innerHTML = "Proyectos de Ingeniería: Innovación y Soluciones Eficientes"
             ingenieriaContainer.classList.add("visible");
             ingenieriaContainer.classList.remove("hidden");
             renovablesContainer.classList.add("hidden");
             renovablesContainer.classList.remove("visible");
         } else {
-            serviceContainerTitle ? serviceContainerTitle.innerHTML = "Servicios - Renovables" : proyectContainerTitle.innerHTML = "Proyectos - Renovables"
+            serviceContainerTitle ? serviceContainerTitle.innerHTML = "Servicios de Energías Renovables: Consultoría y Ejecución de Proyectos" : proyectContainerTitle.innerHTML = "Proyectos en Energías Renovables: Sostenibilidad y Eficiencia"
             ingenieriaContainer.classList.add("hidden");
             ingenieriaContainer.classList.remove("visible");
             renovablesContainer.classList.add("visible");
