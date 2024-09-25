@@ -48,6 +48,10 @@
                     {
                         "title": "Optimización Energética",
                         "description": "Soluciones para mejorar la eficiencia energética y reducir costos."
+                    },
+                    {
+                        "title": "Instrumentación y Control",
+                        "description": "Selección de variables a medir e instrumentos necesarios para sistemas de instrumentación y control. El desarrollo del software de gestión será responsabilidad del cliente."
                     }
                 ],
                 "conclusion": "Nuestro enfoque en la innovación y la seguridad garantiza que sus instalaciones eléctricas operen con la máxima eficiencia y fiabilidad. Permítanos ser su socio de confianza en todos sus proyectos eléctricos.",
@@ -281,6 +285,14 @@
                     {
                         "title": "Soluciones a Medida",
                         "description": "Desarrollo de proyectos específicos según los requerimientos del cliente."
+                    },
+                    {
+                        "title": "Consultoría en Compras y Proveedores",
+                        "description": "Asesoría en procesos de compras y gestión de proveedores para optimizar la cadena de suministro."
+                    },
+                    {
+                        "title": "Asesoramiento a PYMEs",
+                        "description": "Calificación de empresas frente a clientes para mejorar su competitividad en el mercado."
                     },
                     {
                         "title": "Innovación y Tecnología",
