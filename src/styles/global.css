@@ -83,6 +83,14 @@ nav{
 	position: relative;
 }
 
+.botton-final{
+	width: 180px;
+}
+
+.text-ren{
+	text-align: center;
+}
+
 .divHov {
 	position: absolute;
 	font-size: 300%;
@@ -317,6 +325,19 @@ nav{
 
 .card-header-title{
 	font-size: 1.75rem;
+
+}
+
+.toggle-button{
+	cursor: pointer;
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.card-header .arrow-icon.rotate {
+    transform: rotate(180deg);
 }
 
 .serv-card{
@@ -333,6 +354,7 @@ nav{
 .text-serv {
 	width: 80%;
 	margin-right: 3rem;
+	margin-top: 15px;
 }
 
 .title-type-service{
@@ -453,6 +475,8 @@ ol li{
 
 	.div-index-mobile-img{
 		border-radius: 10px;
+		max-width: 650px;
+		margin: auto;
 	}
 
 	.div-index-access{
@@ -461,6 +485,10 @@ ol li{
 
 	.div-button{
 		width: 70%;
+	}
+
+	.botton-final{
+		width: 100%;
 	}
 
 

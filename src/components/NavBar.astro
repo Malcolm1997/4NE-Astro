@@ -34,7 +34,7 @@ import logo from "../assets/img/Logo 4NE - Chico x40.png";
 		</div>
 	</div>
 
-	<div class="navbar-end">
+	<div class="navbar-end botton-final">
 		<div class="navbar-item">
 			<div class="buttons is-justify-content-center">
 				<button class="button is-rounded is-inverted button-class" id="pag-toggle"
@@ -59,14 +59,14 @@ import logo from "../assets/img/Logo 4NE - Chico x40.png";
 		if (tipoPag === "ing") {
 			textNode.nodeValue = "Renovables ";
 		} else if (tipoPag === "ren") {
-			textNode.nodeValue = "Ingeniería ";
+			textNode.nodeValue = "Oil & Gas ";
 		}
 
 		btnPag.addEventListener("click", () => {
 			if (tipoPag === "ing") {
 				tipoPag = "ren";
 				localStorage.setItem("pagTipo", "ren");
-				textNode.nodeValue = "Ingeniería ";
+				textNode.nodeValue = " Oil & Gas ";
 			} else if (tipoPag === "ren") {
 				tipoPag = "ing";
 				localStorage.setItem("pagTipo", "ing");

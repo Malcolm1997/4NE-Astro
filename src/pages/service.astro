@@ -35,7 +35,10 @@ const images = {
 const cantServIng = services.ingenieria.services.length;
 ---
 
-<Layout title="Servicios de Ingeniería en Energías Renovables, Oil & Gas - 4NE" description="Ofrecemos servicios de ingeniería para proyectos de energías renovables, oil & gas, consultoría EPC y más. Contáctanos para conocer nuestros servicios personalizados.">
+<Layout
+	title="Servicios de Ingeniería en Energías Renovables, Oil & Gas - 4NE"
+	description="Ofrecemos servicios de ingeniería para proyectos de energías renovables, oil & gas, consultoría EPC y más. Contáctanos para conocer nuestros servicios personalizados."
+>
 	<script src="../scripts/changeType.js"></script>
 	<main>
 		<h1 class="has-text-centered is-size-3 mt-5" id="title-secction-ing">
@@ -47,22 +50,19 @@ const cantServIng = services.ingenieria.services.length;
 					<>
 						<hr class="has-background-black" />
 						<div class="serv-card" id={`card-${index}`}>
-							<header class="card-header">
+							<header
+								class="card-header toggle-button"
+								data-index={index}
+							>
 								<h2 class="card-header-title is-size-4">
 									{service.title}
 								</h2>
-								<button
-									class="card-header-icon toggle-button"
-									aria-label="more options"
-									data-index={index}
-								>
-									<span class="icon">
-										<i
-											class="fas fa-angle-down"
-											aria-hidden="true"
-										/>
-									</span>
-								</button>
+								<span class="icon">
+									<i
+										class="fas fa-chevron-down arrow-icon"
+										aria-hidden="true"
+									/>
+								</span>
 							</header>
 							<div
 								class="card-content card-content-serv is-flex is-align-items-center"
@@ -71,7 +71,9 @@ const cantServIng = services.ingenieria.services.length;
 								<div class="content content-serv text-serv">
 									<p>{service.description}</p>
 									<h3>
-										<b class="title-type-service is-size-5">Servicios ofrecidos:</b>
+										<b class="title-type-service is-size-5">
+											Servicios ofrecidos:
+										</b>
 									</h3>
 									<ol>
 										{service.service.map((item) => (
@@ -106,22 +108,16 @@ const cantServIng = services.ingenieria.services.length;
 							class="serv-card"
 							id={`card-${index + cantServIng}`}
 						>
-							<header class="card-header">
+							<header class="card-header toggle-button" data-index={index + cantServIng}>
 								<h2 class="card-header-title is-size-4">
 									{service.title}
 								</h2>
-								<button
-									class="card-header-icon toggle-button"
-									aria-label="more options"
-									data-index={index + cantServIng}
-								>
-									<span class="icon">
-										<i
-											class="fas fa-angle-down"
-											aria-hidden="true"
-										/>
-									</span>
-								</button>
+								<span class="icon">
+									<i
+										class="fas fa-chevron-down arrow-icon"
+										aria-hidden="true"
+									/>
+								</span>
 							</header>
 							<div
 								class="card-content card-content-serv is-flex is-align-items-center"
@@ -130,7 +126,9 @@ const cantServIng = services.ingenieria.services.length;
 								<div class="content content-serv text-serv">
 									<p>{service.description}</p>
 									<h3>
-										<b class="title-type-service is-size-5">Servicios ofrecidos:</b>
+										<b class="title-type-service is-size-5">
+											Servicios ofrecidos:
+										</b>
 									</h3>
 									<ol>
 										{service.service.map((item) => (
@@ -157,4 +155,3 @@ const cantServIng = services.ingenieria.services.length;
 		</div>
 	</main>
 </Layout>
-
