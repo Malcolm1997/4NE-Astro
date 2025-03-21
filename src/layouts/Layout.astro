@@ -5,9 +5,9 @@ interface Props {
 }
 const { title, description } = Astro.props;
 
-import NavBar from '../components/NavBar.astro'
-import Footer from '../components/Footer.astro'
-import '../styles/global.css';
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -17,14 +17,91 @@ import '../styles/global.css';
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
+			defer></script>
+
+		<script>
+			declare global {
+				interface Window {
+					cookieconsent: any;
+					fbq: any;
+				}
+				var fbq: any;
+			}
+			window.addEventListener("load", () => {
+				window.cookieconsent.initialise({
+					palette: {
+						popup: { background: "#000" },
+						button: { background: "#f1d600" },
+					},
+					theme: "classic",
+					type: "opt-in",
+					content: {
+						message:
+							"Utilizamos cookies para mejorar tu experiencia y ofrecer publicidad personalizada.",
+						allow: "Aceptar",
+						deny: "Rechazar",
+						link: "Más información",
+						href: "/politica-de-cookies/",
+					},
+					onInitialise(status) {
+						if (this.hasConsented()) loadFacebookPixel();
+					},
+					onStatusChange(status) {
+						if (this.hasConsented()) loadFacebookPixel();
+					},
+				});
+
+				function loadFacebookPixel() {
+					if (window.fbq) return;
+					!(function (f, b, e, v, n, t, s) {
+						if (f.fbq) return;
+						n = f.fbq = function () {
+							n.callMethod
+								? n.callMethod.apply(n, arguments)
+								: n.queue.push(arguments);
+						};
+						if (!f._fbq) f._fbq = n;
+						n.push = n;
+						n.loaded = !0;
+						n.version = "2.0";
+						n.queue = [];
+						t = b.createElement(e);
+						t.async = !0;
+						t.src = v;
+						s = b.getElementsByTagName(e)[0];
+						s.parentNode.insertBefore(t, s);
+					})(
+						window,
+						document,
+						"script",
+						"https://connect.facebook.net/en_US/fbevents.js"
+					);
+
+					fbq("init", "TU_ID_PIXEL"); // Cambia aquí por tu ID de Facebook Pixel
+					fbq("track", "PageView");
+				}
+			});
+		</script>
 	</head>
 	<body>
-		<NavBar/>
+		<NavBar />
 		<slot />
-		<hr class="has-background-black linea-layout" >
-		<Footer/>
+		<hr class="has-background-black linea-layout" />
+		<Footer />
 	</body>
 </html>
