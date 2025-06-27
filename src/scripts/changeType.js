@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
             renovablesContainer.classList.remove("hidden");
         }
     };
+    // Expose for testing
+    window.toggleVisibility = toggleVisibility;
 
     // Selección de todos los encabezados de las tarjetas
     const headers = document.querySelectorAll(".card-header.toggle-button");
