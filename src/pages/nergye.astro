@@ -1,0 +1,61 @@
+---
+// ...existing code...
+import { Picture } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import nergye from '../assets/img/Logos-Alianzas/nergye.svg';
+// ...existing code...
+---
+<Layout title="Nergye" description="Información sobre Nergye - alianza y servicios">
+  <main class=" nergye-page">
+    <section class="hero">
+      <div class="hero-inner">
+        <Picture src={nergye} alt="Nergye" class="nergye-logo" />
+        <div>
+          <h1>Nergye</h1>
+          <p class="lead">Alianza estratégica — Soluciones energéticas y servicios relacionados.</p>
+          <p><a class="button" href="https://www.nergye.com/" target="_blank" rel="noopener noreferrer">Visitar nergye.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>Sobre Nergye</h2>
+      <p>
+        Nergye es una empresa dedicada a soluciones energéticas, proyectos de eficiencia y servicios técnicos.
+        Aquí puedes añadir una descripción más amplia de la empresa, su misión y las áreas principales de trabajo.
+      </p>
+    </section>
+
+    <section class="services">
+      <h2>Servicios destacados</h2>
+      <ul>
+        <li>Auditorías energéticas y diagnóstico</li>
+        <li>Proyectos de eficiencia y optimización</li>
+        <li>Mantenimiento técnico y operation</li>
+        <li>Implementación de soluciones renovables</li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Proyectos y casos de éxito</h2>
+      <p>Añade aquí descripciones de proyectos, imágenes o enlaces a casos de estudio. Si quieres, puedo enlazar datos desde src/assets/proyect.json.</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contacto</h2>
+      <p>Visita su web para más información o contacta a través de su formulario en nergye.com.</p>
+      <p><a href="mailto:info@nergye.com">info@nergye.com</a> (si conoces el email, cámbialo)</p>
+    </section>
+  </main>
+
+  <style>
+    .nergye-page { padding: 2rem 1rem; max-width: 980px; }
+    .hero { padding: 2rem 0; border-bottom: 1px solid #e6e6e6; }
+    .hero-inner { display:flex; gap:1.25rem; align-items:center; }
+    .nergye-logo { width:96px; height:auto; display:block; }
+    .lead { color: #555; margin-top:0.25rem; }
+    .button { display:inline-block; background:#007acc; color:#fff; padding:0.5rem 0.9rem; border-radius:5px; text-decoration:none; }
+    section { margin:1.5rem 0; }
+    .services ul { padding-left:1.25rem; }
+  </style>
+</Layout>
