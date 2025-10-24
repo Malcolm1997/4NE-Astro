@@ -1,0 +1,42 @@
+{
+    "nergye": {
+        "service": [
+            {
+                "title": "Exploración y producción de petróleo & gas:",
+                "description": "Desarrollo de modelos geológicos, revisión de sísmica 2D/3D, mapeo estructural."
+            },
+            {
+                "title": "Gestión de reservorios:",
+                "description": "Estrategia de desarrollo de yacimiento, estimación de EUR (volumen recuperable) y pronóstico de producción."
+            },
+            {
+                "title": "Perforación, completación y work-over:",
+                "description": "Análisis de datos de pozos, optimización de diseños y control de costos y tiempos operativos."
+            },
+            {
+                "title": "Ingeniería de producción e instalaciones:",
+                "description": "Definición de sistemas de extracción, estructura de OPEX/CAPEX e ingeniería básica de instalaciones de superficie."
+            },
+            {
+                "title": "Seguridad, salud y medio ambiente (HSE):",
+                "description": "Auditorías de cumplimiento legal, análisis de prácticas operativas y soporte para integración de sistemas de gestión integrados."
+            },
+            {
+                "title": "Modelado económico y soporte de negocio:",
+                "description": "Análisis de contratos, escenarios técnicos-económicos y apoyo en la toma de decisiones para monetizar reservas."
+            },
+            {
+                "title": "Transformación digital de operaciones:",
+                "description": "Optimización matemática y Big Data para campos inteligentes, inteligencia artificial para detección de patrones operativos y mejora de procesos."
+            },
+            {
+                "title": "Servicios de consultoría digital:",
+                "description": "Definición de estrategias en IA, machine learning aplicado y talleres de innovación tecnológica."
+            },
+            {
+                "title": "Gestión energética y sostenibilidad:",
+                "description": "Desarrollo de soluciones para eficiencia energética, integración de fuentes renovables y reducción de huella de carbono en operaciones industriales."
+            }
+        ]
+    }
+}

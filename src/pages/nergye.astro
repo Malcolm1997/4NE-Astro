@@ -1,61 +1,255 @@
 ---
-// ...existing code...
 import { Picture } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import nergye from '../assets/img/Logos-Alianzas/nergye.svg';
-// ...existing code...
+import nergye from "../assets/img/Logos-Alianzas/nergye.svg";
+import proyect from "../assets/proyectNergye.json";
 ---
-<Layout title="Nergye" description="Información sobre Nergye - alianza y servicios">
-  <main class=" nergye-page">
-    <section class="hero">
-      <div class="hero-inner">
-        <Picture src={nergye} alt="Nergye" class="nergye-logo" />
-        <div>
-          <h1>Nergye</h1>
-          <p class="lead">Alianza estratégica — Soluciones energéticas y servicios relacionados.</p>
-          <p><a class="button" href="https://www.nergye.com/" target="_blank" rel="noopener noreferrer">Visitar nergye.com</a></p>
-        </div>
-      </div>
-    </section>
 
-    <section class="about">
-      <h2>Sobre Nergye</h2>
-      <p>
-        Nergye es una empresa dedicada a soluciones energéticas, proyectos de eficiencia y servicios técnicos.
-        Aquí puedes añadir una descripción más amplia de la empresa, su misión y las áreas principales de trabajo.
-      </p>
-    </section>
+<Layout
+	title="Proyectos de Energías Renovables e Ingeniería en Oil & Gas - 4NE"
+	description="Descubre nuestros proyectos en energías renovables, biogás y oil & gas, con un enfoque en ingeniería EPC y consultoría técnica."
+>
+	<main>
+		<h1
+			class="has-text-centered is-size-3 mt-5 mb-6"
+			id="title-secction-ing-proyect"
+		>
+			<Picture src={nergye} alt="Nergye" />
+		</h1>
 
-    <section class="services">
-      <h2>Servicios destacados</h2>
-      <ul>
-        <li>Auditorías energéticas y diagnóstico</li>
-        <li>Proyectos de eficiencia y optimización</li>
-        <li>Mantenimiento técnico y operation</li>
-        <li>Implementación de soluciones renovables</li>
-      </ul>
-    </section>
+		<h1 class="is-size-3 has-text-centered mt-6">
+							Alianza estratégica — Soluciones energéticas y servicios
+				relacionados
+		</h1>
+		<div class="my-2">
+			<p class="is-size-5-5">
+				Nergye es una empresa dedicada a soluciones energéticas,
+				proyectos de eficiencia y servicios técnicos. 
+			</p>
+		</div>
+		<h2 class="is-size-4 mt-6">Servicios destacados</h2>
+		<ul>
+			{
+				proyect.nergye.service.map((proyect) => (
+							<li class="my-3">
+                                <div class="is-size-6 mb-2">
+                                    <p>
+										<i class="fa fa-check-circle proyect-check" aria-hidden="true"></i>
+										<span class="proyect-title">{proyect.title}</span>
+										{" "}{proyect.description}
+                                    </p>
+                                </div>
+                            </li>
+                        ))
+                    }
+		</ul>
+    <section class="contact mt-6">
+    <h2 class="is-size-4">Contacto</h2>
+    <ul class="contact-list">
+        <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+                </svg>
+            </span>
+            <a
+                class="contact-text contact-link"
+                href="https://www.google.com/maps/search/?api=1&query=Av.+C%C3%B3rdoba+629+piso+3+Buenos+Aires+Argentina"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Av. Córdoba 629, piso 3, Bs. As., ARG
+            </a>
+        </li>
 
-    <section class="projects">
-      <h2>Proyectos y casos de éxito</h2>
-      <p>Añade aquí descripciones de proyectos, imágenes o enlaces a casos de estudio. Si quieres, puedo enlazar datos desde src/assets/proyect.json.</p>
-    </section>
+        <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
+                </svg>
+            </span>
+            <a class="contact-link" href="mailto:info@nergye.com">info@nergye.com</a>
+        </li>
 
-    <section class="contact">
-      <h2>Contacto</h2>
-      <p>Visita su web para más información o contacta a través de su formulario en nergye.com.</p>
-      <p><a href="mailto:info@nergye.com">info@nergye.com</a> (si conoces el email, cámbialo)</p>
-    </section>
-  </main>
+        <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+                    <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57.12.32.03.69-.24 1.01l-2.21 2.21z"/>
+                </svg>
+            </span>
+            <a class="contact-link" href="tel:+5491144384064">(+54 9 11) 4438-4064</a>
+        </li>
+    </ul>
 
-  <style>
-    .nergye-page { padding: 2rem 1rem; max-width: 980px; }
-    .hero { padding: 2rem 0; border-bottom: 1px solid #e6e6e6; }
-    .hero-inner { display:flex; gap:1.25rem; align-items:center; }
-    .nergye-logo { width:96px; height:auto; display:block; }
-    .lead { color: #555; margin-top:0.25rem; }
-    .button { display:inline-block; background:#007acc; color:#fff; padding:0.5rem 0.9rem; border-radius:5px; text-decoration:none; }
-    section { margin:1.5rem 0; }
-    .services ul { padding-left:1.25rem; }
-  </style>
+    <div class="contact-actions mt-3">
+        <a class="button is-rounded is-inverted button-class button-nergye" href="https://nergye.com" target="_blank" rel="noopener noreferrer">
+            Visitar sitio de Nergye
+        </a>
+    </div>
+</section>
+	</main>
+<style>
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0 0 0;
+    max-width: 720px;
+}
+
+/* Más separación entre items y respiración vertical */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;             /* más separación horizontal entre icono y texto */
+    padding: 0.9rem 0;     /* más espacio vertical por item */
+    border-bottom: 1px dashed rgba(0,0,0,0.06);
+}
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+/* Icono */
+.contact-icon {
+    flex: 0 0 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #EC6608 !important;
+    opacity: 0.95;
+}
+
+/* Texto del contacto: aumentar letter-spacing y line-height para mejor lectura */
+.contact-text {
+    font-size: 1rem;
+    color: #222;
+    letter-spacing: 0.32px;   /* espaciado entre letras */
+    line-height: 1.55;        /* más altura de línea para respiración */
+}
+
+/* Enlaces de contacto: color #005C66, sin negrita y más separación entre letras */
+.contact-link {
+    color: #005C66 !important;
+    text-decoration: none !important;
+    font-weight: 400;              /* sin negrita */
+    position: relative;
+    padding-bottom: 3px;
+    transition: color 140ms ease;
+    cursor: pointer;
+    letter-spacing: 0.36px;       /* espaciado entre letras en enlaces */
+    line-height: 1.45;
+}
+
+/* Underline animado */
+.contact-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #005C66, transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 180ms ease;
+    border-radius: 2px;
+}
+
+/* Indicador ↗ */
+.contact-link::after {
+    content: "↗";
+    margin-left: 6px;
+    font-size: 0.85em;
+    opacity: 0.65;
+    transition: transform 140ms ease, opacity 140ms ease;
+    color: #005C66;
+}
+
+/* Estados interactivos */
+.contact-link:hover::before,
+.contact-link:focus::before {
+    transform: scaleX(1);
+}
+.contact-link:hover::after,
+.contact-link:focus::after {
+    transform: translateY(-1px);
+    opacity: 1;
+}
+.contact-link:hover,
+.contact-link:focus {
+    color: #005C66 !important;
+    outline: none;
+}
+
+/* Focus accesible */
+.contact-link:focus {
+    box-shadow: 0 0 0 4px rgba(0,92,102,0.12);
+    border-radius: 4px;
+}
+
+/* Botón y acciones */
+.contact-actions {
+    margin-top: 1rem; /* un poco más de espacio sobre el botón */
+}
+.btn-nergye {
+    display: inline-block;
+    background: #3273dc;
+    color: #fff;
+    padding: 0.55rem 0.9rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(50,115,220,0.15);
+}
+.btn-nergye:hover {
+    background: #275fb0;
+    box-shadow: 0 4px 10px rgba(39,95,176,0.14);
+    transform: translateY(-1px);
+}
+.button-nergye{
+    margin: auto;
+    background-color: #005C66;
+}
+
+/* Underline style for project titles */
+.proyect-title {
+  text-decoration: underline;
+  text-decoration-color: currentColor; /* usa el mismo color que el texto */
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: auto;
+  font-weight: inherit;
+  letter-spacing: 0.36px;               /* opcional: mantener espaciado similar */
+}
+
+/* icono de check delante de cada item */
+.proyect-check {
+  color: #005C66;
+  margin-right: 0.5rem;
+  font-size: 1.05rem;
+  vertical-align: text-bottom;
+  opacity: 0.95;
+}
+
+/* Responsive: mantener espaciado más compacto en móvil */
+@media (max-width: 600px) {
+    .contact-item {
+        gap: 0.75rem;
+        padding: 0.7rem 0;
+    }
+    .contact-text, .contact-link {
+        font-size: 0.95rem;
+        letter-spacing: 0.28px;
+        line-height: 1.4;
+    }
+    .btn-nergye {
+        width: 100%;
+        text-align: center;
+        padding: 0.7rem;
+    }
+}
+</style>
 </Layout>
