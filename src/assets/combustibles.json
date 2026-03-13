@@ -1,0 +1,183 @@
+{
+  "productos": [
+    {
+      "categoria": "Petróleo Crudo",
+      "icon": "fa-solid fa-oil-well",
+      "descripcion": "Comercializamos las principales variedades de petróleo crudo del mercado internacional, garantizando calidad certificada y abastecimiento confiable para refinerías e industrias.",
+      "items": [
+        { "nombre": "Oeste de Texas Intermedio (WTI)", "descripcion": "Crudo liviano y dulce, referencia del mercado norteamericano. Bajo contenido de azufre y alta densidad API." },
+        { "nombre": "Luz de Hueso (LLS)", "descripcion": "Crudo de referencia del Golfo de México, muy cotizado por su bajo contenido de azufre y excelente rendimiento en destilados." },
+        { "nombre": "Cesta Mexicana – Maya", "descripcion": "Crudo pesado de alto rendimiento en productos residuales, ideal para refinerías configuradas para procesar crudos pesados." },
+        { "nombre": "Cesta Mexicana – Olmeca", "descripcion": "Crudo superligero mexicano con bajo contenido de azufre, excelente para la producción de gasolinas y naftas." },
+        { "nombre": "Cesta Mexicana – Istmo", "descripcion": "Crudo ligero de referencia de México, equilibrado en producción de destilados medios y ligeros." }
+      ]
+    },
+    {
+      "categoria": "Diesel",
+      "icon": "fa-solid fa-truck",
+      "descripcion": "Ofrecemos distintas especificaciones de diesel para uso industrial, transporte y generación eléctrica, cumpliendo estándares internacionales de calidad.",
+      "items": [
+        { "nombre": "ULSD < 15 PPM", "descripcion": "Diesel de ultra bajo contenido de azufre, especificación americana. Ideal para motores modernos con sistemas de postratamiento." },
+        { "nombre": "ULSD < 10 PPM (EN-590)", "descripcion": "Diesel de ultra bajo azufre bajo norma europea EN-590. Cumple los requisitos más estrictos de emisiones Euro V y VI." },
+        { "nombre": "D2", "descripcion": "Gasóleo grado 2 de uso industrial y marino. Ampliamente utilizado en generadores, calderas y equipos pesados." },
+        { "nombre": "D6 – Aceite combustible virgen de bajo consumo (LPFO)", "descripcion": "Fuel oil virgen de bajo punto de fusión, utilizado en generación de energía y aplicaciones industriales de alta demanda." }
+      ]
+    },
+    {
+      "categoria": "Gasolina",
+      "icon": "fa-solid fa-gas-pump",
+      "descripcion": "Gasolinas de distintos octanajes para el mercado automotriz e industrial, con estricto control de calidad certificado por laboratorios internacionales.",
+      "items": [
+        { "nombre": "Gasolina 87 Octanos (Regular)", "descripcion": "Gasolina de grado regular, adecuada para motores con relaciones de compresión estándar." },
+        { "nombre": "Gasolina 89 Octanos (Midgrade)", "descripcion": "Gasolina de grado medio, recomendada para motores de compresión media-alta." },
+        { "nombre": "Gasolina 93 Octanos (Premium)", "descripcion": "Gasolina premium de alto octanaje para motores sobrealimentados y de alta performance." }
+      ]
+    },
+    {
+      "categoria": "Combustible para Aviones",
+      "icon": "fa-solid fa-plane",
+      "descripcion": "Suministramos combustibles de aviación certificados según estándares internacionales para operaciones civiles y militares.",
+      "items": [
+        { "nombre": "Jet A-1", "descripcion": "Combustible de aviación civil internacional, con punto de congelación de -47°C. Utilizado en la mayoría de las aerolíneas comerciales del mundo." },
+        { "nombre": "JP-54", "descripcion": "Combustible de aviación de alta pureza con punto de congelación de -58°C, especificación utilizada en aviación comercial rusa e internacional." }
+      ]
+    },
+    {
+      "categoria": "Gas Licuado de Petróleo",
+      "icon": "fa-solid fa-fire-flame-curved",
+      "descripcion": "Comercializamos GLP en distintas mezclas y proporciones según las necesidades industriales, domésticas y de transporte del cliente.",
+      "items": [
+        { "nombre": "LPG Butano 50 / Propano 50", "descripcion": "Mezcla equilibrada de butano y propano, ideal para usos domésticos e industriales en climas templados." },
+        { "nombre": "GLP 60/40 (Butano/Propano)", "descripcion": "Mezcla con mayor proporción de butano, óptima para climas cálidos y aplicaciones industriales específicas." },
+        { "nombre": "GLP 70/30 (Butano/Propano)", "descripcion": "Mezcla de alto contenido butano para aplicaciones industriales en regiones de clima cálido." },
+        { "nombre": "Gas Natural Licuado (GNL)", "descripcion": "Gas natural en estado líquido para transporte y almacenamiento eficiente. Alternativa limpia para generación eléctrica e industria." }
+      ]
+    },
+    {
+      "categoria": "Otros Hidrocarburos",
+      "icon": "fa-solid fa-flask",
+      "descripcion": "Disponemos de una amplia gama de productos derivados del petróleo para aplicaciones industriales especializadas.",
+      "items": [
+        { "nombre": "Mazut M-100", "descripcion": "Fuel oil pesado de alta viscosidad, usado en calderas industriales, centrales térmicas y aplicaciones de bajo costo energético." },
+        { "nombre": "Nafta", "descripcion": "Fracción ligera utilizada como materia prima petroquímica, disolvente industrial y en la producción de plásticos y químicos." },
+        { "nombre": "Betún (Asfalto)", "descripcion": "Ligante hidrocarbonado para pavimentación de carreteras, impermeabilización y construcción civil." },
+        { "nombre": "SN-100", "descripcion": "Aceite base del grupo I de baja viscosidad para formulación de lubricantes industriales y automotrices." },
+        { "nombre": "SN-150", "descripcion": "Aceite base del grupo I, viscosidad media-baja, ampliamente usado en lubricantes hidráulicos." },
+        { "nombre": "SN-300", "descripcion": "Aceite base de viscosidad media para lubricantes de motor y engranes industriales." },
+        { "nombre": "SN-500", "descripcion": "Aceite base de alta viscosidad para transmisiones, reductores y aplicaciones de carga extrema." },
+        { "nombre": "N40", "descripcion": "Aceite mineral neutro de proceso, utilizado como diluente y en formulaciones de aceites especiales." },
+        { "nombre": "Coque de Petróleo (todos los grados)", "descripcion": "Subproducto de refinerías utilizado como combustible en industria cementera, metalúrgica y generación eléctrica." }
+      ]
+    },
+    {
+      "categoria": "Alcoholes",
+      "icon": "fa-solid fa-droplet",
+      "descripcion": "Suministramos alcoholes industriales de alta pureza para uso como biocombustibles, insumos químicos y aditivos.",
+      "items": [
+        { "nombre": "Etanol", "descripcion": "Alcohol etílico industrial y combustible. Utilizado como biocombustible (E85, E10), solvente y materia prima química." },
+        { "nombre": "Metanol", "descripcion": "Alcohol metílico de alta pureza para síntesis química, producción de biodiesel (transesterificación) y uso como combustible alternativo." }
+      ]
+    }
+  ],
+  "procedimientos": [
+    {
+      "tipo": "FOB",
+      "subtitulo": "Procedimiento de Venta FOB (Róterdam, Fujairah, Houston)",
+      "descripcion": "En las operaciones FOB (Free On Board) el comprador se hace cargo de los costos y riesgos del transporte desde el puerto de origen. Este procedimiento aplica para los puertos de Róterdam, Fujairah y Houston.",
+      "pasos": [
+        {
+          "numero": 1,
+          "titulo": "Emisión de ICPO",
+          "descripcion": "El comprador emite la ICPO (Orden Irrevocable de Compra) junto con el Certificado de Registro de la Empresa o cualquier documento de identificación válido."
+        },
+        {
+          "numero": 2,
+          "titulo": "Factura Comercial Proforma",
+          "descripcion": "El vendedor emite la Factura Comercial Proforma. El comprador la firma y la devuelve junto con su Contrato de Almacenamiento en Tanque."
+        },
+        {
+          "numero": 3,
+          "titulo": "Alquiler del Tanque",
+          "descripcion": "El vendedor alquila y paga el tanque del comprador por 3 días para el proceso de inyección. El comprador paga a su compañía de almacenamiento por 2 días adicionales."
+        },
+        {
+          "numero": 4,
+          "titulo": "Documentación POP Completa",
+          "descripcion": "El vendedor entrega la documentación POP completa: Informe SGS reciente, Autorización de prueba de inmersión, Informe de inyección, Contrato y Recibo de almacenamiento en tanque, Información de código de barras, Carta de compromiso de suministro, Pasaporte del producto (Q&Q), Certificado de origen, Certificado de registro, Garantía de confirmación y Autoridad para vender y cobrar (ATSC)."
+        },
+        {
+          "numero": 5,
+          "titulo": "Dip Test y Pago",
+          "descripcion": "El comprador realiza la prueba de inmersión (Dip Test) y verificación Q&Q a través de SGS. Emite el TSR o presenta su Vessel Q88. Realiza el pago total mediante transferencia MT103/TT y retira el producto."
+        },
+        {
+          "numero": 6,
+          "titulo": "Transferencia de Título",
+          "descripcion": "El vendedor transfiere el título de propiedad según instrucciones del comprador. El comprador retira el producto."
+        },
+        {
+          "numero": 7,
+          "titulo": "Pago de Intermediarios y Continuidad",
+          "descripcion": "El vendedor paga a todos los intermediarios involucrados. Se continúan los embarques mensuales conforme a los términos del Contrato de Compraventa."
+        }
+      ]
+    },
+    {
+      "tipo": "CIF",
+      "subtitulo": "Oferta Corporativa Blanda – Procedimiento CIF",
+      "descripcion": "En las operaciones CIF (Cost, Insurance and Freight) el vendedor cubre los costos, el seguro y el flete hasta el puerto de destino del comprador.",
+      "pasos": [
+        {
+          "numero": 1,
+          "titulo": "Orden de Compra",
+          "descripcion": "El comprador emite la orden de compra tras la recepción y aceptación de la oferta suave del vendedor."
+        },
+        {
+          "numero": 2,
+          "titulo": "Contrato y Factura en Borrador",
+          "descripcion": "El vendedor emite el Contrato de Compraventa y la Factura Comercial en borrador para revisión y firma del comprador."
+        },
+        {
+          "numero": 3,
+          "titulo": "Firma del Contrato",
+          "descripcion": "El comprador firma el Contrato de Compraventa y la Factura Comercial y los devuelve al vendedor."
+        },
+        {
+          "numero": 4,
+          "titulo": "Registro y Legalización",
+          "descripcion": "El vendedor registra y legaliza el contrato de compraventa firmado."
+        },
+        {
+          "numero": 5,
+          "titulo": "Documentación POP Parcial",
+          "descripcion": "El vendedor envía al comprador el contrato legalizado junto con los documentos POP parciales: Certificado de origen, Compromiso de suministro, Certificado de registro de la empresa, Declaración de disponibilidad del producto y Licencia de exportación."
+        },
+        {
+          "numero": 6,
+          "titulo": "Garantía Financiera",
+          "descripcion": "El comprador emite su garantía financiera (SBLC MT760 o DLC700) para cubrir el primer envío al banco del vendedor dentro de 7 días hábiles."
+        },
+        {
+          "numero": 7,
+          "titulo": "Alternativa: Depósito de Garantía",
+          "descripcion": "Si el comprador no emite el DLC MT700 en 5 días hábiles, deberá realizar un depósito de garantía del 2% sobre el valor total del contrato mediante TT Wire a la cuenta fiduciaria del vendedor. Este monto será deducido del primer envío."
+        },
+        {
+          "numero": 8,
+          "titulo": "Emisión del Bono y Documentos de Envío",
+          "descripcion": "Confirmada la recepción del DLC MT700 o el depósito del 2%, el vendedor emite el bono de cumplimiento del 2%, la documentación POP completa y los documentos de envío vía SWIFT banco a banco (Permiso de exportación, Certificado de título, Contrato con Transneft, Acuerdo de almacenamiento, Bill of Lading, Certificado SGS, entre otros)."
+        },
+        {
+          "numero": 9,
+          "titulo": "Envío e Inspección Final",
+          "descripcion": "Se inicia el envío. A la llegada del buque al puerto de descarga, el comprador realiza la inspección SGS y activa el DLC operativo para el pago total mediante TT Wire o MT103."
+        },
+        {
+          "numero": 10,
+          "titulo": "Pago de Comisiones",
+          "descripcion": "El vendedor paga las comisiones a todos los intermediarios involucrados en la transacción."
+        }
+      ]
+    }
+  ]
+}

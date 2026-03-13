@@ -3,117 +3,112 @@ import Layout from "../layouts/Layout.astro";
 import { Picture } from "astro:assets";
 import ingenieria from "../assets/img/img3.jpg";
 import renovables from "../assets/img/digestor.jpg";
+import combustible from "../assets/img/combustible.jpg";
 import ingenieriaTiny from "../assets/img/img3Tiny.jpg";
 import renovablesTiny from "../assets/img/digestorTiny.jpg";
+import combustibleTiny from "../assets/img/combustibleTiny.jpg";
 ---
 
 <Layout title="4NE - Soluciones en Energías Renovables e Ingeniería para Empresas" description="4NE ofrece soluciones en energía sustentable, proyectos de ingeniería y consultoría en oil & gas. Descubre cómo optimizamos la eficiencia energética de tu empresa.">
 	<script src="../scripts/animateIndex.js"></script>
 	<main>
-		<div
-			class="is-flex is-flex-direction-row is-justify-content-center py-5 div-index-desktop"
-		>
+		<!-- ── DESKTOP ── -->
+		<div class="is-flex is-flex-direction-row is-justify-content-center py-5 div-index-desktop">
+
+			<!-- Oil & Gas -->
 			<div class="divImg is-flex" id="image-index-ing">
 				<Picture
 					class="image-index image is-3by4"
 					src={ingenieria}
 					alt="Servicios de Ingeniería para Infraestructura Energética - 4NE"
 				/>
-				<div
-					class="divHov is-flex is-flex-direction-column is-justify-content-center is-align-items-center"
-				>
+				<div class="divHov is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
 					<p class="mb-6">Oil & Gas</p>
 					<div>
-						<button
-							class="button buttonIndex is-rounded is-inverted"
-							id="service-ing-button">Servicios</button
-						>
-						<button
-							class="button buttonIndex is-rounded is-inverted"
-							id="proyect-ing-button">Proyectos</button
-						>
+						<button class="button buttonIndex is-rounded is-inverted" id="service-ing-button">Servicios</button>
+						<button class="button buttonIndex is-rounded is-inverted" id="proyect-ing-button">Proyectos</button>
 					</div>
 				</div>
 			</div>
-			<div
-				class="divImg is-flex is-justify-content-center is-align-items-center"
-				id="image-index-ren"
-			>
+
+			<!-- Combustible (centro) -->
+			<div class="divImg is-flex is-justify-content-center is-align-items-center" id="image-index-comb">
+				<Picture
+					class="image-index image is-3by4"
+					src={combustible}
+					alt="Comercialización de Combustibles y Derivados del Petróleo - 4NE"
+				/>
+				<div class="divHov is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+					<p class="mb-6 text-ren">Combustible</p>
+					<div>
+						<button class="button buttonIndex is-rounded is-inverted" id="comb-button">Ver Productos</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Energías Renovables -->
+			<div class="divImg is-flex is-justify-content-center is-align-items-center" id="image-index-ren">
 				<Picture
 					class="image-index image is-3by4"
 					src={renovables}
 					alt="Soluciones de Energías Renovables para Empresas - 4NE"
 				/>
-				<div
-					class="divHov is-flex is-flex-direction-column is-justify-content-center is-align-items-center"
-				>
+				<div class="divHov is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
 					<p class="mb-6 text-ren">Energías Renovables</p>
 					<div>
-						<button
-							class="button buttonIndex is-rounded is-inverted"
-							id="service-ren-button">Servicios</button
-						>
-						<button
-							class="button buttonIndex is-rounded is-inverted"
-							id="proyect-ren-button">Proyectos</button
-						>
+						<button class="button buttonIndex is-rounded is-inverted" id="service-ren-button">Servicios</button>
+						<button class="button buttonIndex is-rounded is-inverted" id="proyect-ren-button">Proyectos</button>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div
-			class="is-flex is-flex-direction-column is-justify-content-center py-5 div-index-mobile"
-		>
-			<div
-				class="is-flex is-flex-direction-column is-align-items-center has-background-black my-6 div-index-mobile-img"
-			>
+		<!-- ── MOBILE ── -->
+		<div class="is-flex is-flex-direction-column is-justify-content-center py-5 div-index-mobile">
+
+			<!-- Combustible PRIMERO en mobile -->
+			<div class="is-flex is-flex-direction-column is-align-items-center has-background-black my-6 div-index-mobile-img">
+				<Picture
+					class="img-index-mobile image is-2by1"
+					src={combustibleTiny}
+					alt="Comercialización de Combustibles y Derivados del Petróleo - 4NE"
+				/>
+				<div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center div-index-access">
+					<p class="my-4 is-size-3 title-class text-ren">Combustible</p>
+					<div class="mb-3 is-flex is-flex-wrap-wrap is-justify-content-space-around mt-4 div-button">
+						<button class="button buttonIndex is-rounded is-inverted mb-4" id="comb-button-mobile">Ver Productos</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Oil & Gas -->
+			<div class="is-flex is-flex-direction-column is-align-items-center has-background-black my-6 div-index-mobile-img">
 				<Picture
 					class="img-index-mobile image is-2by1"
 					src={ingenieriaTiny}
 					alt="Servicios de Ingeniería para Infraestructura Energética - 4NE"
 				/>
-				<div
-					class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center div-index-access"
-				>
+				<div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center div-index-access">
 					<p class="my-4 is-size-3 title-class">Oil & Gas</p>
-					<div
-						class="mb-3 is-flex is-flex-wrap-wrap is-justify-content-space-around mt-4 div-button"
-					>
-						<button
-							class="button buttonIndex is-rounded is-inverted mb-4"
-							id="service-ing-button-mobile">Servicios</button
-						>
-						<button
-							class="button buttonIndex is-rounded is-inverted mb-4"
-							id="proyect-ing-button-mobile">Proyectos</button
-						>
+					<div class="mb-3 is-flex is-flex-wrap-wrap is-justify-content-space-around mt-4 div-button">
+						<button class="button buttonIndex is-rounded is-inverted mb-4" id="service-ing-button-mobile">Servicios</button>
+						<button class="button buttonIndex is-rounded is-inverted mb-4" id="proyect-ing-button-mobile">Proyectos</button>
 					</div>
 				</div>
 			</div>
-			<div
-				class="is-flex is-flex-direction-column is-align-items-center has-background-black my-6 div-index-mobile-img"
-			>
+
+			<!-- Energías Renovables -->
+			<div class="is-flex is-flex-direction-column is-align-items-center has-background-black my-6 div-index-mobile-img">
 				<Picture
 					class="img-index-mobile image is-2by1"
 					src={renovablesTiny}
 					alt="Soluciones de Energías Renovables para Empresas - 4NE"
 				/>
-				<div
-					class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center div-index-access"
-				>
+				<div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-center div-index-access">
 					<p class="my-4 is-size-3 title-class text-ren">Energías Renovables</p>
-					<div
-						class="mb-3 is-flex is-flex-wrap-wrap is-justify-content-space-around mt-4 div-button"
-					>
-						<button
-							class="button buttonIndex is-rounded is-inverted mb-4"
-							id="service-ren-button-mobile">Servicios</button
-						>
-						<button
-							class="button buttonIndex is-rounded is-inverted mb-4"
-							id="proyect-ren-button-mobile">Proyectos</button
-						>
+					<div class="mb-3 is-flex is-flex-wrap-wrap is-justify-content-space-around mt-4 div-button">
+						<button class="button buttonIndex is-rounded is-inverted mb-4" id="service-ren-button-mobile">Servicios</button>
+						<button class="button buttonIndex is-rounded is-inverted mb-4" id="proyect-ren-button-mobile">Proyectos</button>
 					</div>
 				</div>
 			</div>
@@ -122,65 +117,47 @@ import renovablesTiny from "../assets/img/digestorTiny.jpg";
 </Layout>
 
 <script>
-	const serviceIngButton = document.getElementById("service-ing-button");
-	const serviceIngButtonMobile = document.getElementById("service-ing-button-mobile");
-	const proyectIngButton = document.getElementById("proyect-ing-button");
-	const proyectIngButtonMobile = document.getElementById("proyect-ing-button-mobile");
-	const serviceRenButton = document.getElementById("service-ren-button");
-	const serviceRenButtonMobile = document.getElementById("service-ren-button-mobile");
-	const proyectRenButton = document.getElementById("proyect-ren-button");
-	const proyectRenButtonMobile = document.getElementById("proyect-ren-button-mobile");
-
-	serviceIngButton.addEventListener("click", function (event) {
-		event.preventDefault();
-		funcionPreNavegacionSerIng();
-	});
-	serviceIngButtonMobile.addEventListener("click", function (event) {
-		event.preventDefault();
-		funcionPreNavegacionSerIng();
-	});
-	
-	proyectIngButton.addEventListener("click", function (event) {
-		event.preventDefault();
-		funcionPreNavegacionProIng();
-	});
-	proyectIngButtonMobile.addEventListener("click", function (event) {
-		event.preventDefault();
-		funcionPreNavegacionProIng();
-	});
-	
-	serviceRenButton.addEventListener("click", function (event) {
-		event.preventDefault();
-		funcionPreNavegacionSerRen();
-	});
-	serviceRenButtonMobile.addEventListener("click", function (event) {
-		event.preventDefault();
-		funcionPreNavegacionSerRen();
-	});
-
-	proyectRenButton.addEventListener("click", function (event) {
-		event.preventDefault();
-		funcionPreNavegacionProRen();
-	});
-	proyectRenButtonMobile.addEventListener("click", function (event) {
-		event.preventDefault();
-		funcionPreNavegacionProRen();
-	});
-
-	function funcionPreNavegacionSerIng() {
+	// Oil & Gas
+	document.getElementById("service-ing-button")!.addEventListener("click", () => {
 		localStorage.setItem("pagTipo", "ing");
 		window.location.href = "/service";
-	}
-	function funcionPreNavegacionProIng() {
+	});
+	document.getElementById("service-ing-button-mobile")!.addEventListener("click", () => {
+		localStorage.setItem("pagTipo", "ing");
+		window.location.href = "/service";
+	});
+	document.getElementById("proyect-ing-button")!.addEventListener("click", () => {
 		localStorage.setItem("pagTipo", "ing");
 		window.location.href = "/proyect";
-	}
-	function funcionPreNavegacionSerRen() {
+	});
+	document.getElementById("proyect-ing-button-mobile")!.addEventListener("click", () => {
+		localStorage.setItem("pagTipo", "ing");
+		window.location.href = "/proyect";
+	});
+
+	// Energías Renovables
+	document.getElementById("service-ren-button")!.addEventListener("click", () => {
 		localStorage.setItem("pagTipo", "ren");
 		window.location.href = "/service";
-	}
-	function funcionPreNavegacionProRen() {
+	});
+	document.getElementById("service-ren-button-mobile")!.addEventListener("click", () => {
+		localStorage.setItem("pagTipo", "ren");
+		window.location.href = "/service";
+	});
+	document.getElementById("proyect-ren-button")!.addEventListener("click", () => {
 		localStorage.setItem("pagTipo", "ren");
 		window.location.href = "/proyect";
-	}
+	});
+	document.getElementById("proyect-ren-button-mobile")!.addEventListener("click", () => {
+		localStorage.setItem("pagTipo", "ren");
+		window.location.href = "/proyect";
+	});
+
+	// Combustible → página dedicada
+	document.getElementById("comb-button")!.addEventListener("click", () => {
+		window.location.href = "/combustibles";
+	});
+	document.getElementById("comb-button-mobile")!.addEventListener("click", () => {
+		window.location.href = "/combustibles";
+	});
 </script>

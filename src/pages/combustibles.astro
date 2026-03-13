@@ -1,0 +1,575 @@
+---
+import Layout from "../layouts/Layout.astro";
+import combustibles from "../assets/combustibles.json";
+---
+
+<Layout
+  title="Combustibles - Petróleo, Diesel, Gasolina y más | 4NE"
+  description="4NE comercializa petróleo crudo, diesel, gasolina, combustibles de aviación, GLP, hidrocarburos y alcoholes. Consulte nuestros productos y procedimientos de compra FOB y CIF."
+>
+  <script src="../scripts/changeType.js"></script>
+  <main class="main-combustibles">
+
+    <!-- HEADER -->
+    <div class="comb-header">
+      <h1 class="comb-title">Combustibles &amp; Derivados</h1>
+      <p class="comb-subtitle">
+        Comercializamos las principales corrientes del mercado energético internacional.<br />
+        Productos certificados · Trazabilidad completa · Documentación SGS
+      </p>
+    </div>
+
+    <!-- TABS Productos / Procedimiento -->
+    <div class="comb-tabs">
+      <button class="comb-tab active" id="tab-productos" onclick="switchTab('productos')">
+        <i class="fa-solid fa-boxes-stacked mr-2"></i>Productos
+      </button>
+      <button class="comb-tab" id="tab-procedimiento" onclick="switchTab('procedimiento')">
+        <i class="fa-solid fa-file-contract mr-2"></i>Procedimientos de Compra
+      </button>
+    </div>
+
+    <!-- ===== SECCIÓN PRODUCTOS ===== -->
+    <section id="section-productos" class="comb-section">
+      <div class="productos-grid">
+        {
+          combustibles.productos.map((cat, catIdx) => (
+            <div class="prod-categoria" id={`cat-${catIdx}`}>
+              <button
+                class="prod-cat-header"
+                onclick={`toggleCategoria(${catIdx})`}
+                aria-expanded="false"
+              >
+                <span class="prod-cat-icon">
+                  <i class={cat.icon} />
+                </span>
+                <span class="prod-cat-title">{cat.categoria}</span>
+                <span class="prod-cat-count">{cat.items.length} productos</span>
+                <i class="fa-solid fa-chevron-down prod-chevron" id={`chev-${catIdx}`} />
+              </button>
+              <div class="prod-cat-body" id={`body-${catIdx}`}>
+                <p class="prod-cat-desc">{cat.descripcion}</p>
+                <div class="prod-items-grid">
+                  {cat.items.map((item) => (
+                    <div class="prod-item-card">
+                      <div class="prod-item-dot" />
+                      <div>
+                        <p class="prod-item-nombre">{item.nombre}</p>
+                        <p class="prod-item-desc">{item.descripcion}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="comb-cta">
+        <i class="fa-solid fa-envelope mr-2"></i>
+        ¿Interesado en algún producto? <a href="/contact/">Contáctenos</a> para obtener una cotización.
+      </div>
+    </section>
+
+    <!-- ===== SECCIÓN PROCEDIMIENTOS ===== -->
+    <section id="section-procedimiento" class="comb-section hidden-section">
+      <div class="proc-tabs">
+        {
+          combustibles.procedimientos.map((proc, procIdx) => (
+            <button
+              class={`proc-tab-btn ${procIdx === 0 ? "proc-active" : ""}`}
+              id={`proc-btn-${procIdx}`}
+              onclick={`switchProc(${procIdx})`}
+            >
+              <i class={`fa-solid ${procIdx === 0 ? "fa-ship" : "fa-anchor"} mr-2`} />
+              {proc.tipo}
+            </button>
+          ))
+        }
+      </div>
+
+      {
+        combustibles.procedimientos.map((proc, procIdx) => (
+          <div
+            class={`proc-container ${procIdx === 0 ? "" : "hidden-section"}`}
+            id={`proc-${procIdx}`}
+          >
+            <div class="proc-header">
+              <h2 class="proc-title">{proc.subtitulo}</h2>
+              <p class="proc-desc">{proc.descripcion}</p>
+            </div>
+
+            <div class="timeline">
+              {proc.pasos.map((paso) => (
+                <div class="timeline-item">
+                  <div class="timeline-marker">
+                    <span class="timeline-num">{paso.numero}</span>
+                  </div>
+                  <div class="timeline-content">
+                    <h3 class="timeline-title">{paso.titulo}</h3>
+                    <p class="timeline-desc">{paso.descripcion}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div class="comb-cta">
+              <i class="fa-solid fa-circle-info mr-2"></i>
+              Para iniciar el proceso, <a href="/contact/">contáctenos</a> con sus datos de empresa.
+            </div>
+          </div>
+        ))
+      }
+    </section>
+  </main>
+</Layout>
+
+<script>
+  // TAB PRINCIPAL: Productos / Procedimientos
+  function switchTab(tab: string) {
+    const secProd = document.getElementById("section-productos")!;
+    const secProc = document.getElementById("section-procedimiento")!;
+    const btnProd = document.getElementById("tab-productos")!;
+    const btnProc = document.getElementById("tab-procedimiento")!;
+
+    if (tab === "productos") {
+      secProd.classList.remove("hidden-section");
+      secProc.classList.add("hidden-section");
+      btnProd.classList.add("active");
+      btnProc.classList.remove("active");
+    } else {
+      secProd.classList.add("hidden-section");
+      secProc.classList.remove("hidden-section");
+      btnProd.classList.remove("active");
+      btnProc.classList.add("active");
+    }
+  }
+
+  // ACORDEÓN CATEGORÍAS
+  function toggleCategoria(idx: number) {
+    const body = document.getElementById(`body-${idx}`)!;
+    const chev = document.getElementById(`chev-${idx}`)!;
+    const btn = body.previousElementSibling as HTMLElement;
+    const isOpen = body.classList.contains("open");
+
+    // Cerrar todos
+    document.querySelectorAll(".prod-cat-body").forEach((b) => b.classList.remove("open"));
+    document.querySelectorAll(".prod-chevron").forEach((c) => c.classList.remove("rotated"));
+    document.querySelectorAll(".prod-cat-header").forEach((h) => h.setAttribute("aria-expanded","false"));
+
+    if (!isOpen) {
+      body.classList.add("open");
+      chev.classList.add("rotated");
+      btn.setAttribute("aria-expanded", "true");
+    }
+  }
+
+  // TAB PROCEDIMIENTOS: FOB / CIF
+  function switchProc(idx: number) {
+    document.querySelectorAll(".proc-container").forEach((c, i) => {
+      c.classList.toggle("hidden-section", i !== idx);
+    });
+    document.querySelectorAll(".proc-tab-btn").forEach((b, i) => {
+      b.classList.toggle("proc-active", i === idx);
+    });
+  }
+
+  // Exponer globalmente
+  (window as any).switchTab = switchTab;
+  (window as any).toggleCategoria = toggleCategoria;
+  (window as any).switchProc = switchProc;
+
+  // Abrir la primera categoría por defecto
+  document.addEventListener("DOMContentLoaded", () => {
+    toggleCategoria(0);
+  });
+</script>
+
+<style>
+  .main-combustibles {
+    padding-bottom: 4rem;
+  }
+
+  /* ---- HEADER ---- */
+  .comb-header {
+    text-align: center;
+    padding: 2.5rem 1rem 1.5rem;
+    border-bottom: 2px solid #A4CD39;
+    margin-bottom: 2rem;
+  }
+
+  .comb-title {
+    font-size: 2.2rem;
+    color: #404654;
+    margin-bottom: 0.75rem;
+  }
+
+  .comb-subtitle {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* ---- TABS PRINCIPALES ---- */
+  .comb-tabs {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .comb-tab {
+    padding: 0.65rem 1.8rem;
+    border: 2px solid #A4CD39;
+    background: transparent;
+    color: #404654;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.25s, color 0.25s;
+  }
+
+  .comb-tab.active,
+  .comb-tab:hover {
+    background: #A4CD39;
+    color: #fff;
+  }
+
+  /* ---- SECCIONES ---- */
+  .comb-section {
+    transition: opacity 0.3s;
+  }
+
+  .hidden-section {
+    display: none;
+  }
+
+  /* ---- GRID CATEGORÍAS ---- */
+  .productos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* ---- CATEGORÍA ACORDEÓN ---- */
+  .prod-categoria {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+
+  .prod-cat-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: #f8fafb;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s;
+  }
+
+  .prod-cat-header:hover {
+    background: #edf4e0;
+  }
+
+  .prod-cat-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #A4CD39;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .prod-cat-title {
+    font-size: 1.1rem;
+    color: #404654;
+    flex: 1 1 auto;
+    word-break: break-word;
+  }
+
+  .prod-cat-count {
+    font-size: 0.8rem;
+    color: #A4CD39;
+    background: #edf4e0;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .prod-chevron {
+    color: #A4CD39;
+    transition: transform 0.3s;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .prod-chevron.rotated {
+    transform: rotate(180deg);
+  }
+
+  /* ---- CUERPO ACORDEÓN ---- */
+  .prod-cat-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease-out;
+    background: #fff;
+  }
+
+  .prod-cat-body.open {
+    max-height: 2000px;
+    transition: max-height 0.6s ease-in;
+  }
+
+  .prod-cat-desc {
+    padding: 1.25rem 1.25rem 0.5rem;
+    color: #6b7280;
+    font-size: 0.9rem;
+    border-bottom: 1px dashed #e2e8f0;
+    margin-bottom: 0.5rem;
+  }
+
+  .prod-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem 1.25rem;
+  }
+
+  .prod-item-card {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    background: #f8fafb;
+    border-radius: 8px;
+    padding: 0.85rem;
+    border-left: 3px solid #A4CD39;
+  }
+
+  .prod-item-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #A4CD39;
+    margin-top: 0.4rem;
+    flex-shrink: 0;
+  }
+
+  .prod-item-nombre {
+    font-size: 0.92rem;
+    color: #404654;
+    margin-bottom: 0.2rem;
+  }
+
+  .prod-item-desc {
+    font-size: 0.8rem;
+    color: #6b7280;
+    line-height: 1.5;
+  }
+
+  /* ---- CTA ---- */
+  .comb-cta {
+    margin-top: 2rem;
+    text-align: center;
+    background: #edf4e0;
+    border-radius: 10px;
+    padding: 1.25rem;
+    color: #404654;
+    font-size: 0.95rem;
+  }
+
+  .comb-cta a {
+    color: #A4CD39;
+    text-decoration: underline;
+  }
+
+  .comb-cta a:hover {
+    color: #6E9223;
+  }
+
+  /* ---- TABS PROCEDIMIENTOS ---- */
+  .proc-tabs {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .proc-tab-btn {
+    padding: 0.55rem 1.4rem;
+    border: 2px solid #A4CD39;
+    background: transparent;
+    color: #404654;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .proc-tab-btn.proc-active,
+  .proc-tab-btn:hover {
+    background: #A4CD39;
+    color: #fff;
+  }
+
+  /* ---- HEADER PROCEDIMIENTO ---- */
+  .proc-header {
+    margin-bottom: 2rem;
+  }
+
+  .proc-title {
+    font-size: 1.4rem;
+    color: #404654;
+    margin-bottom: 0.5rem;
+  }
+
+  .proc-desc {
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  /* ---- TIMELINE ---- */
+  .timeline {
+    position: relative;
+    padding-left: 2.5rem;
+  }
+
+  /* La línea vertical principal ya no se dibuja a lo largo de todo el contenedor para no sobrepasarse */
+  .timeline::before {
+    display: none;
+  }
+
+  /* Cada item dibuja su propia parte de la línea hacia abajo */
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    left: calc(-1rem - 1px);
+    top: 2rem; /* empiece de abajo del circulo */
+    bottom: -2rem; /* llegue hasta el top del prox circulo */
+    width: 2px;
+    background: linear-gradient(to bottom, #A4CD39, #6E9223);
+    z-index: 0;
+  }
+
+  /* Y el último elemento NO dibuja línea hacia abajo */
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+  .timeline-item:last-child::after {
+    display: none;
+  }
+
+
+  .timeline-marker {
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    background: #A4CD39;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 4px #edf4e0;
+  }
+
+  .timeline-num {
+    color: #fff;
+    font-size: 0.85rem;
+  }
+
+  .timeline-content {
+    background: #f8fafb;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    width: 100%;
+    transition: box-shadow 0.2s;
+  }
+
+  .timeline-content:hover {
+    box-shadow: 0 4px 12px rgba(164, 205, 57, 0.15);
+    border-color: #A4CD39;
+  }
+
+  .timeline-title {
+    font-size: 1rem;
+    color: #404654;
+    margin-bottom: 0.4rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.85rem;
+    color: #6b7280;
+    line-height: 1.6;
+  }
+
+  /* ---- RESPONSIVE ---- */
+  @media (max-width: 768px) {
+    .comb-title {
+      font-size: 1.6rem;
+    }
+
+    .prod-cat-header {
+      gap: 0.5rem;
+      padding: 1rem 0.5rem;
+    }
+
+    .prod-cat-icon {
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: 1rem;
+    }
+
+    .prod-cat-title {
+      font-size: 0.9rem;
+    }
+
+    .prod-cat-count {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.4rem;
+      text-align: center;
+      line-height: 1.1;
+    }
+
+    .prod-items-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .timeline {
+      padding-left: 2rem;
+    }
+
+    .timeline-item::after {
+      left: calc(-0.875rem - 1px);
+    }
+
+    .timeline-marker {
+      left: -1.75rem;
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+  }
+</style>
