@@ -7,10 +7,10 @@ import logo from "../assets/img/Logo 4NE - Chico x40.png";
 <nav class="navbar is-transparent is-justify-content-center">
 	<div class="navbar-brand">
 		<a class="navbar-item navbar-item-logo" href="/">
-			<Picture class="logo-image" src={logo} alt="Soluciones de Energía Renovable para Empresas - 4NE" /> 
+			<Picture class="logo-image" src={logo} alt="Soluciones de Energía Renovable para Empresas - 4NE" />
 		</a>
 		<div
-			role="button" 
+			role="button"
 			class="navbar-burger"
 			id="navbar-burger"
 			aria-label="menu"
@@ -27,8 +27,25 @@ import logo from "../assets/img/Logo 4NE - Chico x40.png";
 	<div id="navbarExampleTransparentExample" class="navbar-menu">
 		<div class="navbar-start">
 			<a class="navbar-item navbar-item-mod" href="/">Inicio</a>
-			<a class="navbar-item navbar-item-mod" href="/service/">Servicios</a>
-			<a class="navbar-item navbar-item-mod" href="/proyect/">Proyectos</a>
+
+			<!-- Servicios dropdown -->
+			<div class="navbar-item has-dropdown is-hoverable" id="nav-servicios-dropdown">
+				<a class="navbar-link navbar-item-mod nav-dropdown-link">Servicios</a>
+				<div class="navbar-dropdown">
+					<a class="navbar-item navbar-item-mod" id="nav-serv-ing" href="#">Oil &amp; Gas</a>
+					<a class="navbar-item navbar-item-mod" id="nav-serv-ren" href="#">Energías Renovables</a>
+				</div>
+			</div>
+
+			<!-- Proyectos dropdown -->
+			<div class="navbar-item has-dropdown is-hoverable" id="nav-proyectos-dropdown">
+				<a class="navbar-link navbar-item-mod nav-dropdown-link">Proyectos</a>
+				<div class="navbar-dropdown">
+					<a class="navbar-item navbar-item-mod" id="nav-proy-ing" href="#">Oil &amp; Gas</a>
+					<a class="navbar-item navbar-item-mod" id="nav-proy-ren" href="#">Energías Renovables</a>
+				</div>
+			</div>
+
 			<a class="navbar-item navbar-item-mod" href="/combustibles/">Combustibles</a>
 			<a class="navbar-item navbar-item-mod" href="/about/">Quienes somos?</a>
 			<a class="navbar-item navbar-item-mod" href="/politica-de-cookies/">Cookies</a>
@@ -36,51 +53,119 @@ import logo from "../assets/img/Logo 4NE - Chico x40.png";
 			<a class="navbar-item navbar-item-mod" href="/nergye/">Nergye</a>
 		</div>
 	</div>
-
-	<div class="navbar-end botton-final">
-		<div class="navbar-item">
-			<div class="buttons is-justify-content-center">
-				<button class="button is-rounded is-inverted button-class" id="pag-toggle"
-					>Renovables<i class="fa-solid fa-repeat ml-2"></i></button
-				>
-			</div>
-		</div>
-	</div>
 </nav>
 
 <script>
+	document.addEventListener("DOMContentLoaded", () => {
 
-	document.addEventListener("DOMContentLoaded", function () {
-		if (!localStorage.getItem("pagTipo")) {
+		// ── Servicios ────────────────────────────────────────────────────────
+		document.getElementById("nav-serv-ing")!.addEventListener("click", (e) => {
+			e.preventDefault();
 			localStorage.setItem("pagTipo", "ing");
-		}
+			window.location.href = "/service";
+		});
+		document.getElementById("nav-serv-ren")!.addEventListener("click", (e) => {
+			e.preventDefault();
+			localStorage.setItem("pagTipo", "ren");
+			window.location.href = "/service";
+		});
 
-		let tipoPag = localStorage.getItem("pagTipo");
-		const btnPag = document.getElementById("pag-toggle");
-		const textNode = btnPag.firstChild;
+		// ── Proyectos ────────────────────────────────────────────────────────
+		document.getElementById("nav-proy-ing")!.addEventListener("click", (e) => {
+			e.preventDefault();
+			localStorage.setItem("pagTipo", "ing");
+			window.location.href = "/proyect";
+		});
+		document.getElementById("nav-proy-ren")!.addEventListener("click", (e) => {
+			e.preventDefault();
+			localStorage.setItem("pagTipo", "ren");
+			window.location.href = "/proyect";
+		});
 
-		if (tipoPag === "ing") {
-			textNode.nodeValue = "Renovables ";
-		} else if (tipoPag === "ren") {
-			textNode.nodeValue = "Oil & Gas ";
-		}
+		// ── Mobile ONLY: toggle is-active con click en el navbar-link ────────
+		// En desktop (≥1024px) Bulma maneja los dropdowns solo con :hover (is-hoverable).
+		// Agregar is-active en desktop los deja abiertos permanentemente, por eso
+		// este bloque solo corre en viewports de mobile.
+		const dropdowns = document.querySelectorAll<HTMLElement>(".navbar-item.has-dropdown");
 
-		btnPag.addEventListener("click", () => {
-			if (tipoPag === "ing") {
-				tipoPag = "ren";
-				localStorage.setItem("pagTipo", "ren");
-				textNode.nodeValue = " Oil & Gas ";
-			} else if (tipoPag === "ren") {
-				tipoPag = "ing";
-				localStorage.setItem("pagTipo", "ing");
-				textNode.nodeValue = "Renovables ";
-			}
+		dropdowns.forEach((dropdown) => {
+			const link = dropdown.querySelector(".navbar-link");
 
-			const event = new CustomEvent("pagToggle", {
-				detail: { tipoPag: tipoPag },
+			link?.addEventListener("click", () => {
+				// Solo actuar en mobile
+				if (window.innerWidth < 1024) {
+					// Cerrar todos los demás antes de abrir este
+					dropdowns.forEach((d) => {
+						if (d !== dropdown) d.classList.remove("is-active");
+					});
+					dropdown.classList.toggle("is-active");
+				}
 			});
-			document.dispatchEvent(event);
+
+			// En desktop: asegurarse de que is-active nunca quede pegado
+			dropdown.addEventListener("mouseleave", () => {
+				if (window.innerWidth >= 1024) {
+					dropdown.classList.remove("is-active");
+				}
+			});
+		});
+
+		// Cerrar todos los dropdowns al hacer click fuera del nav
+		document.addEventListener("click", (e) => {
+			if (!(e.target as HTMLElement).closest(".navbar-item.has-dropdown")) {
+				dropdowns.forEach((d) => d.classList.remove("is-active"));
+			}
 		});
 	});
-	
 </script>
+
+<style>
+	.nav-dropdown-link {
+		cursor: pointer;
+	}
+
+	/* Pegar el dropdown al navbar sin espacio flotante */
+	@media screen and (min-width: 1024px) {
+		.navbar-item.has-dropdown:hover .navbar-dropdown,
+		.navbar-item.has-dropdown.is-active .navbar-dropdown {
+			margin-top: -4px;          /* cierra el hueco con el nav */
+		}
+		.navbar-dropdown {
+			background-color: #F0F0F0 !important;
+			border-top: 2px solid #A4CD39 !important;  /* línea verde que lo ancla */
+			border-radius: 0 0 6px 6px !important;
+			box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12) !important;
+			padding: 0.25rem 0 !important;
+		}
+	}
+
+	.navbar-dropdown .navbar-item {
+		color: hsla(221deg, 14%, 29%, 1) !important;
+		padding: 0.6rem 1.2rem !important;
+		font-size: 0.9rem;
+	}
+	.navbar-dropdown .navbar-item:hover {
+		background-color: #e4e4e4 !important;
+		color: #A4CD39 !important;
+	}
+	.navbar-link:not(.is-arrowless)::after {
+		border-color: hsla(221deg, 14%, 29%, 1) !important;
+	}
+	.navbar-link {
+		color: hsla(221deg, 14%, 29%, 1) !important;
+	}
+
+	/* Mobile: ocultar dropdown hasta que tenga is-active */
+	@media screen and (max-width: 1023px) {
+		.navbar-item.has-dropdown .navbar-dropdown {
+			display: none;
+			box-shadow: none !important;
+			border-top: none !important;
+			border-left: 3px solid #A4CD39;
+			margin-left: 1rem;
+		}
+		.navbar-item.has-dropdown.is-active .navbar-dropdown {
+			display: block;
+		}
+	}
+</style>
