@@ -13,6 +13,7 @@ import mineria from "../assets/img/Fotos-Serv/mineria.webp";
 import personalizado from "../assets/img/Fotos-Serv/personalizado.webp";
 import rsu from "../assets/img/Fotos-Serv/rsu.webp";
 import fotovoltaica from "../assets/img/Fotos-Serv/fotovoltaica.webp";
+import texsolarLogo from "../assets/img/Logos-Alianzas/solartexLogo.webp";
 import biogas from "../assets/img/Fotos-Serv/biogas.webp";
 import biofertilizantes from "../assets/img/Fotos-Serv/biofertilizantes.webp";
 import personalizadoRen from "../assets/img/Fotos-Serv/personalizadoRen.webp";
@@ -30,6 +31,10 @@ const images = {
 	biogas: biogas,
 	biofertilizantes: biofertilizantes,
 	personalizadoRen: personalizadoRen,
+};
+
+const partnerLogos = {
+	texsolar: texsolarLogo,
 };
 
 const cantServIng = services.ingenieria.services.length;
@@ -139,6 +144,27 @@ const cantServIng = services.ingenieria.services.length;
 										))}
 									</ol>
 									<p>{service.conclusion}</p>
+									{(service as any).partnerLogo && (
+										<div class="partner-block">
+											{(service as any).partnerText && (
+												<p class="partner-text">
+													{(service as any).partnerText}
+												</p>
+											)}
+											<a
+												href={(service as any).partnerUrl}
+												target="_blank"
+												rel="noopener noreferrer"
+												class="partner-logo-link"
+											>
+												<Image
+													src={partnerLogos[(service as any).partnerLogo as keyof typeof partnerLogos]}
+													alt="Texsolar"
+													class="partner-logo"
+												/>
+											</a>
+										</div>
+									)}
 								</div>
 								<div class="img-serv">
 									<Image

@@ -228,7 +228,10 @@
                     }
                 ],
                 "conclusion": "Nuestro objetivo es proporcionar energía limpia y renovable mediante el desarrollo eficiente de centrales fotovoltaicas. Permítanos ser su socio en la transición hacia un futuro más sostenible.",
-                "img": "fotovoltaica"
+                "img": "fotovoltaica",
+                "partnerText": "Desarrollamos este servicio junto a nuestro socio estratégico Texsolar, líder en soluciones de energía solar. Conocé más sobre su trabajo:",
+                "partnerLogo": "texsolar",
+                "partnerUrl": "https://texsolar.com.ar/"
             },
             {
                 "title": "Desarrollo Integral de Planta de BioGas",
