@@ -387,7 +387,7 @@ nav{
 }
 
 .partner-logo-link:hover .partner-logo {
-	transform: scale(1.05);
+	opacity: 0.8;
 }
 
 ol li{
